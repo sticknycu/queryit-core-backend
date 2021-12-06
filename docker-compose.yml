@@ -4,7 +4,7 @@ services:
 
   api_service:
     image: "openjdk:17-jdk-oraclelinux8"
-    build: ..
+    build: .
     restart: always
     ports:
       - 8080:8080
