@@ -19,6 +19,7 @@ jobs:
       - name: Build And Run Docker Environment
         run: |
           cd ..
+          cd queryit-core-backend
           ls -a
           docker-compose up -d
 
