@@ -18,6 +18,7 @@ jobs:
 
       - name: Build And Run Docker Environment
         run: |
+          cd ..
           ls -a
           docker-compose up -d
 
