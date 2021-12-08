@@ -3,10 +3,10 @@ version: "3.7"
 services:
 
   api_service:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    restart: always
+    image: "openjdk:17-jdk-oraclelinux8"
+    build: .
+    restart: "no"
+    command: java -jar docker-jar-file.jar
     ports:
       - 8080:8080
     depends_on:
