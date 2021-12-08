@@ -3,6 +3,7 @@ package ro.nicolaemariusghergu.queryit.service.impl;
 import org.jeasy.random.EasyRandom;
 import org.jeasy.random.EasyRandomParameters;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.mockito.Mockito;
@@ -46,7 +47,7 @@ class TypeStatusServiceImplTest {
         }
     }
 
-    @BeforeAll
+    @BeforeEach
     void configurateBeans() {
         EasyRandom easyRandom = new EasyRandom(new EasyRandomParameters().collectionSizeRange(1, 2));
 
