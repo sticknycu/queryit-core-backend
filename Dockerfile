@@ -13,5 +13,3 @@ RUN mvn --version
 
 # Copy files from project and move them to container to /src directory
 COPY . .
-
-RUN mvn test
