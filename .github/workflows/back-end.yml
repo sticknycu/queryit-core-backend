@@ -8,4 +8,4 @@ jobs:
 
     steps:
       - name: Build And Run Docker Environment
-        run: ls -a
+        run: ls -a && cd ..
