@@ -1,4 +1,4 @@
-name: run_back-end
+name: run_core_backend
 
 on: [ push ]
 
@@ -17,8 +17,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Build And Run Docker Environment
-        run: |
-          docker-compose up -d
+        run: docker-compose up -d
 
       - name: Set up JDK 17
         uses: actions/setup-java@v1
