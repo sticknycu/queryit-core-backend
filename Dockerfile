@@ -13,3 +13,8 @@ RUN mvn --version
 
 # Copy files from project and move them to container to /src directory
 COPY . .
+
+# Create runnable jar
+RUN mvn clean package -DskipTests
+
+WORKDIR target

@@ -5,8 +5,8 @@ services:
   api_service:
     image: "openjdk:17-jdk-oraclelinux8"
     build: .
-    restart: always
-    command: mvn clean package && java -jar target/docker-jar-file.jar
+    restart: "no"
+    command: java -jar docker-jar-file.jar
     ports:
       - 8080:8080
     depends_on:
