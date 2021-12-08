@@ -20,7 +20,7 @@ services:
     container_name: postgres_core_backend
     restart: always
     expose:
-      - 5432[/TCP]
+      - 5432
     ports:
       - "5432:5432"
     environment:
