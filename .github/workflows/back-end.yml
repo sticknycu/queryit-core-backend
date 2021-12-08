@@ -10,4 +10,4 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Build And Run Docker Environment
-        run: ls -a
+        run: docker-compose up -d
