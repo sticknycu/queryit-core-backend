@@ -8,4 +8,4 @@ jobs:
 
     steps:
       - name: Build And Run Docker Environment
-        run: docker-compose up -d
+        run: ls -a
