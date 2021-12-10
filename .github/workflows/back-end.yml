@@ -16,3 +16,9 @@ jobs:
 
       - name: Test with Maven
         run: mvn test
+
+      - name: Upload Coverage Raport from Jacoco to Codacy
+        run: |
+        mvn jacoco:report
+        cd target && cd site && cd jacoco
+        bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r jacoco.xml
