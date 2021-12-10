@@ -19,7 +19,7 @@ jobs:
 
       - name: Upload Coverage Raport from Jacoco to Codacy
         env:
-          CODACY_PROJECT_TOKEN: e95ff09eb425437da36048afebefe7d5
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
         run: |
           mvn jacoco:report
           cd target && cd site && cd jacoco
