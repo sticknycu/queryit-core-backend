@@ -69,6 +69,15 @@ CREATE TABLE IF NOT EXISTS
     );
 
 CREATE TABLE IF NOT EXISTS
+    promotions
+(
+    id SERIAL,
+    description VARCHAR,
+
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS
     shelves
 (
     id
@@ -298,3 +307,6 @@ SELECT products.id, minishop_category.id
 FROM products
          INNER JOIN minishop_category ON minishop_category.name = 'Fructe si legume'
 WHERE products.name = 'Portocale';
+
+INSERT INTO promotions(description)
+VALUES ('Cumpara 2 paini si primesti una gratuit!');
