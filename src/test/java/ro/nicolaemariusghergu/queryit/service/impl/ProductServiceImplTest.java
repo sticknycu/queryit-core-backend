@@ -8,6 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
+import ro.nicolaemariusghergu.queryit.repository.CategoryRepository;
+import ro.nicolaemariusghergu.queryit.repository.ManufacturerRepository;
 import ro.nicolaemariusghergu.queryit.repository.ProductRepository;
 import ro.nicolaemariusghergu.queryit.service.ProductService;
 
@@ -23,6 +25,12 @@ class ProductServiceImplTest {
     @MockBean
     private ProductRepository productRepository;
 
+    @MockBean
+    private ManufacturerRepository manufacturerRepository;
+
+    @MockBean
+    private CategoryRepository categoryRepository;
+
     @Test
     void whenGetDataFromWebsiteThenShowResult() throws JSONException, IOException {
         productService.handleDataFromWeb();
@@ -33,7 +41,7 @@ class ProductServiceImplTest {
 
         @Bean
         public ProductServiceImpl productService() {
-            return new ProductServiceImpl(productRepository);
+            return new ProductServiceImpl(productRepository, manufacturerRepository, categoryRepository);
         }
     }
 }

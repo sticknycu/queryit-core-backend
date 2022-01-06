@@ -2,7 +2,10 @@ package ro.nicolaemariusghergu.queryit.executor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.stereotype.Component;
+import ro.nicolaemariusghergu.queryit.service.ProductService;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
@@ -16,6 +19,9 @@ import java.nio.channels.ReadableByteChannel;
 public class ExecutorHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorHandler.class);
+
+    @Autowired
+    ProductService productService;
 
     public static void downloadData(String url, String name) throws IOException {
         URL website = new URL(url);
@@ -37,8 +43,9 @@ public class ExecutorHandler {
     }
 
     @PostConstruct
-    private void init() {
+    private void init() throws JSONException, IOException {
         LOGGER.info("ExecutorHandler has started. Starting collecting the data...");
+        productService.handleDataFromWeb();
     }
 
 }

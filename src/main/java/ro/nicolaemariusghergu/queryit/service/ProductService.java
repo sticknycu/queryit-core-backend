@@ -21,5 +21,4 @@ public interface ProductService {
     List<Product> findAllByPrice(Double price);
 
     void handleDataFromWeb() throws JSONException, IOException;
-
 }
