@@ -12,9 +12,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class ProductDto extends Product {
 
-    private String price;
+    private Double price;
 
     private LocalDateTime deliveryData;
 
     private Integer quantity;
+
+    private String iconUrl;
+
+    private String manufacturerName;
 }
