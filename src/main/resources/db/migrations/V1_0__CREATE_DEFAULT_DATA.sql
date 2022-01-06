@@ -57,6 +57,7 @@ CREATE TABLE IF NOT EXISTS
         name VARCHAR,
         price FLOAT,
         quantity INTEGER,
+        icon_url VARCHAR,
 
         PRIMARY KEY (product_id),
 

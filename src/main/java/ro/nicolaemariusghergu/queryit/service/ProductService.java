@@ -1,5 +1,6 @@
 package ro.nicolaemariusghergu.queryit.service;
 
+import com.sun.istack.NotNull;
 import org.springframework.lang.NonNull;
 import ro.nicolaemariusghergu.queryit.model.Product;
 
@@ -25,4 +26,7 @@ public interface ProductService {
     <S extends Product> S saveAndFlush(S entity);
 
     <S extends Product> List<S> saveAllAndFlush(Iterable<S> entities);
+
+    @NonNull
+    void deleteById(@NotNull Long id);
 }

@@ -1,5 +1,6 @@
 package ro.nicolaemariusghergu.queryit.repository;
 
+import com.sun.istack.NotNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
@@ -34,4 +35,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Override
     <S extends Product> List<S> saveAll(Iterable<S> entities);
+
+    @NonNull
+    @Override
+    void deleteById(@NotNull Long id);
 }

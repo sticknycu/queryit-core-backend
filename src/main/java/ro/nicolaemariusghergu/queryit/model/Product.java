@@ -28,6 +28,9 @@ public class Product implements Serializable {
     @Column(name = "quantity")
     private Integer quantity;
 
+    @Column(name = "icon_url")
+    private String iconUrl;
+
     @ToString.Exclude
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)

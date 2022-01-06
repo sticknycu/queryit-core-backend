@@ -8,7 +8,6 @@ import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.stereotype.Component;
-import ro.nicolaemariusghergu.queryit.dto.ProductDto;
 import ro.nicolaemariusghergu.queryit.model.Category;
 import ro.nicolaemariusghergu.queryit.model.Manufacturer;
 import ro.nicolaemariusghergu.queryit.model.Product;
@@ -144,18 +143,18 @@ public class ExecutorHandler {
                         .getJSONObject(j)
                         .getString("name");
 
+                String urlImage = jsonArray.getJSONObject(j)
+                        .getJSONArray("images")
+                        .getJSONObject(2) // the correct array for url icon
+                        .getString("url");
+                String iconUrl = baseLinkImages + urlImage;
+
                 // daca nu gasesc item-ul in database
                 if (productService.findByName(productName).isEmpty()) {
                     Double price = jsonArray
                             .getJSONObject(j)
                             .getJSONObject("price")
                             .getDouble("value");
-
-                    String urlImage = jsonArray.getJSONObject(j)
-                            .getJSONArray("images")
-                            .getJSONObject(2) // the correct array for url icon
-                            .getString("url");
-                    String iconUrl = baseLinkImages + urlImage;
 
 
                     String manufacturerName = jsonArray
@@ -170,28 +169,20 @@ public class ExecutorHandler {
                     product.setPrice(price);
                     product.setQuantity(new IntegerRangeRandomizer(1, 50).getRandomValue());
                     product.setCategory(category);
+                    product.setIconUrl(iconUrl);
 
                     Manufacturer manufacturer = manufacturerService.findByName(manufacturerName).get();
                     product.setManufacturer(manufacturer);
 
-                    ProductDto productDto = new ProductDto();
-                    productDto.setId(product.getId());
-                    productDto.setName(product.getName());
-                    productDto.setPrice(product.getPrice());
-                    productDto.setQuantity(product.getQuantity());
-                    productDto.setCategory(product.getCategory());
-                    productDto.setManufacturer(product.getManufacturer());
-                    productDto.setIconUrl(iconUrl);
-
                     productService.saveAndFlush(product);
-
-                    System.out.println(productDto);
+                    System.out.println(product);
                 }
             }
         }
 
         LOGGER.info("Saved collected data to database!");
 
+        //TODO: LOGGER.info("Randomizing data for other tables....");
     }
 
     private String readAll(Reader rd) throws IOException {
