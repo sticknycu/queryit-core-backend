@@ -15,4 +15,8 @@ public interface MiniMarketService {
     List<MiniMarket> findAll();
 
     Optional<MiniMarket> findByName(String name);
+
+    <S extends MiniMarket> S save(S entity);
+
+    <S extends MiniMarket> List<S> saveAll(Iterable<S> entities);
 }

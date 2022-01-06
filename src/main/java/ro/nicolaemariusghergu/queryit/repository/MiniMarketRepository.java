@@ -20,4 +20,10 @@ public interface MiniMarketRepository extends JpaRepository<MiniMarket, Long> {
     List<MiniMarket> findAll();
 
     Optional<MiniMarket> findByName(String name);
+
+    @Override
+    <S extends MiniMarket> S save(S entity);
+
+    @Override
+    <S extends MiniMarket> List<S> saveAll(Iterable<S> entities);
 }

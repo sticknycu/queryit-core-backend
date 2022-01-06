@@ -28,4 +28,14 @@ public record MiniMarketServiceImpl(MiniMarketRepository miniMarketRepository) i
     public Optional<MiniMarket> findByName(String name) {
         return miniMarketRepository.findByName(name);
     }
+
+    @Override
+    public <S extends MiniMarket> S save(S entity) {
+        return miniMarketRepository.save(entity);
+    }
+
+    @Override
+    public <S extends MiniMarket> List<S> saveAll(Iterable<S> entities) {
+        return miniMarketRepository.saveAll(entities);
+    }
 }

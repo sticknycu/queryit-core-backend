@@ -22,4 +22,16 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Optional<Product> findByName(String name);
 
     List<Product> findAllByPrice(Double price);
+
+    @Override
+    <S extends Product> S save(S entity);
+
+    @Override
+    <S extends Product> S saveAndFlush(S entity);
+
+    @Override
+    <S extends Product> List<S> saveAllAndFlush(Iterable<S> entities);
+
+    @Override
+    <S extends Product> List<S> saveAll(Iterable<S> entities);
 }

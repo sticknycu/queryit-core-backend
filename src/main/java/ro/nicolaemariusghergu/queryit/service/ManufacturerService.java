@@ -15,4 +15,12 @@ public interface ManufacturerService {
     List<Manufacturer> findAll();
 
     Optional<Manufacturer> findByName(String name);
+
+    <S extends Manufacturer> S save(S entity);
+
+    <S extends Manufacturer> S saveAndFlush(S entity);
+
+    <S extends Manufacturer> List<S> saveAll(Iterable<S> entities);
+
+    <S extends Manufacturer> List<S> saveAllAndFlush(Iterable<S> entities);
 }

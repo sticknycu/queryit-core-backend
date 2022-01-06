@@ -15,4 +15,12 @@ public interface CategoryService {
     List<Category> findAll();
 
     Optional<Category> findByName(String name);
+
+    <S extends Category> S save(S entity);
+
+    <S extends Category> S saveAndFlush(S entity);
+
+    <S extends Category> List<S> saveAll(Iterable<S> entities);
+
+    <S extends Category> List<S> saveAllAndFlush(Iterable<S> entities);
 }

@@ -20,4 +20,10 @@ public interface PromotionRepository extends JpaRepository<Promotion, Long> {
     List<Promotion> findAll();
 
     List<Promotion> findByName(String name);
+
+    @Override
+    <S extends Promotion> S save(S entity);
+
+    @Override
+    <S extends Promotion> List<S> saveAll(Iterable<S> entities);
 }

@@ -28,4 +28,14 @@ public record TruckServiceImpl(TruckRepository truckRepository) implements Truck
     public Optional<Truck> findBySerialNumber(String serialNumber) {
         return truckRepository.findBySerialNumber(serialNumber);
     }
+
+    @Override
+    public <S extends Truck> S save(S entity) {
+        return truckRepository.save(entity);
+    }
+
+    @Override
+    public <S extends Truck> List<S> saveAll(Iterable<S> entities) {
+        return truckRepository.saveAll(entities);
+    }
 }

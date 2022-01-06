@@ -28,4 +28,14 @@ public record DepositServiceImpl(DepositRepository depositRepository) implements
     public Optional<Deposit> findByName(String name) {
         return depositRepository.findByName(name);
     }
+
+    @Override
+    public <S extends Deposit> S save(S entity) {
+        return depositRepository.save(entity);
+    }
+
+    @Override
+    public <S extends Deposit> List<S> saveAll(Iterable<S> entities) {
+        return depositRepository.saveAll(entities);
+    }
 }

@@ -20,4 +20,10 @@ public interface DepositRepository extends JpaRepository<Deposit, Long> {
     List<Deposit> findAll();
 
     Optional<Deposit> findByName(String name);
+
+    @Override
+    <S extends Deposit> S save(S entity);
+
+    @Override
+    <S extends Deposit> List<S> saveAll(Iterable<S> entities);
 }

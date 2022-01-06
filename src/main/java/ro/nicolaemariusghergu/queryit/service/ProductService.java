@@ -1,10 +1,8 @@
 package ro.nicolaemariusghergu.queryit.service;
 
-import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.lang.NonNull;
 import ro.nicolaemariusghergu.queryit.model.Product;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,5 +18,11 @@ public interface ProductService {
 
     List<Product> findAllByPrice(Double price);
 
-    void handleDataFromWeb() throws JSONException, IOException;
+    <S extends Product> S save(S entity);
+
+    <S extends Product> List<S> saveAll(Iterable<S> entities);
+
+    <S extends Product> S saveAndFlush(S entity);
+
+    <S extends Product> List<S> saveAllAndFlush(Iterable<S> entities);
 }

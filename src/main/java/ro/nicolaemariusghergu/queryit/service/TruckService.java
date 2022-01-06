@@ -15,4 +15,8 @@ public interface TruckService {
     List<Truck> findAll();
 
     Optional<Truck> findBySerialNumber(String serialNumber);
+
+    <S extends Truck> S save(S entity);
+
+    <S extends Truck> List<S> saveAll(Iterable<S> entities);
 }

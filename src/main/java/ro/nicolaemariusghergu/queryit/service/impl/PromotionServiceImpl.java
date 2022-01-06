@@ -28,4 +28,14 @@ public record PromotionServiceImpl(PromotionRepository promotionRepository) impl
     public List<Promotion> findByName(String name) {
         return promotionRepository.findByName(name);
     }
+
+    @Override
+    public <S extends Promotion> S save(S entity) {
+        return promotionRepository.save(entity);
+    }
+
+    @Override
+    public <S extends Promotion> List<S> saveAll(Iterable<S> entities) {
+        return promotionRepository.saveAll(entities);
+    }
 }

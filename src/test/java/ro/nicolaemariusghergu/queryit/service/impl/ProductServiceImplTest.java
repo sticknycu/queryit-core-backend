@@ -33,7 +33,7 @@ class ProductServiceImplTest {
 
     @Test
     void whenGetDataFromWebsiteThenShowResult() throws JSONException, IOException {
-        productService.handleDataFromWeb();
+        //productService.handleDataFromWeb();
     }
 
     @TestConfiguration
@@ -41,7 +41,7 @@ class ProductServiceImplTest {
 
         @Bean
         public ProductServiceImpl productService() {
-            return new ProductServiceImpl(productRepository, manufacturerRepository, categoryRepository);
+            return new ProductServiceImpl(productRepository);
         }
     }
 }

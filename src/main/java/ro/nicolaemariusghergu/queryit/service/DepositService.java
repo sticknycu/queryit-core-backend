@@ -15,4 +15,8 @@ public interface DepositService {
     List<Deposit> findAll();
 
     Optional<Deposit> findByName(String name);
+
+    <S extends Deposit> S save(S entity);
+
+    <S extends Deposit> List<S> saveAll(Iterable<S> entities);
 }

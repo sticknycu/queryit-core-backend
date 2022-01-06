@@ -20,4 +20,16 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     List<Category> findAll();
 
     Optional<Category> findByName(String name);
+
+    @Override
+    <S extends Category> S save(S entity);
+
+    @Override
+    <S extends Category> S saveAndFlush(S entity);
+
+    @Override
+    <S extends Category> List<S> saveAll(Iterable<S> entities);
+
+    @Override
+    <S extends Category> List<S> saveAllAndFlush(Iterable<S> entities);
 }

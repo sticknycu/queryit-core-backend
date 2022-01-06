@@ -20,4 +20,16 @@ public interface ManufacturerRepository extends JpaRepository<Manufacturer, Long
     List<Manufacturer> findAll();
 
     Optional<Manufacturer> findByName(String name);
+
+    @Override
+    <S extends Manufacturer> S save(S entity);
+
+    @Override
+    <S extends Manufacturer> S saveAndFlush(S entity);
+
+    @Override
+    <S extends Manufacturer> List<S> saveAll(Iterable<S> entities);
+
+    @Override
+    <S extends Manufacturer> List<S> saveAllAndFlush(Iterable<S> entities);
 }

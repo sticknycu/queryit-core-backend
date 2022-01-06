@@ -28,4 +28,24 @@ public record ManufacturerServiceImpl(ManufacturerRepository manufacturerReposit
     public Optional<Manufacturer> findByName(String name) {
         return manufacturerRepository.findByName(name);
     }
+
+    @Override
+    public <S extends Manufacturer> S save(S entity) {
+        return manufacturerRepository.save(entity);
+    }
+
+    @Override
+    public <S extends Manufacturer> S saveAndFlush(S entity) {
+        return manufacturerRepository.saveAndFlush(entity);
+    }
+
+    @Override
+    public <S extends Manufacturer> List<S> saveAll(Iterable<S> entities) {
+        return manufacturerRepository.saveAll(entities);
+    }
+
+    @Override
+    public <S extends Manufacturer> List<S> saveAllAndFlush(Iterable<S> entities) {
+        return manufacturerRepository.saveAllAndFlush(entities);
+    }
 }

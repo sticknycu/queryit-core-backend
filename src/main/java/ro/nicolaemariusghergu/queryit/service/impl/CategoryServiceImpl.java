@@ -28,4 +28,24 @@ public record CategoryServiceImpl(CategoryRepository categoryRepository) impleme
     public Optional<Category> findByName(String name) {
         return categoryRepository.findByName(name);
     }
+
+    @Override
+    public <S extends Category> S save(S entity) {
+        return categoryRepository.save(entity);
+    }
+
+    @Override
+    public <S extends Category> S saveAndFlush(S entity) {
+        return categoryRepository.saveAndFlush(entity);
+    }
+
+    @Override
+    public <S extends Category> List<S> saveAll(Iterable<S> entities) {
+        return categoryRepository.saveAll(entities);
+    }
+
+    @Override
+    public <S extends Category> List<S> saveAllAndFlush(Iterable<S> entities) {
+        return categoryRepository.saveAllAndFlush(entities);
+    }
 }

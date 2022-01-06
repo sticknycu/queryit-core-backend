@@ -15,4 +15,8 @@ public interface PromotionService {
     List<Promotion> findAll();
 
     List<Promotion> findByName(String name);
+
+    <S extends Promotion> S save(S entity);
+
+    <S extends Promotion> List<S> saveAll(Iterable<S> entities);
 }

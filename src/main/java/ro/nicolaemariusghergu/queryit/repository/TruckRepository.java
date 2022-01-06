@@ -20,4 +20,10 @@ public interface TruckRepository extends JpaRepository<Truck, Long> {
     List<Truck> findAll();
 
     Optional<Truck> findBySerialNumber(String serialNumber);
+
+    @Override
+    <S extends Truck> S save(S entity);
+
+    @Override
+    <S extends Truck> List<S> saveAll(Iterable<S> entities);
 }
