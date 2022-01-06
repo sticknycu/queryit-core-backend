@@ -40,13 +40,37 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
 
     @Override
     public void handleDataFromWeb() throws JSONException, IOException {
-        // hardcoded website to get mega image products
-        String website = "https://api.mega-image.ro/?operationName=QlProductList&variables=%7B%22productListingType%22%3A%22PROMOTION_SEARCH%22%2C%22lang%22%3A%22ro%22%2C%22productCodes%22%3A%22%22%2C%22categoryCode%22%3A%22%22%2C%22excludedProductCodes%22%3A%22%22%2C%22brands%22%3A%22%22%2C%22keywords%22%3A%22%22%2C%22productTypes%22%3A%22%22%2C%22numberOfItemsToDisplay%22%3A40%2C%22lazyLoadCount%22%3A10%2C%22pageNumber%22%3A0%2C%22sort%22%3A%22%22%2C%22searchQuery%22%3A%22%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%227002669566907d507d1d3697aee939727738ff5d8a3e07e42aa5f7ee21305cc7%22%7D%7D";
-        JSONObject jsonObject = readJsonFromUrl(website);
-        JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONObject("qlProductList").getJSONArray("products");
-        for (int i = 0; i < jsonArray.length(); i++) {
-            JSONObject productObject = jsonArray.getJSONObject(i);
-            System.out.println("Name: " + productObject.get("name"));
+        // hardcoded website to get mega image products from promotions, I need some data , lol , i stole some from you guys, sorry
+        String baseLink = "https://api.mega-image.ro/?operationName=GetCategoryProductSearch&variables=%7B%22lang%22%3A%22ro%22%2C%22searchQuery%22%3A%22%22%2C%22category%22%3A%220--%22%2C%22pageNumber%22%3A0%2C%22pageSize%22%3A20%2C%22filterFlag%22%3Atrue%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22bdb32b6dc09b8ee0bce785e0a6799c6ff2593a8d1fd2a4ad2ac66cf3e999fdf5%22%7D%7D";
+        // deoarece avem 15 categorii
+        for (int i = 1; i <= 15; i++) {
+            String word;
+            if (i >= 10) {
+                word = "" + i;
+            } else {
+                word = "0" + i;
+            }
+            System.out.println("Avem site-ul numarul " + i);
+            String dataLink = baseLink.replace("--", word);
+            System.out.println("Site-ul este " + dataLink);
+            JSONObject jsonObject = readJsonFromUrl(dataLink);
+            JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONObject("categoryProductSearch").getJSONArray("products");
+            for (int j = 0; j < jsonArray.length(); j++) {
+                String productName = jsonArray.getJSONObject(j).get("name").toString();
+                String category = jsonObject.getJSONObject("data")
+                        .getJSONObject("categoryProductSearch")
+                        .getJSONArray("categorySearchTree")
+                        .getJSONObject(0)
+                        .getJSONArray("categoryDataList")
+                        .getJSONObject(0)
+                        .getJSONObject("categoryData")
+                        .getJSONObject("facetData")
+                        .get("name")
+                        .toString();
+                System.out.println();
+                System.out.println("Pentru categoria " + category + " avem urmatoarele produse:");
+                System.out.println("Name: " + productName);
+            }
         }
     }
 
