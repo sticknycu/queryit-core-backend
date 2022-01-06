@@ -54,8 +54,9 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
         return productRepository.saveAllAndFlush(entities);
     }
 
+    @NonNull
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(@NonNull Long id) {
         productRepository.deleteById(id);
     }
 

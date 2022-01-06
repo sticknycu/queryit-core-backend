@@ -26,4 +26,8 @@ public interface PromotionRepository extends JpaRepository<Promotion, Long> {
 
     @Override
     <S extends Promotion> List<S> saveAll(Iterable<S> entities);
+
+    @NonNull
+    @Override
+    void deleteById(@NonNull Long id);
 }

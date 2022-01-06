@@ -19,4 +19,7 @@ public interface PromotionService {
     <S extends Promotion> S save(S entity);
 
     <S extends Promotion> List<S> saveAll(Iterable<S> entities);
+
+    @NonNull
+    void deleteById(@NonNull Long id);
 }

@@ -38,4 +38,10 @@ public record PromotionServiceImpl(PromotionRepository promotionRepository) impl
     public <S extends Promotion> List<S> saveAll(Iterable<S> entities) {
         return promotionRepository.saveAll(entities);
     }
+
+    @NonNull
+    @Override
+    public void deleteById(@NonNull Long id) {
+        promotionRepository.deleteById(id);
+    }
 }
