@@ -84,9 +84,9 @@ public record ProductServiceImpl(ProductRepository productRepository, Manufactur
         Set<Manufacturer> manufacturers = new HashSet<>();
         Set<Product> products = new HashSet<>();
 
-        Long productId = 0L;
-        Long manufacturerId = 0L;
-        Long categoryId = 0L;
+        long productId = 0L;
+        long manufacturerId = 0L;
+        long categoryId = 0L;
         // deoarece avem 15 categorii
         for (int i = 1; i <= 15; i++) {
             String word;
@@ -162,11 +162,12 @@ public record ProductServiceImpl(ProductRepository productRepository, Manufactur
                 productDto.setName(product.getName());
                 productDto.setPrice(product.getPrice());
                 productDto.setQuantity(product.getQuantity());
+                productDto.setCategory(product.getCategory());
+                productDto.setManufacturer(product.getManufacturer());
                 productDto.setIconUrl(iconUrl);
 
                 products.add(product);
                 manufacturers.add(manufacturer);
-                //productDto.setManufacturerName(manufacturerName);
 
                 System.out.println(productDto);
             }
@@ -174,8 +175,20 @@ public record ProductServiceImpl(ProductRepository productRepository, Manufactur
 
         LOGGER.info("Saving collected data to database...");
 
-        categoryRepository.saveAll(categories);
-        manufacturerRepository.saveAll(manufacturers);
-        productRepository.saveAll(products);
+        categories.forEach(category -> {
+            if (categoryRepository.findByName(category.getName()).isEmpty()) {
+                categoryRepository.save(category);
+            }
+        });
+        manufacturers.forEach(manufacturer -> {
+            if (manufacturerRepository.findByName(manufacturer.getName()).isEmpty()) {
+                manufacturerRepository.save(manufacturer);
+            }
+        });
+        products.forEach(product -> {
+            if (productRepository.findByName(product.getName()).isEmpty()) {
+                productRepository.save(product);
+            }
+        });
     }
 }
