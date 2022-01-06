@@ -2,7 +2,6 @@ package ro.nicolaemariusghergu.queryit.service.impl;
 
 import org.jeasy.random.EasyRandom;
 import org.jeasy.random.EasyRandomParameters;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -13,12 +12,9 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import ro.nicolaemariusghergu.queryit.exceptions.ResourceNotFoundException;
-import ro.nicolaemariusghergu.queryit.model.data.TypePay;
 import ro.nicolaemariusghergu.queryit.model.data.TypeStatus;
-import ro.nicolaemariusghergu.queryit.repository.data.TypePayRepository;
 import ro.nicolaemariusghergu.queryit.repository.data.TypeStatusRepository;
 import ro.nicolaemariusghergu.queryit.service.data.TypeStatusService;
-import ro.nicolaemariusghergu.queryit.service.impl.data.TypePayServiceImpl;
 import ro.nicolaemariusghergu.queryit.service.impl.data.TypeStatusServiceImpl;
 
 import java.util.Optional;
@@ -38,15 +34,6 @@ class TypeStatusServiceImplTest {
     @MockBean
     TypeStatusRepository typeStatusRepository;
 
-    @TestConfiguration
-    class TypeStatusServiceImplTestContextConfiguration {
-
-        @Bean
-        public TypeStatusServiceImpl typeStatusService() {
-            return new TypeStatusServiceImpl(typeStatusRepository);
-        }
-    }
-
     @BeforeEach
     void configurateBeans() {
         EasyRandom easyRandom = new EasyRandom(new EasyRandomParameters().collectionSizeRange(1, 2));
@@ -64,7 +51,6 @@ class TypeStatusServiceImplTest {
                 .when(typeStatusRepository.findByType(TYPE))
                 .thenReturn(Optional.of(typeStatusRandomized));
     }
-
 
     @Test
     void whenFindByIdthenReturnTypePay() {
@@ -86,5 +72,14 @@ class TypeStatusServiceImplTest {
         found.ifPresentOrElse(typePayFounded -> assertNotNull(typePayFounded.getId()), () -> {
             throw new ResourceNotFoundException("Resource requested has not been found");
         });
+    }
+
+    @TestConfiguration
+    class TypeStatusServiceImplTestContextConfiguration {
+
+        @Bean
+        public TypeStatusServiceImpl typeStatusService() {
+            return new TypeStatusServiceImpl(typeStatusRepository);
+        }
     }
 }

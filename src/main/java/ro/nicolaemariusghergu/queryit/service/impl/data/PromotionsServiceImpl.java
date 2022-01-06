@@ -1,6 +1,5 @@
 package ro.nicolaemariusghergu.queryit.service.impl.data;
 
-import lombok.NonNull;
 import org.springframework.stereotype.Service;
 import ro.nicolaemariusghergu.queryit.model.Promotions;
 import ro.nicolaemariusghergu.queryit.repository.data.PromotionsRepository;

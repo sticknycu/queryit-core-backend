@@ -1,7 +1,5 @@
 package ro.nicolaemariusghergu.queryit.service.impl.data;
 
-import com.fasterxml.jackson.databind.json.JsonMapper;
-import org.jeasy.random.randomizers.number.IntegerRandomizer;
 import org.jeasy.random.randomizers.range.IntegerRangeRandomizer;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
@@ -15,21 +13,36 @@ import ro.nicolaemariusghergu.queryit.model.data.ShelfCategory;
 import ro.nicolaemariusghergu.queryit.repository.ProductRepository;
 import ro.nicolaemariusghergu.queryit.service.data.ProductService;
 
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DatatypeConverter;
 import java.io.*;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.Executor;
 
 @Service
 public record ProductServiceImpl(ProductRepository productRepository) implements ProductService {
+
+    private static String readAll(Reader rd) throws IOException {
+        StringBuilder sb = new StringBuilder();
+        int cp;
+        while ((cp = rd.read()) != -1) {
+            sb.append((char) cp);
+        }
+        return sb.toString();
+    }
+
+    public static JSONObject readJsonFromUrl(String url) throws IOException, JSONException {
+        InputStream is = new URL(url).openStream();
+        try {
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+            String jsonText = readAll(rd);
+            JSONObject json = new JSONObject(jsonText);
+            return json;
+        } finally {
+            is.close();
+        }
+    }
 
     @Override
     public Optional<Product> findById(Long id) {
@@ -121,27 +134,6 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
 
                 System.out.println(productDto);
             }
-        }
-    }
-
-    private static String readAll(Reader rd) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        int cp;
-        while ((cp = rd.read()) != -1) {
-            sb.append((char) cp);
-        }
-        return sb.toString();
-    }
-
-    public static JSONObject readJsonFromUrl(String url) throws IOException, JSONException {
-        InputStream is = new URL(url).openStream();
-        try {
-            BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
-            String jsonText = readAll(rd);
-            JSONObject json = new JSONObject(jsonText);
-            return json;
-        } finally {
-            is.close();
         }
     }
 }

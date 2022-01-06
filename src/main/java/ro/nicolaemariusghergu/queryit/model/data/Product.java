@@ -1,6 +1,8 @@
 package ro.nicolaemariusghergu.queryit.model.data;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,1 +1,2909 @@
-{"data":{"categoryProductSearch":{"products":[{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"365","manufacturerSubBrandName":null,"code":"32537","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h02/hd1/9082421542942.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h9c/hb0/9082421477406.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h3f/hf4/9082421805086.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h45/h9d/9082421411870.jpg","__typename":"Image"}],"maxOrderQuantity":24,"limitedAssortment":false,"name":"Servetele umede pentru copii 80 bucati","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"5,49 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"5,49 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"5,49 ","unitCode":"pieces","unitPrice":5.49,"value":5.49,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-pentru-copii-80-bucati/p/32537","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Pampers","manufacturerSubBrandName":null,"code":"58652","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/ha3/h46/9081304121374.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h35/h8d/9081304055838.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/hcb/hdc/9081304383518.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/hf6/hf7/9081303990302.jpg","__typename":"Image"}],"maxOrderQuantity":24,"limitedAssortment":false,"name":"Servetele umede Fresh Clean, 52 bucati","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"5,87 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"5,87 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"5,87 ","unitCode":"pieces","unitPrice":5.87,"value":5.87,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-Fresh-Clean-52-bucati/p/58652","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Huggies","manufacturerSubBrandName":"Pure","code":"51280","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h56/h94/9091856039966.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/hd5/hf0/9091855974430.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/hf9/h39/9091856302110.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h6d/h11/9091855908894.jpg","__typename":"Image"}],"maxOrderQuantity":8,"limitedAssortment":false,"name":"Servetele umede 3x56 bucati","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"13,98 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"13,98 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"13,98 ","unitCode":"pieces","unitPrice":13.98,"value":13.98,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-3x56-bucati/p/51280","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Ok Mama","manufacturerSubBrandName":null,"code":"9333","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h6f/h8a/8948507377694.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h5b/h55/8948507312158.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h3a/hec/8948507639838.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h7b/hd4/8948507246622.jpg","__typename":"Image"}],"maxOrderQuantity":18,"limitedAssortment":false,"name":"Servetele umede pentru bebelusi 120 bucati","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"11,87 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"11,87 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"11,87 ","unitCode":"pieces","unitPrice":11.87,"value":11.87,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-pentru-bebelusi-120-bucati/p/9333","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Pampers","manufacturerSubBrandName":"Sensitive","code":"74227","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h9b/hf8/9081313296414.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/hbe/hf1/9081313230878.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h62/h36/9081313558558.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/had/h75/9081313165342.jpg","__typename":"Image"}],"maxOrderQuantity":14,"limitedAssortment":false,"name":"Servetele umede pentru bebelusi 48 buc","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"9,21 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"9,21 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"9,21 ","unitCode":"pieces","unitPrice":9.21,"value":9.21,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-pentru-bebelusi-48-buc/p/74227","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Hipp","manufacturerSubBrandName":null,"code":"82960","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h3b/hc2/8954902642718.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h08/h7a/8954902577182.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h12/h6f/8954902904862.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h0d/hac/8954902511646.jpg","__typename":"Image"}],"maxOrderQuantity":12,"limitedAssortment":false,"name":"Apa pentru copii  1.5L","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"8,75 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":"5.83 Lei/L","showStrikethroughPrice":false,"discountedPriceFormatted":"8,75 Lei","discountedUnitPriceFormatted":"8.75 Lei/L","unit":"piece","unitPriceFormatted":"8,75 ","unitCode":"pieces","unitPrice":8.75,"value":8.75,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Biberoane-si-tetine/Apa-pentru-copii-1-5L/p/82960","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Expert wipes","manufacturerSubBrandName":null,"code":"58170","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/hf9/ha2/8993270956062.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/hc4/h81/8993270890526.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/haf/h2d/8993271218206.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h84/h9c/8993270824990.jpg","__typename":"Image"}],"maxOrderQuantity":16,"limitedAssortment":false,"name":"Servetele umede dezinfectante Kids 15 bucati","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"3,87 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"3,87 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"3,87 ","unitCode":"pieces","unitPrice":3.87,"value":3.87,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-dezinfectante-Kids-15-bucati/p/58170","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Delhaize","manufacturerSubBrandName":null,"code":"24709","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h34/ha4/9007066382366.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h2e/h85/9007066316830.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/hc4/hd4/9007066644510.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h13/hca/9007066251294.jpg","__typename":"Image"}],"maxOrderQuantity":20,"limitedAssortment":false,"name":"Pungi parfumate pentru scutece, 100 bucati","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"6,50 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"6,50 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"6,50 ","unitCode":"pieces","unitPrice":6.5,"value":6.5,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Scutece/Pungi-parfumate-pentru-scutece-100-bucati/p/24709","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Happy","manufacturerSubBrandName":null,"code":"69915","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/hdb/h18/9020913483806.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/ha7/h57/9020913418270.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/hd7/hb5/9020913745950.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/hdc/h78/9020913352734.jpg","__typename":"Image"}],"maxOrderQuantity":12,"limitedAssortment":false,"name":"Cearsaf absorbant 90x60cm 5 bucati","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"13,32 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"13,32 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"13,32 ","unitCode":"pieces","unitPrice":13.32,"value":13.32,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Scutece/Cearsaf-absorbant-90x60cm-5-bucati/p/69915","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Noriel","manufacturerSubBrandName":null,"code":"18575","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h7f/h87/9084569321502.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h5f/h58/9084569223198.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/hfd/h2e/9084602384414.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h95/hf4/9084569059358.jpg","__typename":"Image"}],"maxOrderQuantity":6,"limitedAssortment":false,"name":"Joc de societate - Mare branza!","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"47,99 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"47,99 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"47,99 ","unitCode":"pieces","unitPrice":47.99,"value":47.99,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/Jucarii-copii/Joc-de-societate-Mare-branza-/p/18575","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Bio Junior","manufacturerSubBrandName":null,"code":"99570","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h3e/h24/9064930246686.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/ha1/h6a/9064930181150.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h45/hab/9064930508830.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h4a/h6e/9064930115614.jpg","__typename":"Image"}],"maxOrderQuantity":12,"limitedAssortment":false,"name":"Cereale eco Petale de ciocolata 250g","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"16,49 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":"65.96 Lei/Kg","showStrikethroughPrice":false,"discountedPriceFormatted":"16,49 Lei","discountedUnitPriceFormatted":"16.49 Lei/Kg","unit":"piece","unitPriceFormatted":"16,49 ","unitCode":"pieces","unitPrice":16.49,"value":16.49,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Cereale-eco-Petale-de-ciocolata-250g/p/99570","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Noriel","manufacturerSubBrandName":null,"code":"38244","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h8a/hf2/9084605399070.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h70/hdb/9084605333534.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/hda/h8b/9084605661214.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h42/h4f/9084605267998.jpg","__typename":"Image"}],"maxOrderQuantity":24,"limitedAssortment":false,"name":"Joc educativ - Ghici! Tara mea","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"22,90 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"22,90 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"22,90 ","unitCode":"pieces","unitPrice":22.9,"value":22.9,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/Jucarii-copii/Joc-educativ-Ghici-Tara-mea/p/38244","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Nivea","manufacturerSubBrandName":"Baby","code":"15890","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/had/h2c/8965469077534.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h06/h17/8965469011998.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h55/ha4/8965469339678.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h17/h79/8965468946462.jpg","__typename":"Image"}],"maxOrderQuantity":12,"limitedAssortment":false,"name":"Sapun crema  100g","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"4,19 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":"41.90 Lei/Kg","showStrikethroughPrice":false,"discountedPriceFormatted":"4,19 Lei","discountedUnitPriceFormatted":"4.19 Lei/Kg","unit":"piece","unitPriceFormatted":"4,19 ","unitCode":"pieces","unitPrice":4.19,"value":4.19,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Sampon-si-sapun/Sapun-crema-100g/p/15890","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Pampers","manufacturerSubBrandName":null,"code":"46287","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h74/h87/9081278693406.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/hd3/h96/9081278627870.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h3d/h47/9081278955550.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h42/h0a/9081278562334.jpg","__typename":"Image"}],"maxOrderQuantity":10,"limitedAssortment":false,"name":"Servetele umede Sensitive, 6x52buc","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"33,99 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":null,"showStrikethroughPrice":false,"discountedPriceFormatted":"33,99 Lei","discountedUnitPriceFormatted":"","unit":"piece","unitPriceFormatted":"33,99 ","unitCode":"pieces","unitPrice":33.99,"value":33.99,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-Sensitive-6x52buc/p/46287","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Organix","manufacturerSubBrandName":"Goodies","code":"3356","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/he2/h1c/8932867768350.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/he7/h4e/8932867702814.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/hde/h6a/8932868030494.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h24/h77/8932867637278.jpg","__typename":"Image"}],"maxOrderQuantity":12,"limitedAssortment":false,"name":"Batoane ecologice pentru copii 12+ din ovaz integral cu mere si portocale 180g","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"24,20 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":"134.44 Lei/Kg","showStrikethroughPrice":false,"discountedPriceFormatted":"24,20 Lei","discountedUnitPriceFormatted":"24.20 Lei/Kg","unit":"piece","unitPriceFormatted":"24,20 ","unitCode":"pieces","unitPrice":24.2,"value":24.2,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Batoane-ecologice-pentru-copii-12-din-ovaz-integral-cu-mere-si-portocale-180g/p/3356","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Organix","manufacturerSubBrandName":"Goodies","code":"94675","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/haf/h66/8954838745118.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h2d/hf5/8954838679582.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/hf5/h53/8954839007262.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h07/h2b/8954838614046.jpg","__typename":"Image"}],"maxOrderQuantity":10,"limitedAssortment":false,"name":"Biscuiti ecologici in forma de animale 100g","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"15,70 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":"157.00 Lei/Kg","showStrikethroughPrice":false,"discountedPriceFormatted":"15,70 Lei","discountedUnitPriceFormatted":"15.70 Lei/Kg","unit":"piece","unitPriceFormatted":"15,70 ","unitCode":"pieces","unitPrice":15.7,"value":15.7,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Biscuiti-ecologici-in-forma-de-animale-100g/p/94675","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Finger","manufacturerSubBrandName":null,"code":"3358","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h54/h2a/8947527024670.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/hc1/hbc/8947526959134.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h1a/hf9/8947527286814.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h5d/hda/8947526893598.jpg","__typename":"Image"}],"maxOrderQuantity":14,"limitedAssortment":false,"name":"Rondele ecologice din orez cu mere +7 luni 50g","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"17,01 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":"340.20 Lei/Kg","showStrikethroughPrice":false,"discountedPriceFormatted":"17,01 Lei","discountedUnitPriceFormatted":"17.01 Lei/Kg","unit":"piece","unitPriceFormatted":"17,01 ","unitCode":"pieces","unitPrice":17.01,"value":17.01,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Rondele-ecologice-din-orez-cu-mere-7-luni-50g/p/3358","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Aquafresh","manufacturerSubBrandName":null,"code":"15700","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/hdd/ha7/8972857147422.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/hfc/h3e/8972857081886.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h25/h29/8972857409566.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h25/h16/8972857016350.jpg","__typename":"Image"}],"maxOrderQuantity":12,"limitedAssortment":false,"name":"Pasta de dinti Big teeth, 6-8 ani 50ml","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"6,54 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":"130.80 Lei/L","showStrikethroughPrice":false,"discountedPriceFormatted":"6,54 Lei","discountedUnitPriceFormatted":"6.54 Lei/L","unit":"piece","unitPriceFormatted":"6,54 ","unitCode":"pieces","unitPrice":6.54,"value":6.54,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Ingrijire-dentara/Pasta-de-dinti-Big-teeth-6-8-ani-50ml/p/15700","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Bio Junior","manufacturerSubBrandName":null,"code":"99573","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h2c/h10/8931187130398.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/h56/he6/8931187064862.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/h14/hca/8931187392542.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/he8/h53/8931186999326.jpg","__typename":"Image"}],"maxOrderQuantity":12,"limitedAssortment":false,"name":"Cereale eco Bulgarasi cu miere 250g","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"20,99 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":"83.96 Lei/Kg","showStrikethroughPrice":false,"discountedPriceFormatted":"20,99 Lei","discountedUnitPriceFormatted":"20.99 Lei/Kg","unit":"piece","unitPriceFormatted":"20,99 ","unitCode":"pieces","unitPrice":20.99,"value":20.99,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Cereale-eco-Bulgarasi-cu-miere-250g/p/99573","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"},{"available":true,"averageRating":null,"numberOfReviews":null,"manufacturerName":"Organix","manufacturerSubBrandName":null,"code":"28391","badges":[],"badgeBrand":null,"promoBadges":null,"freshnessDuration":null,"freshnessDurationTipFormatted":null,"frozen":null,"recyclable":null,"images":[{"format":"thumbnail","imageType":"PRIMARY","url":"/medias/sys_master/h23/hd7/8988518973470.jpg","__typename":"Image"},{"format":"thumbnailGrid","imageType":"PRIMARY","url":"/medias/sys_master/hc8/h01/8988518907934.jpg","__typename":"Image"},{"format":"respListGrid","imageType":"PRIMARY","url":"/medias/sys_master/hd9/h61/8988519235614.jpg","__typename":"Image"},{"format":"zoom","imageType":"PRIMARY","url":"/medias/sys_master/h1c/h43/8988518842398.jpg","__typename":"Image"}],"maxOrderQuantity":20,"limitedAssortment":false,"name":"Jeleu ecologic sub forma de vacute cu mar si zmeura 12g","onlineExclusive":null,"potentialPromotions":[],"price":{"approximatePriceSymbol":"","currencySymbol":"Lei","formattedValue":"7,14 Lei","priceType":"BUY","supplementaryPriceLabel1":null,"supplementaryPriceLabel2":"595.00 Lei/Kg","showStrikethroughPrice":false,"discountedPriceFormatted":"7,14 Lei","discountedUnitPriceFormatted":"7.14 Lei/Kg","unit":"piece","unitPriceFormatted":"7,14 ","unitCode":"pieces","unitPrice":7.14,"value":7.14,"__typename":"Price"},"purchasable":null,"productProposedPackaging":1,"productProposedPackaging2":null,"stock":{"inStock":true,"inStockBeforeMaxAdvanceOrderingDate":false,"partiallyInStock":false,"availableFromDate":null,"__typename":"Stock"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Piure/Jeleu-ecologic-sub-forma-de-vacute-cu-mar-si-zmeura-12g/p/28391","previouslyBought":false,"nutriScoreLetter":null,"isLowPriceGuarantee":null,"__typename":"Product"}],"breadcrumbs":[],"facets":[{"code":"isBio","name":"Produse BIO","category":false,"facetUiType":"QUICK_FILTER","values":[{"code":"true","count":57,"name":"true","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:isBio:true","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"}],"__typename":"Facet"},{"code":"manufacturerNameFacet","name":"Brand","category":false,"facetUiType":null,"values":[{"code":"365","count":1,"name":"365","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:365","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Alce Nero","count":2,"name":"Alce Nero","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Alce+Nero","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Annabel Karmel","count":9,"name":"Annabel Karmel","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Annabel+Karmel","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Aquafresh","count":2,"name":"Aquafresh","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Aquafresh","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Bear","count":3,"name":"Bear","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Bear","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Bio Junior","count":3,"name":"Bio Junior","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Bio+Junior","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Cattier","count":3,"name":"Cattier","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Cattier","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Colgate","count":1,"name":"Colgate","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Colgate","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Delhaize","count":21,"name":"Delhaize","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Delhaize","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Dove","count":1,"name":"Dove","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Dove","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Ecosi","count":1,"name":"Ecosi","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Ecosi","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Ecowell","count":3,"name":"Ecowell","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Ecowell","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Evian","count":1,"name":"Evian","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Evian","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Expert wipes","count":2,"name":"Expert wipes","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Expert+wipes","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Finger","count":1,"name":"Finger","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Finger","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Goodies","count":1,"name":"Goodies","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Goodies","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Happy","count":1,"name":"Happy","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Happy","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Hero","count":2,"name":"Hero","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Hero","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Hero Baby","count":6,"name":"Hero Baby","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Hero+Baby","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Hipp","count":37,"name":"Hipp","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Hipp","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Holle","count":13,"name":"Holle","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Holle","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Huggies","count":23,"name":"Huggies","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Huggies","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Johnson's Baby","count":16,"name":"Johnson's Baby","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Johnson%26%23x27%3Bs+Baby","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Manuka Health","count":1,"name":"Manuka Health","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Manuka+Health","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Milupa","count":12,"name":"Milupa","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Milupa","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Mogli","count":8,"name":"Mogli","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Mogli","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Moltex","count":6,"name":"Moltex","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Moltex","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"NAN Comfortis","count":3,"name":"NAN Comfortis","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:NAN+Comfortis","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Nebiolina","count":5,"name":"Nebiolina","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Nebiolina","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Nivea","count":8,"name":"Nivea","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Nivea","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Noriel","count":6,"name":"Noriel","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Noriel","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Nutricia","count":4,"name":"Nutricia","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Nutricia","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Officina Naturae","count":3,"name":"Officina Naturae","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Officina+Naturae","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Ok Mama","count":2,"name":"Ok Mama","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Ok+Mama","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"On Line","count":7,"name":"On Line","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:On+Line","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Oral-B","count":4,"name":"Oral-B","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Oral-B","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Organix","count":28,"name":"Organix","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Organix","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Palmer's","count":2,"name":"Palmer's","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Palmer%26%23x27%3Bs","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Pampers","count":54,"name":"Pampers","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Pampers","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Parodontax","count":2,"name":"Parodontax","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Parodontax","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Petrini","count":1,"name":"Petrini","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Petrini","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Pierrot","count":3,"name":"Pierrot","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Pierrot","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Pro Natura","count":1,"name":"Pro Natura","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Pro+Natura","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Pufies","count":7,"name":"Pufies","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Pufies","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"RoStar","count":2,"name":"RoStar","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:RoStar","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Sabio","count":1,"name":"Sabio","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Sabio","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Sanosan","count":6,"name":"Sanosan","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Sanosan","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Sav Com","count":8,"name":"Sav Com","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Sav+Com","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Super Touch","count":1,"name":"Super Touch","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Super+Touch","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Susy Card","count":15,"name":"Susy Card","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Susy+Card","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Synek Kids","count":3,"name":"Synek Kids","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Synek+Kids","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Vademecum","count":1,"name":"Vademecum","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Vademecum","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"Weleda","count":5,"name":"Weleda","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Weleda","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"}],"__typename":"Facet"},{"code":"offers","name":"Oferte","category":false,"facetUiType":"QUICK_FILTER","values":[{"code":"true","count":9,"name":"true","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:offers:true","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"}],"__typename":"Facet"},{"code":"ownBrands","name":"Branduri proprii","category":false,"facetUiType":"QUICK_FILTER","values":[{"code":"true","count":22,"name":"true","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:ownBrands:true","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"}],"__typename":"Facet"},{"code":"budgetRangeFacet","name":"Pret","category":false,"facetUiType":"LONG_MULTI_SELECT_LIST","values":[{"code":"<50RON","count":288,"name":"<50RON","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:budgetRangeFacet:%26lt%3B50RON","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":"50RON-100RON","count":56,"name":"50RON-100RON","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:budgetRangeFacet:50RON-100RON","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"},{"code":">100RON","count":18,"name":">100RON","query":{"query":{"value":"categoryIdentifier=011&searchQuery=:relevance:budgetRangeFacet:%26gt%3B100RON","__typename":"InternalPageQuery"},"__typename":"PageQuery"},"selected":false,"__typename":"FacetValue"}],"__typename":"Facet"}],"sorts":[{"name":"Relevanta","selected":true,"code":"relevance","__typename":"Sort"},{"name":"Pret Bucata","selected":false,"code":"price-piece","__typename":"Sort"},{"name":"Alfabetic Produs","selected":false,"code":"product","__typename":"Sort"}],"pagination":{"currentPage":0,"totalResults":362,"totalPages":19,"sort":"relevance","__typename":"Pagination"},"currentQuery":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/c/011?q=%3Arelevance","__typename":"PageQuery"},"categorySearchTree":[{"categoryDataList":[{"categoryCode":"011","categoryData":{"facetData":{"count":362,"name":"Mama si ingrijire copil","nameNonLocalized":"Mama si ingrijire copil","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/c/011?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":["011002","011001","011003"],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"}],"level":"1","__typename":"CategorySearchTreeLevel"},{"categoryDataList":[{"categoryCode":"011001","categoryData":{"facetData":{"count":132,"name":"Hrana copii si bebelusi","nameNonLocalized":"Hrana copii si bebelusi","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/c/011001?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":["011001002","011001004","011001003","011001005","011001001"],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011002","categoryData":{"facetData":{"count":188,"name":"Ingrijire","nameNonLocalized":"Ingrijire","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Ingrijire/c/011002?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":["011002003","011002002","011002001","011002004","011002006","011002005"],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011003","categoryData":{"facetData":{"count":42,"name":"Jucarii si accesorii petrecere","nameNonLocalized":"Jucarii si accesorii petrecere","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/c/011003?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":["011003003","011003001"],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"}],"level":"2","__typename":"CategorySearchTreeLevel"},{"categoryDataList":[{"categoryCode":"011001001","categoryData":{"facetData":{"count":1,"name":"Biberoane si tetine","nameNonLocalized":"Biberoane si tetine","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Biberoane-si-tetine/c/011001001?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011001002","categoryData":{"facetData":{"count":62,"name":"Cereale si biscuiti","nameNonLocalized":"Cereale si biscuiti","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/c/011001002?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011001003","categoryData":{"facetData":{"count":15,"name":"Formule de lapte","nameNonLocalized":"Formule de lapte","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Formule-de-lapte/c/011001003?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011001004","categoryData":{"facetData":{"count":50,"name":"Piure","nameNonLocalized":"Piure","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Piure/c/011001004?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011001005","categoryData":{"facetData":{"count":4,"name":"Altele","nameNonLocalized":"Altele","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Altele/c/011001005?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011002001","categoryData":{"facetData":{"count":20,"name":"Ingrijire dentara","nameNonLocalized":"Ingrijire dentara","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Ingrijire-dentara/c/011002001?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011002002","categoryData":{"facetData":{"count":55,"name":"Sampon si sapun","nameNonLocalized":"Sampon si sapun","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Sampon-si-sapun/c/011002002?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011002003","categoryData":{"facetData":{"count":93,"name":"Scutece","nameNonLocalized":"Scutece","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Scutece/c/011002003?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011002004","categoryData":{"facetData":{"count":11,"name":"Servetele umede bebelusi","nameNonLocalized":"Servetele umede bebelusi","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/c/011002004?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011002005","categoryData":{"facetData":{"count":3,"name":"Articole gravide","nameNonLocalized":"Articole gravide","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Articole-gravide/c/011002005?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011002006","categoryData":{"facetData":{"count":6,"name":"Altele","nameNonLocalized":"Altele","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Ingrijire/Altele/c/011002006?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011003001","categoryData":{"facetData":{"count":7,"name":"Jucarii copii","nameNonLocalized":"Jucarii copii","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/Jucarii-copii/c/011003001?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"},{"categoryCode":"011003003","categoryData":{"facetData":{"count":35,"name":"Accesorii petrecere","nameNonLocalized":"Accesorii petrecere","query":{"query":{"value":":relevance","__typename":"InternalPageQuery"},"url":"/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/Accesorii-petrecere/c/011003003?q=%3Arelevance","__typename":"PageQuery"},"selected":false,"__typename":"CategorySearchTreeFacetData"},"subCategories":[],"__typename":"CategorySearchTreeData"},"__typename":"CategorySearchTreeLevelDataList"}],"level":"3","__typename":"CategorySearchTreeLevel"}],"__typename":"CategoryProductSearchList"}}}
+{
+  "data": {
+    "categoryProductSearch": {
+      "products": [
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "365",
+          "manufacturerSubBrandName": null,
+          "code": "32537",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h02/hd1/9082421542942.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h9c/hb0/9082421477406.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h3f/hf4/9082421805086.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h45/h9d/9082421411870.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 24,
+          "limitedAssortment": false,
+          "name": "Servetele umede pentru copii 80 bucati",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "5,49 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "5,49 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "5,49 ",
+            "unitCode": "pieces",
+            "unitPrice": 5.49,
+            "value": 5.49,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-pentru-copii-80-bucati/p/32537",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Pampers",
+          "manufacturerSubBrandName": null,
+          "code": "58652",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/ha3/h46/9081304121374.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h35/h8d/9081304055838.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hcb/hdc/9081304383518.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hf6/hf7/9081303990302.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 24,
+          "limitedAssortment": false,
+          "name": "Servetele umede Fresh Clean, 52 bucati",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "5,87 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "5,87 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "5,87 ",
+            "unitCode": "pieces",
+            "unitPrice": 5.87,
+            "value": 5.87,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-Fresh-Clean-52-bucati/p/58652",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Huggies",
+          "manufacturerSubBrandName": "Pure",
+          "code": "51280",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h56/h94/9091856039966.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hd5/hf0/9091855974430.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hf9/h39/9091856302110.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h6d/h11/9091855908894.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 8,
+          "limitedAssortment": false,
+          "name": "Servetele umede 3x56 bucati",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "13,98 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "13,98 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "13,98 ",
+            "unitCode": "pieces",
+            "unitPrice": 13.98,
+            "value": 13.98,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-3x56-bucati/p/51280",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Ok Mama",
+          "manufacturerSubBrandName": null,
+          "code": "9333",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h6f/h8a/8948507377694.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h5b/h55/8948507312158.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h3a/hec/8948507639838.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h7b/hd4/8948507246622.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 18,
+          "limitedAssortment": false,
+          "name": "Servetele umede pentru bebelusi 120 bucati",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "11,87 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "11,87 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "11,87 ",
+            "unitCode": "pieces",
+            "unitPrice": 11.87,
+            "value": 11.87,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-pentru-bebelusi-120-bucati/p/9333",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Pampers",
+          "manufacturerSubBrandName": "Sensitive",
+          "code": "74227",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h9b/hf8/9081313296414.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hbe/hf1/9081313230878.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h62/h36/9081313558558.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/had/h75/9081313165342.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 14,
+          "limitedAssortment": false,
+          "name": "Servetele umede pentru bebelusi 48 buc",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "9,21 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "9,21 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "9,21 ",
+            "unitCode": "pieces",
+            "unitPrice": 9.21,
+            "value": 9.21,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-pentru-bebelusi-48-buc/p/74227",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Hipp",
+          "manufacturerSubBrandName": null,
+          "code": "82960",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h3b/hc2/8954902642718.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h08/h7a/8954902577182.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h12/h6f/8954902904862.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h0d/hac/8954902511646.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 12,
+          "limitedAssortment": false,
+          "name": "Apa pentru copii  1.5L",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "8,75 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": "5.83 Lei/L",
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "8,75 Lei",
+            "discountedUnitPriceFormatted": "8.75 Lei/L",
+            "unit": "piece",
+            "unitPriceFormatted": "8,75 ",
+            "unitCode": "pieces",
+            "unitPrice": 8.75,
+            "value": 8.75,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Biberoane-si-tetine/Apa-pentru-copii-1-5L/p/82960",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Expert wipes",
+          "manufacturerSubBrandName": null,
+          "code": "58170",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hf9/ha2/8993270956062.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hc4/h81/8993270890526.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/haf/h2d/8993271218206.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h84/h9c/8993270824990.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 16,
+          "limitedAssortment": false,
+          "name": "Servetele umede dezinfectante Kids 15 bucati",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "3,87 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "3,87 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "3,87 ",
+            "unitCode": "pieces",
+            "unitPrice": 3.87,
+            "value": 3.87,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-dezinfectante-Kids-15-bucati/p/58170",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Delhaize",
+          "manufacturerSubBrandName": null,
+          "code": "24709",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h34/ha4/9007066382366.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h2e/h85/9007066316830.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hc4/hd4/9007066644510.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h13/hca/9007066251294.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 20,
+          "limitedAssortment": false,
+          "name": "Pungi parfumate pentru scutece, 100 bucati",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "6,50 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "6,50 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "6,50 ",
+            "unitCode": "pieces",
+            "unitPrice": 6.5,
+            "value": 6.5,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Scutece/Pungi-parfumate-pentru-scutece-100-bucati/p/24709",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Happy",
+          "manufacturerSubBrandName": null,
+          "code": "69915",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hdb/h18/9020913483806.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/ha7/h57/9020913418270.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hd7/hb5/9020913745950.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hdc/h78/9020913352734.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 12,
+          "limitedAssortment": false,
+          "name": "Cearsaf absorbant 90x60cm 5 bucati",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "13,32 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "13,32 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "13,32 ",
+            "unitCode": "pieces",
+            "unitPrice": 13.32,
+            "value": 13.32,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Scutece/Cearsaf-absorbant-90x60cm-5-bucati/p/69915",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Noriel",
+          "manufacturerSubBrandName": null,
+          "code": "18575",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h7f/h87/9084569321502.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h5f/h58/9084569223198.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hfd/h2e/9084602384414.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h95/hf4/9084569059358.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 6,
+          "limitedAssortment": false,
+          "name": "Joc de societate - Mare branza!",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "47,99 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "47,99 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "47,99 ",
+            "unitCode": "pieces",
+            "unitPrice": 47.99,
+            "value": 47.99,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/Jucarii-copii/Joc-de-societate-Mare-branza-/p/18575",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Bio Junior",
+          "manufacturerSubBrandName": null,
+          "code": "99570",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h3e/h24/9064930246686.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/ha1/h6a/9064930181150.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h45/hab/9064930508830.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h4a/h6e/9064930115614.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 12,
+          "limitedAssortment": false,
+          "name": "Cereale eco Petale de ciocolata 250g",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "16,49 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": "65.96 Lei/Kg",
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "16,49 Lei",
+            "discountedUnitPriceFormatted": "16.49 Lei/Kg",
+            "unit": "piece",
+            "unitPriceFormatted": "16,49 ",
+            "unitCode": "pieces",
+            "unitPrice": 16.49,
+            "value": 16.49,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Cereale-eco-Petale-de-ciocolata-250g/p/99570",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Noriel",
+          "manufacturerSubBrandName": null,
+          "code": "38244",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h8a/hf2/9084605399070.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h70/hdb/9084605333534.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hda/h8b/9084605661214.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h42/h4f/9084605267998.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 24,
+          "limitedAssortment": false,
+          "name": "Joc educativ - Ghici! Tara mea",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "22,90 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "22,90 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "22,90 ",
+            "unitCode": "pieces",
+            "unitPrice": 22.9,
+            "value": 22.9,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/Jucarii-copii/Joc-educativ-Ghici-Tara-mea/p/38244",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Nivea",
+          "manufacturerSubBrandName": "Baby",
+          "code": "15890",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/had/h2c/8965469077534.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h06/h17/8965469011998.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h55/ha4/8965469339678.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h17/h79/8965468946462.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 12,
+          "limitedAssortment": false,
+          "name": "Sapun crema  100g",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "4,19 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": "41.90 Lei/Kg",
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "4,19 Lei",
+            "discountedUnitPriceFormatted": "4.19 Lei/Kg",
+            "unit": "piece",
+            "unitPriceFormatted": "4,19 ",
+            "unitCode": "pieces",
+            "unitPrice": 4.19,
+            "value": 4.19,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Sampon-si-sapun/Sapun-crema-100g/p/15890",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Pampers",
+          "manufacturerSubBrandName": null,
+          "code": "46287",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h74/h87/9081278693406.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hd3/h96/9081278627870.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h3d/h47/9081278955550.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h42/h0a/9081278562334.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 10,
+          "limitedAssortment": false,
+          "name": "Servetele umede Sensitive, 6x52buc",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "33,99 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": null,
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "33,99 Lei",
+            "discountedUnitPriceFormatted": "",
+            "unit": "piece",
+            "unitPriceFormatted": "33,99 ",
+            "unitCode": "pieces",
+            "unitPrice": 33.99,
+            "value": 33.99,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/Servetele-umede-Sensitive-6x52buc/p/46287",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Organix",
+          "manufacturerSubBrandName": "Goodies",
+          "code": "3356",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/he2/h1c/8932867768350.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/he7/h4e/8932867702814.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hde/h6a/8932868030494.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h24/h77/8932867637278.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 12,
+          "limitedAssortment": false,
+          "name": "Batoane ecologice pentru copii 12+ din ovaz integral cu mere si portocale 180g",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "24,20 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": "134.44 Lei/Kg",
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "24,20 Lei",
+            "discountedUnitPriceFormatted": "24.20 Lei/Kg",
+            "unit": "piece",
+            "unitPriceFormatted": "24,20 ",
+            "unitCode": "pieces",
+            "unitPrice": 24.2,
+            "value": 24.2,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Batoane-ecologice-pentru-copii-12-din-ovaz-integral-cu-mere-si-portocale-180g/p/3356",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Organix",
+          "manufacturerSubBrandName": "Goodies",
+          "code": "94675",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/haf/h66/8954838745118.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h2d/hf5/8954838679582.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hf5/h53/8954839007262.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h07/h2b/8954838614046.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 10,
+          "limitedAssortment": false,
+          "name": "Biscuiti ecologici in forma de animale 100g",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "15,70 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": "157.00 Lei/Kg",
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "15,70 Lei",
+            "discountedUnitPriceFormatted": "15.70 Lei/Kg",
+            "unit": "piece",
+            "unitPriceFormatted": "15,70 ",
+            "unitCode": "pieces",
+            "unitPrice": 15.7,
+            "value": 15.7,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Biscuiti-ecologici-in-forma-de-animale-100g/p/94675",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Finger",
+          "manufacturerSubBrandName": null,
+          "code": "3358",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h54/h2a/8947527024670.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hc1/hbc/8947526959134.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h1a/hf9/8947527286814.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h5d/hda/8947526893598.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 14,
+          "limitedAssortment": false,
+          "name": "Rondele ecologice din orez cu mere +7 luni 50g",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "17,01 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": "340.20 Lei/Kg",
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "17,01 Lei",
+            "discountedUnitPriceFormatted": "17.01 Lei/Kg",
+            "unit": "piece",
+            "unitPriceFormatted": "17,01 ",
+            "unitCode": "pieces",
+            "unitPrice": 17.01,
+            "value": 17.01,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Rondele-ecologice-din-orez-cu-mere-7-luni-50g/p/3358",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Aquafresh",
+          "manufacturerSubBrandName": null,
+          "code": "15700",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hdd/ha7/8972857147422.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hfc/h3e/8972857081886.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h25/h29/8972857409566.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h25/h16/8972857016350.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 12,
+          "limitedAssortment": false,
+          "name": "Pasta de dinti Big teeth, 6-8 ani 50ml",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "6,54 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": "130.80 Lei/L",
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "6,54 Lei",
+            "discountedUnitPriceFormatted": "6.54 Lei/L",
+            "unit": "piece",
+            "unitPriceFormatted": "6,54 ",
+            "unitCode": "pieces",
+            "unitPrice": 6.54,
+            "value": 6.54,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Ingrijire/Ingrijire-dentara/Pasta-de-dinti-Big-teeth-6-8-ani-50ml/p/15700",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Bio Junior",
+          "manufacturerSubBrandName": null,
+          "code": "99573",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h2c/h10/8931187130398.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h56/he6/8931187064862.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h14/hca/8931187392542.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/he8/h53/8931186999326.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 12,
+          "limitedAssortment": false,
+          "name": "Cereale eco Bulgarasi cu miere 250g",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "20,99 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": "83.96 Lei/Kg",
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "20,99 Lei",
+            "discountedUnitPriceFormatted": "20.99 Lei/Kg",
+            "unit": "piece",
+            "unitPriceFormatted": "20,99 ",
+            "unitCode": "pieces",
+            "unitPrice": 20.99,
+            "value": 20.99,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/Cereale-eco-Bulgarasi-cu-miere-250g/p/99573",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        },
+        {
+          "available": true,
+          "averageRating": null,
+          "numberOfReviews": null,
+          "manufacturerName": "Organix",
+          "manufacturerSubBrandName": null,
+          "code": "28391",
+          "badges": [],
+          "badgeBrand": null,
+          "promoBadges": null,
+          "freshnessDuration": null,
+          "freshnessDurationTipFormatted": null,
+          "frozen": null,
+          "recyclable": null,
+          "images": [
+            {
+              "format": "thumbnail",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h23/hd7/8988518973470.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "thumbnailGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hc8/h01/8988518907934.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "respListGrid",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/hd9/h61/8988519235614.jpg",
+              "__typename": "Image"
+            },
+            {
+              "format": "zoom",
+              "imageType": "PRIMARY",
+              "url": "/medias/sys_master/h1c/h43/8988518842398.jpg",
+              "__typename": "Image"
+            }
+          ],
+          "maxOrderQuantity": 20,
+          "limitedAssortment": false,
+          "name": "Jeleu ecologic sub forma de vacute cu mar si zmeura 12g",
+          "onlineExclusive": null,
+          "potentialPromotions": [],
+          "price": {
+            "approximatePriceSymbol": "",
+            "currencySymbol": "Lei",
+            "formattedValue": "7,14 Lei",
+            "priceType": "BUY",
+            "supplementaryPriceLabel1": null,
+            "supplementaryPriceLabel2": "595.00 Lei/Kg",
+            "showStrikethroughPrice": false,
+            "discountedPriceFormatted": "7,14 Lei",
+            "discountedUnitPriceFormatted": "7.14 Lei/Kg",
+            "unit": "piece",
+            "unitPriceFormatted": "7,14 ",
+            "unitCode": "pieces",
+            "unitPrice": 7.14,
+            "value": 7.14,
+            "__typename": "Price"
+          },
+          "purchasable": null,
+          "productProposedPackaging": 1,
+          "productProposedPackaging2": null,
+          "stock": {
+            "inStock": true,
+            "inStockBeforeMaxAdvanceOrderingDate": false,
+            "partiallyInStock": false,
+            "availableFromDate": null,
+            "__typename": "Stock"
+          },
+          "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Piure/Jeleu-ecologic-sub-forma-de-vacute-cu-mar-si-zmeura-12g/p/28391",
+          "previouslyBought": false,
+          "nutriScoreLetter": null,
+          "isLowPriceGuarantee": null,
+          "__typename": "Product"
+        }
+      ],
+      "breadcrumbs": [],
+      "facets": [
+        {
+          "code": "isBio",
+          "name": "Produse BIO",
+          "category": false,
+          "facetUiType": "QUICK_FILTER",
+          "values": [
+            {
+              "code": "true",
+              "count": 57,
+              "name": "true",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:isBio:true",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            }
+          ],
+          "__typename": "Facet"
+        },
+        {
+          "code": "manufacturerNameFacet",
+          "name": "Brand",
+          "category": false,
+          "facetUiType": null,
+          "values": [
+            {
+              "code": "365",
+              "count": 1,
+              "name": "365",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:365",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Alce Nero",
+              "count": 2,
+              "name": "Alce Nero",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Alce+Nero",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Annabel Karmel",
+              "count": 9,
+              "name": "Annabel Karmel",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Annabel+Karmel",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Aquafresh",
+              "count": 2,
+              "name": "Aquafresh",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Aquafresh",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Bear",
+              "count": 3,
+              "name": "Bear",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Bear",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Bio Junior",
+              "count": 3,
+              "name": "Bio Junior",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Bio+Junior",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Cattier",
+              "count": 3,
+              "name": "Cattier",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Cattier",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Colgate",
+              "count": 1,
+              "name": "Colgate",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Colgate",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Delhaize",
+              "count": 21,
+              "name": "Delhaize",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Delhaize",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Dove",
+              "count": 1,
+              "name": "Dove",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Dove",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Ecosi",
+              "count": 1,
+              "name": "Ecosi",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Ecosi",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Ecowell",
+              "count": 3,
+              "name": "Ecowell",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Ecowell",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Evian",
+              "count": 1,
+              "name": "Evian",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Evian",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Expert wipes",
+              "count": 2,
+              "name": "Expert wipes",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Expert+wipes",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Finger",
+              "count": 1,
+              "name": "Finger",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Finger",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Goodies",
+              "count": 1,
+              "name": "Goodies",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Goodies",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Happy",
+              "count": 1,
+              "name": "Happy",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Happy",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Hero",
+              "count": 2,
+              "name": "Hero",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Hero",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Hero Baby",
+              "count": 6,
+              "name": "Hero Baby",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Hero+Baby",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Hipp",
+              "count": 37,
+              "name": "Hipp",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Hipp",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Holle",
+              "count": 13,
+              "name": "Holle",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Holle",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Huggies",
+              "count": 23,
+              "name": "Huggies",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Huggies",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Johnson's Baby",
+              "count": 16,
+              "name": "Johnson's Baby",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Johnson%26%23x27%3Bs+Baby",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Manuka Health",
+              "count": 1,
+              "name": "Manuka Health",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Manuka+Health",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Milupa",
+              "count": 12,
+              "name": "Milupa",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Milupa",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Mogli",
+              "count": 8,
+              "name": "Mogli",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Mogli",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Moltex",
+              "count": 6,
+              "name": "Moltex",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Moltex",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "NAN Comfortis",
+              "count": 3,
+              "name": "NAN Comfortis",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:NAN+Comfortis",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Nebiolina",
+              "count": 5,
+              "name": "Nebiolina",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Nebiolina",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Nivea",
+              "count": 8,
+              "name": "Nivea",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Nivea",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Noriel",
+              "count": 6,
+              "name": "Noriel",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Noriel",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Nutricia",
+              "count": 4,
+              "name": "Nutricia",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Nutricia",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Officina Naturae",
+              "count": 3,
+              "name": "Officina Naturae",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Officina+Naturae",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Ok Mama",
+              "count": 2,
+              "name": "Ok Mama",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Ok+Mama",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "On Line",
+              "count": 7,
+              "name": "On Line",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:On+Line",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Oral-B",
+              "count": 4,
+              "name": "Oral-B",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Oral-B",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Organix",
+              "count": 28,
+              "name": "Organix",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Organix",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Palmer's",
+              "count": 2,
+              "name": "Palmer's",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Palmer%26%23x27%3Bs",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Pampers",
+              "count": 54,
+              "name": "Pampers",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Pampers",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Parodontax",
+              "count": 2,
+              "name": "Parodontax",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Parodontax",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Petrini",
+              "count": 1,
+              "name": "Petrini",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Petrini",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Pierrot",
+              "count": 3,
+              "name": "Pierrot",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Pierrot",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Pro Natura",
+              "count": 1,
+              "name": "Pro Natura",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Pro+Natura",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Pufies",
+              "count": 7,
+              "name": "Pufies",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Pufies",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "RoStar",
+              "count": 2,
+              "name": "RoStar",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:RoStar",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Sabio",
+              "count": 1,
+              "name": "Sabio",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Sabio",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Sanosan",
+              "count": 6,
+              "name": "Sanosan",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Sanosan",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Sav Com",
+              "count": 8,
+              "name": "Sav Com",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Sav+Com",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Super Touch",
+              "count": 1,
+              "name": "Super Touch",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Super+Touch",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Susy Card",
+              "count": 15,
+              "name": "Susy Card",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Susy+Card",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Synek Kids",
+              "count": 3,
+              "name": "Synek Kids",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Synek+Kids",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Vademecum",
+              "count": 1,
+              "name": "Vademecum",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Vademecum",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "Weleda",
+              "count": 5,
+              "name": "Weleda",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:manufacturerNameFacet:Weleda",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            }
+          ],
+          "__typename": "Facet"
+        },
+        {
+          "code": "offers",
+          "name": "Oferte",
+          "category": false,
+          "facetUiType": "QUICK_FILTER",
+          "values": [
+            {
+              "code": "true",
+              "count": 9,
+              "name": "true",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:offers:true",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            }
+          ],
+          "__typename": "Facet"
+        },
+        {
+          "code": "ownBrands",
+          "name": "Branduri proprii",
+          "category": false,
+          "facetUiType": "QUICK_FILTER",
+          "values": [
+            {
+              "code": "true",
+              "count": 22,
+              "name": "true",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:ownBrands:true",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            }
+          ],
+          "__typename": "Facet"
+        },
+        {
+          "code": "budgetRangeFacet",
+          "name": "Pret",
+          "category": false,
+          "facetUiType": "LONG_MULTI_SELECT_LIST",
+          "values": [
+            {
+              "code": "<50RON",
+              "count": 288,
+              "name": "<50RON",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:budgetRangeFacet:%26lt%3B50RON",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": "50RON-100RON",
+              "count": 56,
+              "name": "50RON-100RON",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:budgetRangeFacet:50RON-100RON",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            },
+            {
+              "code": ">100RON",
+              "count": 18,
+              "name": ">100RON",
+              "query": {
+                "query": {
+                  "value": "categoryIdentifier=011&searchQuery=:relevance:budgetRangeFacet:%26gt%3B100RON",
+                  "__typename": "InternalPageQuery"
+                },
+                "__typename": "PageQuery"
+              },
+              "selected": false,
+              "__typename": "FacetValue"
+            }
+          ],
+          "__typename": "Facet"
+        }
+      ],
+      "sorts": [
+        {
+          "name": "Relevanta",
+          "selected": true,
+          "code": "relevance",
+          "__typename": "Sort"
+        },
+        {
+          "name": "Pret Bucata",
+          "selected": false,
+          "code": "price-piece",
+          "__typename": "Sort"
+        },
+        {
+          "name": "Alfabetic Produs",
+          "selected": false,
+          "code": "product",
+          "__typename": "Sort"
+        }
+      ],
+      "pagination": {
+        "currentPage": 0,
+        "totalResults": 362,
+        "totalPages": 19,
+        "sort": "relevance",
+        "__typename": "Pagination"
+      },
+      "currentQuery": {
+        "query": {
+          "value": ":relevance",
+          "__typename": "InternalPageQuery"
+        },
+        "url": "/Mama-si-ingrijire-copil/c/011?q=%3Arelevance",
+        "__typename": "PageQuery"
+      },
+      "categorySearchTree": [
+        {
+          "categoryDataList": [
+            {
+              "categoryCode": "011",
+              "categoryData": {
+                "facetData": {
+                  "count": 362,
+                  "name": "Mama si ingrijire copil",
+                  "nameNonLocalized": "Mama si ingrijire copil",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/c/011?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [
+                  "011002",
+                  "011001",
+                  "011003"
+                ],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            }
+          ],
+          "level": "1",
+          "__typename": "CategorySearchTreeLevel"
+        },
+        {
+          "categoryDataList": [
+            {
+              "categoryCode": "011001",
+              "categoryData": {
+                "facetData": {
+                  "count": 132,
+                  "name": "Hrana copii si bebelusi",
+                  "nameNonLocalized": "Hrana copii si bebelusi",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/c/011001?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [
+                  "011001002",
+                  "011001004",
+                  "011001003",
+                  "011001005",
+                  "011001001"
+                ],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011002",
+              "categoryData": {
+                "facetData": {
+                  "count": 188,
+                  "name": "Ingrijire",
+                  "nameNonLocalized": "Ingrijire",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Ingrijire/c/011002?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [
+                  "011002003",
+                  "011002002",
+                  "011002001",
+                  "011002004",
+                  "011002006",
+                  "011002005"
+                ],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011003",
+              "categoryData": {
+                "facetData": {
+                  "count": 42,
+                  "name": "Jucarii si accesorii petrecere",
+                  "nameNonLocalized": "Jucarii si accesorii petrecere",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/c/011003?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [
+                  "011003003",
+                  "011003001"
+                ],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            }
+          ],
+          "level": "2",
+          "__typename": "CategorySearchTreeLevel"
+        },
+        {
+          "categoryDataList": [
+            {
+              "categoryCode": "011001001",
+              "categoryData": {
+                "facetData": {
+                  "count": 1,
+                  "name": "Biberoane si tetine",
+                  "nameNonLocalized": "Biberoane si tetine",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Biberoane-si-tetine/c/011001001?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011001002",
+              "categoryData": {
+                "facetData": {
+                  "count": 62,
+                  "name": "Cereale si biscuiti",
+                  "nameNonLocalized": "Cereale si biscuiti",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Cereale-si-biscuiti/c/011001002?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011001003",
+              "categoryData": {
+                "facetData": {
+                  "count": 15,
+                  "name": "Formule de lapte",
+                  "nameNonLocalized": "Formule de lapte",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Formule-de-lapte/c/011001003?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011001004",
+              "categoryData": {
+                "facetData": {
+                  "count": 50,
+                  "name": "Piure",
+                  "nameNonLocalized": "Piure",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Piure/c/011001004?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011001005",
+              "categoryData": {
+                "facetData": {
+                  "count": 4,
+                  "name": "Altele",
+                  "nameNonLocalized": "Altele",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Hrana-copii-si-bebelusi/Altele/c/011001005?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011002001",
+              "categoryData": {
+                "facetData": {
+                  "count": 20,
+                  "name": "Ingrijire dentara",
+                  "nameNonLocalized": "Ingrijire dentara",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Ingrijire/Ingrijire-dentara/c/011002001?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011002002",
+              "categoryData": {
+                "facetData": {
+                  "count": 55,
+                  "name": "Sampon si sapun",
+                  "nameNonLocalized": "Sampon si sapun",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Ingrijire/Sampon-si-sapun/c/011002002?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011002003",
+              "categoryData": {
+                "facetData": {
+                  "count": 93,
+                  "name": "Scutece",
+                  "nameNonLocalized": "Scutece",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Ingrijire/Scutece/c/011002003?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011002004",
+              "categoryData": {
+                "facetData": {
+                  "count": 11,
+                  "name": "Servetele umede bebelusi",
+                  "nameNonLocalized": "Servetele umede bebelusi",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Ingrijire/Servetele-umede-bebelusi/c/011002004?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011002005",
+              "categoryData": {
+                "facetData": {
+                  "count": 3,
+                  "name": "Articole gravide",
+                  "nameNonLocalized": "Articole gravide",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Ingrijire/Articole-gravide/c/011002005?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011002006",
+              "categoryData": {
+                "facetData": {
+                  "count": 6,
+                  "name": "Altele",
+                  "nameNonLocalized": "Altele",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Ingrijire/Altele/c/011002006?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011003001",
+              "categoryData": {
+                "facetData": {
+                  "count": 7,
+                  "name": "Jucarii copii",
+                  "nameNonLocalized": "Jucarii copii",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/Jucarii-copii/c/011003001?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            },
+            {
+              "categoryCode": "011003003",
+              "categoryData": {
+                "facetData": {
+                  "count": 35,
+                  "name": "Accesorii petrecere",
+                  "nameNonLocalized": "Accesorii petrecere",
+                  "query": {
+                    "query": {
+                      "value": ":relevance",
+                      "__typename": "InternalPageQuery"
+                    },
+                    "url": "/Mama-si-ingrijire-copil/Jucarii-si-accesorii-petrecere/Accesorii-petrecere/c/011003003?q=%3Arelevance",
+                    "__typename": "PageQuery"
+                  },
+                  "selected": false,
+                  "__typename": "CategorySearchTreeFacetData"
+                },
+                "subCategories": [],
+                "__typename": "CategorySearchTreeData"
+              },
+              "__typename": "CategorySearchTreeLevelDataList"
+            }
+          ],
+          "level": "3",
+          "__typename": "CategorySearchTreeLevel"
+        }
+      ],
+      "__typename": "CategoryProductSearchList"
+    }
+  }
+}

@@ -4,8 +4,6 @@ import org.springframework.boot.configurationprocessor.json.JSONException;
 import ro.nicolaemariusghergu.queryit.model.data.Product;
 
 import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Optional;
 

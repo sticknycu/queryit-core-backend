@@ -71,11 +71,17 @@ CREATE TABLE IF NOT EXISTS
 CREATE TABLE IF NOT EXISTS
     promotions
 (
-    id SERIAL,
-    description VARCHAR,
+    id
+    SERIAL,
+    description
+    VARCHAR,
 
-    PRIMARY KEY(id)
-);
+    PRIMARY
+    KEY
+(
+    id
+)
+    );
 
 CREATE TABLE IF NOT EXISTS
     shelves

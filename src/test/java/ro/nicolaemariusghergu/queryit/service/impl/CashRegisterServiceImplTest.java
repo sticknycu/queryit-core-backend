@@ -2,11 +2,9 @@ package ro.nicolaemariusghergu.queryit.service.impl;
 
 import org.jeasy.random.EasyRandom;
 import org.jeasy.random.EasyRandomParameters;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,15 +34,6 @@ class CashRegisterServiceImplTest {
 
     @MockBean
     private CashRegisterRepository cashRegisterRepository;
-
-    @TestConfiguration
-    class CashRegisterServiceImplTestContextConfiguration {
-
-        @Bean
-        public CashRegisterServiceImpl cashRegisterService() {
-            return new CashRegisterServiceImpl(cashRegisterRepository);
-        }
-    }
 
     @BeforeEach
     void configurateBeans() {
@@ -133,5 +122,14 @@ class CashRegisterServiceImplTest {
         }, () -> {
             throw new ResourceNotFoundException("Resource requested has not been found");
         });
+    }
+
+    @TestConfiguration
+    class CashRegisterServiceImplTestContextConfiguration {
+
+        @Bean
+        public CashRegisterServiceImpl cashRegisterService() {
+            return new CashRegisterServiceImpl(cashRegisterRepository);
+        }
     }
 }
