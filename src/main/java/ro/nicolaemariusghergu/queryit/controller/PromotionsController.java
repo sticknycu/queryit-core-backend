@@ -10,7 +10,7 @@ import ro.nicolaemariusghergu.queryit.service.PromotionService;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("http://localhost:60028")
 @Controller
 public record PromotionsController(PromotionService promotionService) {
 
