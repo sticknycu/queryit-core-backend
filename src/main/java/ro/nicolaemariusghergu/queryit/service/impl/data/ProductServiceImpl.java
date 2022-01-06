@@ -8,6 +8,7 @@ import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.stereotype.Service;
 import ro.nicolaemariusghergu.queryit.dto.ProductDto;
+import ro.nicolaemariusghergu.queryit.executor.ExecutorHandler;
 import ro.nicolaemariusghergu.queryit.model.Shelf;
 import ro.nicolaemariusghergu.queryit.model.data.Product;
 import ro.nicolaemariusghergu.queryit.model.data.ShelfCategory;
@@ -25,6 +26,7 @@ import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.Executor;
 
 @Service
 public record ProductServiceImpl(ProductRepository productRepository) implements ProductService {
@@ -58,6 +60,7 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
             } else {
                 word = "0" + i;
             }
+
             System.out.println("Avem site-ul numarul " + i);
             String dataLink = baseLink.replace("--", word);
             System.out.println("Site-ul este " + dataLink);
@@ -75,6 +78,8 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
                     .getJSONObject("facetData")
                     .get("name")
                     .toString();
+
+            ExecutorHandler.downloadData(dataLink, category);
 
             ShelfCategory shelfCategory = new ShelfCategory();
             shelfCategory.setName(category);
