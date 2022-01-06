@@ -3,23 +3,21 @@ package ro.nicolaemariusghergu.queryit.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
-import ro.nicolaemariusghergu.queryit.model.Product;
+import ro.nicolaemariusghergu.queryit.model.MiniMarket;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface MiniMarketRepository extends JpaRepository<MiniMarket, Long> {
 
     @NonNull
     @Override
-    Optional<Product> findById(@NonNull Long id);
+    Optional<MiniMarket> findById(@NonNull Long id);
 
     @NonNull
     @Override
-    List<Product> findAll();
+    List<MiniMarket> findAll();
 
-    Optional<Product> findByName(String name);
-
-    List<Product> findAllByPrice(Double price);
+    Optional<MiniMarket> findByName(String name);
 }

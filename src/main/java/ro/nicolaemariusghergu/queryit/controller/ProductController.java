@@ -6,8 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import ro.nicolaemariusghergu.queryit.model.data.Product;
-import ro.nicolaemariusghergu.queryit.service.data.ProductService;
+import ro.nicolaemariusghergu.queryit.model.Product;
+import ro.nicolaemariusghergu.queryit.service.ProductService;
 
 import java.util.List;
 

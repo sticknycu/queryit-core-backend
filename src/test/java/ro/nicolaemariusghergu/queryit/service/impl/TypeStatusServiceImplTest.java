@@ -1,4 +1,4 @@
-package ro.nicolaemariusghergu.queryit.service.impl;
+/*package ro.nicolaemariusghergu.queryit.service.impl;
 
 import org.jeasy.random.EasyRandom;
 import org.jeasy.random.EasyRandomParameters;
@@ -12,10 +12,6 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import ro.nicolaemariusghergu.queryit.exceptions.ResourceNotFoundException;
-import ro.nicolaemariusghergu.queryit.model.data.TypeStatus;
-import ro.nicolaemariusghergu.queryit.repository.data.TypeStatusRepository;
-import ro.nicolaemariusghergu.queryit.service.data.TypeStatusService;
-import ro.nicolaemariusghergu.queryit.service.impl.data.TypeStatusServiceImpl;
 
 import java.util.Optional;
 
@@ -82,4 +78,4 @@ class TypeStatusServiceImplTest {
             return new TypeStatusServiceImpl(typeStatusRepository);
         }
     }
-}
+}*/

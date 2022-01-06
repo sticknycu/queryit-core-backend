@@ -1,25 +1,25 @@
-package ro.nicolaemariusghergu.queryit.repository;
+package ro.nicolaemariusghergu.queryit.service;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.lang.NonNull;
-import org.springframework.stereotype.Repository;
 import ro.nicolaemariusghergu.queryit.model.Product;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface ProductService {
 
     @NonNull
-    @Override
     Optional<Product> findById(@NonNull Long id);
 
     @NonNull
-    @Override
     List<Product> findAll();
 
     Optional<Product> findByName(String name);
 
     List<Product> findAllByPrice(Double price);
+
+    void handleDataFromWeb() throws JSONException, IOException;
+
 }
