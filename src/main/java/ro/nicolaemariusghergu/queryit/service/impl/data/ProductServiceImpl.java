@@ -1,11 +1,16 @@
 package ro.nicolaemariusghergu.queryit.service.impl.data;
 
 import com.fasterxml.jackson.databind.json.JsonMapper;
+import org.jeasy.random.randomizers.number.IntegerRandomizer;
+import org.jeasy.random.randomizers.range.IntegerRangeRandomizer;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.stereotype.Service;
+import ro.nicolaemariusghergu.queryit.dto.ProductDto;
+import ro.nicolaemariusghergu.queryit.model.Shelf;
 import ro.nicolaemariusghergu.queryit.model.data.Product;
+import ro.nicolaemariusghergu.queryit.model.data.ShelfCategory;
 import ro.nicolaemariusghergu.queryit.repository.ProductRepository;
 import ro.nicolaemariusghergu.queryit.service.data.ProductService;
 
@@ -17,6 +22,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,22 +60,43 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
             String dataLink = baseLink.replace("--", word);
             System.out.println("Site-ul este " + dataLink);
             JSONObject jsonObject = readJsonFromUrl(dataLink);
+
             JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONObject("categoryProductSearch").getJSONArray("products");
+
+            String category = jsonObject.getJSONObject("data")
+                    .getJSONObject("categoryProductSearch")
+                    .getJSONArray("categorySearchTree")
+                    .getJSONObject(0)
+                    .getJSONArray("categoryDataList")
+                    .getJSONObject(0)
+                    .getJSONObject("categoryData")
+                    .getJSONObject("facetData")
+                    .get("name")
+                    .toString();
+
+            ShelfCategory shelfCategory = new ShelfCategory();
+            shelfCategory.setName(category);
+
+            System.out.println();
+            System.out.println("Pentru categoria " + category + " avem urmatoarele produse:");
             for (int j = 0; j < jsonArray.length(); j++) {
                 String productName = jsonArray.getJSONObject(j).get("name").toString();
-                String category = jsonObject.getJSONObject("data")
-                        .getJSONObject("categoryProductSearch")
-                        .getJSONArray("categorySearchTree")
-                        .getJSONObject(0)
-                        .getJSONArray("categoryDataList")
-                        .getJSONObject(0)
-                        .getJSONObject("categoryData")
-                        .getJSONObject("facetData")
-                        .get("name")
+                String price = jsonArray.getJSONObject(j)
+                        .getJSONObject("price")
+                        .get("value")
                         .toString();
-                System.out.println();
-                System.out.println("Pentru categoria " + category + " avem urmatoarele produse:");
-                System.out.println("Name: " + productName);
+
+                ProductDto productDto = new ProductDto();
+                productDto.setName(productName);
+                productDto.setPrice(price);
+                productDto.setDeliveryData(LocalDateTime.now());
+                productDto.setQuantity(new IntegerRangeRandomizer(1, 50).getRandomValue());
+
+                Shelf shelf = new Shelf();
+                shelf.setProduct(productDto);
+                shelf.setShelfCategory(shelfCategory);
+
+                System.out.println(productDto);
             }
         }
     }

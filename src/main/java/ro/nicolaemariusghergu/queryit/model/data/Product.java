@@ -13,8 +13,6 @@ import java.util.Objects;
 @Setter
 @Entity
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "products")
 public class Product implements Serializable {
 
