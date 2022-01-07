@@ -38,7 +38,7 @@ public class ExecutorHandler {
     @Autowired
     ManufacturerService manufacturerService;
 
-    public static void downloadData(String url, String name) throws IOException {
+    public static boolean downloadData(String url, String name) throws IOException {
         URL website = new URL(url);
         String resourcesPath = "src/main/resources/";
         String dataPath = resourcesPath + "data/";
@@ -46,15 +46,19 @@ public class ExecutorHandler {
         // I don't want to download the data if already exists
         String filePath = dataPath + name + ".json";
         File file = new File(filePath);
+
         if (file.exists()) {
             LOGGER.info("Data about " + name + " already exists on local!");
-            return;
+            return false;
         }
+
         try (ReadableByteChannel rbc = Channels.newChannel(website.openStream())) {
             try (FileOutputStream fos = new FileOutputStream(filePath)) {
                 fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
             }
         }
+
+        return true;
     }
 
     @PostConstruct
@@ -100,7 +104,10 @@ public class ExecutorHandler {
                     .get("name")
                     .toString();
 
-            ExecutorHandler.downloadData(dataLink, categoryName);
+            // If already data exists, I don't want to download it again
+            if (!ExecutorHandler.downloadData(dataLink, categoryName)) {
+                continue;
+            }
 
             LOGGER.info("Get data about every Category...");
             // daca nu exista categoria in database
