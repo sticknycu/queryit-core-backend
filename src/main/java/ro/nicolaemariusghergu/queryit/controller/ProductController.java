@@ -39,14 +39,16 @@ public record ProductController(ProductService productService) {
 
         if (optionalProduct.isPresent()) {
             Product oldProduct = optionalProduct.get();
-
             oldProduct.setName(product.getName());
+            oldProduct.setQuantity(product.getQuantity());
             oldProduct.setPrice(product.getPrice());
             oldProduct.setIconUrl(product.getIconUrl());
             oldProduct.setCategory(product.getCategory());
             oldProduct.setManufacturer(product.getManufacturer());
             oldProduct.setMiniMarket(product.getMiniMarket());
             oldProduct.setPromotion(product.getPromotion());
+
+            productService.save(oldProduct);
 
             return new ResponseEntity<>(oldProduct, HttpStatus.OK);
         } else {
