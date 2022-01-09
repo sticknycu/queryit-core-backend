@@ -116,6 +116,7 @@ public class ExecutorHandler {
                 Category category = new Category();
                 category.setId(categoryId++);
                 category.setName(categoryName);
+
                 // si il salvez in database
                 categoryService.saveAndFlush(category);
             }

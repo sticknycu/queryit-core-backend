@@ -23,4 +23,7 @@ public interface CategoryService {
     <S extends Category> List<S> saveAll(Iterable<S> entities);
 
     <S extends Category> List<S> saveAllAndFlush(Iterable<S> entities);
+
+    @NonNull
+    void deleteById(@NonNull Long id);
 }

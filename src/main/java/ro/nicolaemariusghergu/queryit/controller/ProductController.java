@@ -14,25 +14,25 @@ import java.util.Optional;
 @Controller
 public record ProductController(ProductService productService) {
 
-    @GetMapping("/products")
+    @GetMapping("/v1/products")
     @ResponseBody
     public ResponseEntity<List<Product>> getProducts() {
         return new ResponseEntity<>(productService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/products/{productId}")
+    @GetMapping("/v1/products/{productId}")
     @ResponseBody
     public ResponseEntity<Optional<Product>> getProductById(@PathVariable Long productId) {
         return new ResponseEntity<>(productService.findById(productId), HttpStatus.OK);
     }
 
-    @PostMapping("/products")
+    @PostMapping("/v1/products")
     @ResponseBody
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
         return new ResponseEntity<>(productService.save(product), HttpStatus.OK);
     }
 
-    @PutMapping("/products/{productId}")
+    @PutMapping("/v1/products/{productId}")
     @ResponseBody
     public ResponseEntity<Product> updateProduct(@RequestBody Product product, @PathVariable Long productId) {
         Optional<Product> optionalProduct = productService.findById(productId);
@@ -56,7 +56,7 @@ public record ProductController(ProductService productService) {
         }
     }
 
-    @DeleteMapping("/products/{productId}")
+    @DeleteMapping("/v1/products/{productId}")
     @ResponseBody
     public ResponseEntity<Object> deleteProduct(@PathVariable Long productId) {
         productService.deleteById(productId);

@@ -32,4 +32,8 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     @Override
     <S extends Category> List<S> saveAllAndFlush(Iterable<S> entities);
+
+    @NonNull
+    @Override
+    void deleteById(@NonNull Long id);
 }

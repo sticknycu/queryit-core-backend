@@ -48,4 +48,10 @@ public record CategoryServiceImpl(CategoryRepository categoryRepository) impleme
     public <S extends Category> List<S> saveAllAndFlush(Iterable<S> entities) {
         return categoryRepository.saveAllAndFlush(entities);
     }
+
+    @NonNull
+    @Override
+    public void deleteById(@NonNull Long id) {
+        categoryRepository.deleteById(id);
+    }
 }
