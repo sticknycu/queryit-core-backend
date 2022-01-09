@@ -10,7 +10,7 @@ import ro.nicolaemariusghergu.queryit.service.CategoryService;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("http://localhost:60028/")
+@CrossOrigin("http://localhost:60028")
 @Controller
 public record CategoryController(CategoryService categoryService) {
 
