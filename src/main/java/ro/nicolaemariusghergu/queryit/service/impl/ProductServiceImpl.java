@@ -60,5 +60,9 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
         productRepository.deleteById(id);
     }
 
+    @Override
+    public List<Product> findAllByCategoryId(Long categoryId) {
+        return productRepository.findAllByCategoryId(categoryId);
+    }
 
 }

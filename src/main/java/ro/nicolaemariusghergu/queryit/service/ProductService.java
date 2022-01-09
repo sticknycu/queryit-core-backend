@@ -29,4 +29,6 @@ public interface ProductService {
 
     @NonNull
     void deleteById(@NotNull Long id);
+
+    List<Product> findAllByCategoryId(Long categoryId);
 }

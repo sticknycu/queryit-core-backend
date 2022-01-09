@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ro.nicolaemariusghergu.queryit.model.Product;
+import ro.nicolaemariusghergu.queryit.service.CategoryService;
 import ro.nicolaemariusghergu.queryit.service.ProductService;
 
 import java.util.List;
@@ -12,12 +13,21 @@ import java.util.Optional;
 
 @CrossOrigin("http://localhost:60028")
 @Controller
-public record ProductController(ProductService productService) {
+public record ProductController(ProductService productService, CategoryService categoryService) {
 
     @GetMapping("/v1/products")
     @ResponseBody
     public ResponseEntity<List<Product>> getProducts() {
         return new ResponseEntity<>(productService.findAll(), HttpStatus.OK);
+    }
+
+    @GetMapping("/v1/productsByCategoryId/{categoryId}")
+    @ResponseBody
+    public ResponseEntity<List<Product>> getProductsByCategoryId(@PathVariable Long categoryId) {
+        if (categoryService.findById(categoryId).isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(productService.findAllByCategoryId(categoryId), HttpStatus.OK);
     }
 
     @GetMapping("/v1/products/{productId}")

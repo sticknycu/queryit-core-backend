@@ -39,4 +39,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @NonNull
     @Override
     void deleteById(@NotNull Long id);
+
+    List<Product> findAllByCategoryId(Long categoryId);
 }

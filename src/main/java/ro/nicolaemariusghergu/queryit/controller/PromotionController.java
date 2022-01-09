@@ -10,38 +10,39 @@ import ro.nicolaemariusghergu.queryit.service.PromotionService;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("http://localhost:60028")
+@CrossOrigin("http://localhost:60028/")
 @Controller
-public record PromotionsController(PromotionService promotionService) {
+public record PromotionController(PromotionService promotionService) {
 
-    @GetMapping("/promotions")
+    @GetMapping("/v1/promotions")
     @ResponseBody
     public ResponseEntity<List<Promotion>> getPromotions() {
         return new ResponseEntity<>(promotionService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/promotions/{promotionId}")
+    @GetMapping("/v1/promotions/{promotionId}")
     @ResponseBody
     public ResponseEntity<Optional<Promotion>> getPromotionById(@PathVariable Long promotionId) {
         return new ResponseEntity<>(promotionService.findById(promotionId), HttpStatus.OK);
     }
 
-    @PostMapping("/promotions")
+    @PostMapping("/v1/promotions")
     @ResponseBody
     public ResponseEntity<Promotion> addPromotion(@RequestBody Promotion promotion) {
         return new ResponseEntity<>(promotionService.save(promotion), HttpStatus.OK);
     }
 
-    @PutMapping("/promotions/{promotionId}")
+    @PutMapping("/v1/promotions/{promotionId}")
     @ResponseBody
     public ResponseEntity<Promotion> updatePromotion(@RequestBody Promotion promotion, @PathVariable Long promotionId) {
         Optional<Promotion> optionalPromotion = promotionService.findById(promotionId);
 
         if (optionalPromotion.isPresent()) {
             Promotion oldPromotion = optionalPromotion.get();
-
             oldPromotion.setName(promotion.getName());
             oldPromotion.setDescription(promotion.getDescription());
+
+            promotionService.save(oldPromotion);
 
             return new ResponseEntity<>(oldPromotion, HttpStatus.OK);
         } else {
@@ -49,10 +50,11 @@ public record PromotionsController(PromotionService promotionService) {
         }
     }
 
-    @DeleteMapping("/promotions/{promotionId}")
+    @DeleteMapping("/v1/promotions/{promotionId}")
     @ResponseBody
-    public ResponseEntity<Object> deletePromotion(@PathVariable Long promotionId) {
+    public ResponseEntity<Object> deleteProduct(@PathVariable Long promotionId) {
         promotionService.deleteById(promotionId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
+
