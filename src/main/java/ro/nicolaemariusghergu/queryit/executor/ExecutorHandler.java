@@ -216,7 +216,7 @@ public class ExecutorHandler {
             int quantityNeeded = new IntegerRangeRandomizer(1, 3).getRandomValue();
 
             Product neededProduct = findAvailableProductFromRandomizedIntegerId();
-            neededProduct.setQuantity(quantityNeeded);
+            promotion.setQuantityNeeded(quantityNeeded);
 
             String description = "La " +
                     neededProduct.getQuantity() +

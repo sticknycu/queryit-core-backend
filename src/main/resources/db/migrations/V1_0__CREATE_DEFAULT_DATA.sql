@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS
                    description VARCHAR,
                    product_id SERIAL,
                    expire_date BIGINT,
+                   quantity_needed SERIAL,
 
                    PRIMARY KEY (promotion_id)
     );

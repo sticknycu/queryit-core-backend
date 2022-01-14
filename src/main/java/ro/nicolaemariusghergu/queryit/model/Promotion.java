@@ -32,6 +32,9 @@ public class Promotion implements Serializable {
     @Column(name = "expire_date")
     private Long expireDate;
 
+    @Column(name = "quantity_needed")
+    private Integer quantityNeeded;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
