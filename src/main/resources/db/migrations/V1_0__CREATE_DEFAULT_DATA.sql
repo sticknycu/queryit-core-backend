@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS
                    promotion_id SERIAL,
                    name VARCHAR,
                    description VARCHAR,
+                   product_id SERIAL,
 
                    PRIMARY KEY (promotion_id)
     );

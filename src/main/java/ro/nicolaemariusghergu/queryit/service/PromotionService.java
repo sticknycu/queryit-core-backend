@@ -22,4 +22,7 @@ public interface PromotionService {
 
     @NonNull
     void deleteById(@NonNull Long id);
+
+    @NonNull
+    <S extends Promotion> S saveAndFlush(@NonNull S entity);
 }

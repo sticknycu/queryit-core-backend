@@ -44,4 +44,10 @@ public record PromotionServiceImpl(PromotionRepository promotionRepository) impl
     public void deleteById(@NonNull Long id) {
         promotionRepository.deleteById(id);
     }
+
+    @NonNull
+    @Override
+    public <S extends Promotion> S saveAndFlush(@NonNull S entity) {
+        return promotionRepository.saveAndFlush(entity);
+    }
 }

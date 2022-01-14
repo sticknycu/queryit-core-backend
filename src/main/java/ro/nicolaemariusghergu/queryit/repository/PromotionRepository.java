@@ -30,4 +30,8 @@ public interface PromotionRepository extends JpaRepository<Promotion, Long> {
     @NonNull
     @Override
     void deleteById(@NonNull Long id);
+
+    @NonNull
+    @Override
+    <S extends Promotion> S saveAndFlush(@NonNull S entity);
 }

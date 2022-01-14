@@ -11,9 +11,11 @@ import org.springframework.stereotype.Component;
 import ro.nicolaemariusghergu.queryit.model.Category;
 import ro.nicolaemariusghergu.queryit.model.Manufacturer;
 import ro.nicolaemariusghergu.queryit.model.Product;
+import ro.nicolaemariusghergu.queryit.model.Promotion;
 import ro.nicolaemariusghergu.queryit.service.CategoryService;
 import ro.nicolaemariusghergu.queryit.service.ManufacturerService;
 import ro.nicolaemariusghergu.queryit.service.ProductService;
+import ro.nicolaemariusghergu.queryit.service.PromotionService;
 
 import javax.annotation.PostConstruct;
 import java.io.*;
@@ -22,7 +24,9 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 @Component
 public class ExecutorHandler {
@@ -34,6 +38,9 @@ public class ExecutorHandler {
 
     @Autowired
     CategoryService categoryService;
+
+    @Autowired
+    PromotionService promotionService;
 
     @Autowired
     ManufacturerService manufacturerService;
@@ -190,7 +197,59 @@ public class ExecutorHandler {
 
         LOGGER.info("Saved collected data to database!");
 
-        //TODO: LOGGER.info("Randomizing data for other tables....");
+        LOGGER.info("Randomizing table Promotion....");
+        int maxValue = new IntegerRangeRandomizer(1, 20).getRandomValue();
+        for (int i = 0; i < maxValue; i++) {
+            Optional<Promotion> localPromotion = promotionService.findById((long) i);
+            if (localPromotion.isPresent()) {
+                LOGGER.info("Promotion with id " + i + " already exists in our database!");
+                continue;
+            }
+
+            Promotion promotion = new Promotion();
+            promotion.setId((long) i);
+
+            int quantityNeeded = new IntegerRangeRandomizer(1, 3).getRandomValue();
+
+            Product neededProduct = findAvailableProductFromRandomizedIntegerId();
+            neededProduct.setQuantity(quantityNeeded);
+
+            String description = "La " +
+                    neededProduct.getQuantity() +
+                    " " +
+                    neededProduct.getName() +
+                    " primesti inca unul gratuit!";
+
+            promotion.setProductId(neededProduct);
+            promotion.setDescription(description);
+
+            System.out.println(promotion);
+
+            promotionService.saveAndFlush(promotion);
+        }
+    }
+
+    private final int MAX_PRODUCT_ID = 290;
+
+    private Product findAvailableProductFromRandomizedIntegerId() {
+        int productRandomizedId = new IntegerRangeRandomizer(0, MAX_PRODUCT_ID).getRandomValue();
+        Optional<Product> product = productService.findById((long) productRandomizedId);
+        if (product.isEmpty()) {
+            return findAvailableProductFromRandomizedIntegerId();
+        } else {
+            AtomicBoolean existanceOffer = new AtomicBoolean(false);
+            promotionService.findAll()
+                    .forEach(promotion -> {
+                        if (promotion.getProductId().getId() == productRandomizedId) {
+                            existanceOffer.set(true);
+                        }
+                    });
+            if (existanceOffer.get()) {
+                return findAvailableProductFromRandomizedIntegerId();
+            } else {
+                return product.get();
+            }
+        }
     }
 
     private String readAll(Reader rd) throws IOException {
