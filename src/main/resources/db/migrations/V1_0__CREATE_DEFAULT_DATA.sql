@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS
                    name VARCHAR,
                    description VARCHAR,
                    product_id SERIAL,
+                   expire_date BIGINT,
 
                    PRIMARY KEY (promotion_id)
     );

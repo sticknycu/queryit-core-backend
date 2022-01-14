@@ -29,6 +29,9 @@ public class Promotion implements Serializable {
     @JoinColumn(name = "product_id")
     private Product productId;
 
+    @Column(name = "expire_date")
+    private Long expireDate;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

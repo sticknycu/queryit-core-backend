@@ -23,6 +23,10 @@ import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.nio.charset.StandardCharsets;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
@@ -222,6 +226,25 @@ public class ExecutorHandler {
 
             promotion.setProductId(neededProduct);
             promotion.setDescription(description);
+            promotion.setName(neededProduct.getName());
+
+            int randomDay = new IntegerRangeRandomizer(1, 27).getRandomValue();
+            int randomMonth = new IntegerRangeRandomizer(0, 1).getRandomValue();
+            int randomHour = new IntegerRangeRandomizer(1, 24).getRandomValue();
+            int randomMinute = new IntegerRangeRandomizer(1, 59).getRandomValue();
+            int randomSecond = new IntegerRangeRandomizer(1, 59).getRandomValue();
+
+            LocalDateTime localDateTime = LocalDateTime.of(LocalDateTime.now().getYear(),
+                    LocalDateTime.now().getMonthValue() + randomMonth,
+                    randomDay,
+                    randomHour,
+                    randomMinute,
+                    randomSecond);
+
+            Instant instant = Instant.now();
+            ZoneId zoneId = ZoneId.systemDefault();
+            ZoneOffset zoneOffset = zoneId.getRules().getOffset(instant);
+            promotion.setExpireDate(localDateTime.toInstant(zoneOffset).toEpochMilli());
 
             System.out.println(promotion);
 
