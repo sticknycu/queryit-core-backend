@@ -16,8 +16,7 @@ jobs:
 
       - name: Test with Maven
         run: |
-          docker-compose up -d
-          mvn test
+          mvn install
 
       - name: Upload Coverage Raport from Jacoco to Codacy
         env:
