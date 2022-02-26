@@ -23,10 +23,6 @@ public interface ProductService {
 
     <S extends Product> List<S> saveAll(Iterable<S> entities);
 
-    <S extends Product> S saveAndFlush(S entity);
-
-    <S extends Product> List<S> saveAllAndFlush(Iterable<S> entities);
-
     @NonNull
     void deleteById(@NotNull Long id);
 

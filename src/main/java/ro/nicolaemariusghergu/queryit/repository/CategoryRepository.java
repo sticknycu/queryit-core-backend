@@ -21,17 +21,13 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     Optional<Category> findByName(String name);
 
+    @NonNull
     @Override
-    <S extends Category> S save(S entity);
+    <S extends Category> S save(@NonNull S entity);
 
+    @NonNull
     @Override
-    <S extends Category> S saveAndFlush(S entity);
-
-    @Override
-    <S extends Category> List<S> saveAll(Iterable<S> entities);
-
-    @Override
-    <S extends Category> List<S> saveAllAndFlush(Iterable<S> entities);
+    <S extends Category> List<S> saveAll(@NonNull Iterable<S> entities);
 
     @NonNull
     @Override

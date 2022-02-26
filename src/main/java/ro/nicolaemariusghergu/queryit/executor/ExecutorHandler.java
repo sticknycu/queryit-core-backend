@@ -125,7 +125,7 @@ public class ExecutorHandler {
                 category.setName(categoryName);
 
                 // si il salvez in database
-                categoryService.saveAndFlush(category);
+                categoryService.save(category);
             }
 
             // pentru fiecare produs
@@ -146,7 +146,7 @@ public class ExecutorHandler {
                         manufacturer.setName(manufacturerName);
 
                         // si il salvez in baza de date
-                        manufacturerService.saveAndFlush(manufacturer);
+                        manufacturerService.save(manufacturer);
                     }
                 }
             }
@@ -189,7 +189,7 @@ public class ExecutorHandler {
                     Manufacturer manufacturer = manufacturerService.findByName(manufacturerName).get();
                     product.setManufacturer(manufacturer);
 
-                    productService.saveAndFlush(product);
+                    productService.save(product);
                     System.out.println(product);
                 }
             }
@@ -244,7 +244,7 @@ public class ExecutorHandler {
 
             System.out.println(promotion);
 
-            promotionService.saveAndFlush(promotion);
+            promotionService.save(promotion);
         }
     }
 

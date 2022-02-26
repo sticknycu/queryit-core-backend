@@ -18,9 +18,5 @@ public interface ManufacturerService {
 
     <S extends Manufacturer> S save(S entity);
 
-    <S extends Manufacturer> S saveAndFlush(S entity);
-
     <S extends Manufacturer> List<S> saveAll(Iterable<S> entities);
-
-    <S extends Manufacturer> List<S> saveAllAndFlush(Iterable<S> entities);
 }

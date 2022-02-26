@@ -21,17 +21,16 @@ public interface PromotionRepository extends JpaRepository<Promotion, Long> {
 
     List<Promotion> findByName(String name);
 
+    @NonNull
     @Override
-    <S extends Promotion> S save(S entity);
+    <S extends Promotion> S save(@NonNull S entity);
 
+    @NonNull
     @Override
-    <S extends Promotion> List<S> saveAll(Iterable<S> entities);
+    <S extends Promotion> List<S> saveAll(@NonNull Iterable<S> entities);
 
     @NonNull
     @Override
     void deleteById(@NonNull Long id);
 
-    @NonNull
-    @Override
-    <S extends Promotion> S saveAndFlush(@NonNull S entity);
 }

@@ -44,16 +44,6 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
         return productRepository.saveAll(entities);
     }
 
-    @Override
-    public <S extends Product> S saveAndFlush(S entity) {
-        return productRepository.saveAndFlush(entity);
-    }
-
-    @Override
-    public <S extends Product> List<S> saveAllAndFlush(Iterable<S> entities) {
-        return productRepository.saveAllAndFlush(entities);
-    }
-
     @NonNull
     @Override
     public void deleteById(@NonNull Long id) {

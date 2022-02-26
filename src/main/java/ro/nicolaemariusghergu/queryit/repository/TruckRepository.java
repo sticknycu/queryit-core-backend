@@ -21,8 +21,9 @@ public interface TruckRepository extends JpaRepository<Truck, Long> {
 
     Optional<Truck> findBySerialNumber(String serialNumber);
 
+    @NonNull
     @Override
-    <S extends Truck> S save(S entity);
+    <S extends Truck> S save(@NonNull S entity);
 
     @Override
     <S extends Truck> List<S> saveAll(Iterable<S> entities);
