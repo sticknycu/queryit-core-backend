@@ -18,24 +18,24 @@ import ro.nicolaemariusghergu.queryit.service.ProductService;
 import ro.nicolaemariusghergu.queryit.service.PromotionService;
 
 import javax.annotation.PostConstruct;
-import java.io.*;
-import java.net.URL;
-import java.nio.channels.Channels;
-import java.nio.channels.ReadableByteChannel;
-import java.nio.charset.StandardCharsets;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Component
 public class ExecutorHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorHandler.class);
+
+    private static final String RESOURCES_PATH = "src/main/resources/";
+    private static final String DATA_PATH = "data/";
 
     @Autowired
     ProductService productService;
@@ -49,38 +49,31 @@ public class ExecutorHandler {
     @Autowired
     ManufacturerService manufacturerService;
 
-    public static boolean downloadData(String url, String name) throws IOException {
-        URL website = new URL(url);
-        String resourcesPath = "src/main/resources/";
-        String dataPath = resourcesPath + "data/";
-
-        // I don't want to download the data if already exists
-        String filePath = dataPath + name + ".json";
-        File file = new File(filePath);
-
-        if (file.exists()) {
-            LOGGER.info("Data about " + name + " already exists on local!");
-            return false;
-        }
-
-        try (ReadableByteChannel rbc = Channels.newChannel(website.openStream())) {
-            try (FileOutputStream fos = new FileOutputStream(filePath)) {
-                fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
-            }
-        }
-
-        return true;
-    }
-
     @PostConstruct
     private void init() throws JSONException, IOException {
         LOGGER.info("ExecutorHandler has started. Starting collecting the data...");
         handleDataFromWeb();
     }
 
+    private Map<String, JSONObject> readFiles() throws IOException, JSONException {
+        File resourcesJsonFolder = new File(RESOURCES_PATH + DATA_PATH);
+        Map<String, JSONObject> jsonData = new HashMap<>();
+        for (final File fileEntry : Objects.requireNonNull(resourcesJsonFolder.listFiles())) {
+            jsonData.put(fileEntry.getName(), readJSON(fileEntry.getName()));
+        }
+        return jsonData;
+    }
+
+    private JSONObject readJSON(String filename) throws IOException, JSONException {
+        String stringData = new String(Files.readAllBytes(Path.of(RESOURCES_PATH + DATA_PATH + filename)));
+
+        JSONObject jsonObject = new JSONObject(stringData);
+        return jsonObject;
+    }
+
     private void handleDataFromWeb() throws JSONException, IOException {
         // hardcoded website to get mega image products from promotions, I need some data , lol , i stole some from you guys, sorry
-        String baseLink = "https://api.mega-image.ro/?operationName=GetCategoryProductSearch&variables=%7B%22lang%22%3A%22ro%22%2C%22searchQuery%22%3A%22%22%2C%22category%22%3A%220--%22%2C%22pageNumber%22%3A0%2C%22pageSize%22%3A20%2C%22filterFlag%22%3Atrue%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22bdb32b6dc09b8ee0bce785e0a6799c6ff2593a8d1fd2a4ad2ac66cf3e999fdf5%22%7D%7D";
+        //String baseLink = "https://api.mega-image.ro/?operationName=GetCategoryProductSearch&variables=%7B%22lang%22%3A%22ro%22%2C%22searchQuery%22%3A%22%22%2C%22category%22%3A%220--%22%2C%22pageNumber%22%3A0%2C%22pageSize%22%3A20%2C%22filterFlag%22%3Atrue%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22bdb32b6dc09b8ee0bce785e0a6799c6ff2593a8d1fd2a4ad2ac66cf3e999fdf5%22%7D%7D";
         String baseLinkImages = "https://d1lqpgkqcok0l.cloudfront.net";
 
         Set<String> manufacturersName = new HashSet<>();
@@ -88,19 +81,22 @@ public class ExecutorHandler {
         long productId = 0L;
         long manufacturerId = 0L;
         long categoryId = 0L;
-        // deoarece avem 15 categorii
+        /* deoarece avem 15 categorii
         for (int i = 1; i <= 15; i++) {
             String word;
             if (i >= 10) {
                 word = "" + i;
             } else {
                 word = "0" + i;
-            }
+            }*
 
             System.out.println("Avem site-ul numarul " + i);
             String dataLink = baseLink.replace("--", word);
-            System.out.println("Site-ul este " + dataLink);
-            JSONObject jsonObject = readJsonFromUrl(dataLink);
+            System.out.println("Site-ul este " + dataLink);*/
+
+        for (Map.Entry<String, JSONObject> entry : readFiles().entrySet()) {
+
+            JSONObject jsonObject = entry.getValue();
 
             JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONObject("categoryProductSearch").getJSONArray("products");
 
@@ -115,10 +111,10 @@ public class ExecutorHandler {
                     .get("name")
                     .toString();
 
-            // If already data exists, I don't want to download it again
+            /* If already data exists, I don't want to download it again
             if (!ExecutorHandler.downloadData(dataLink, categoryName)) {
                 continue;
-            }
+            }*/
 
             LOGGER.info("Get data about every Category...");
             // daca nu exista categoria in database
@@ -272,23 +268,6 @@ public class ExecutorHandler {
             } else {
                 return product.get();
             }
-        }
-    }
-
-    private String readAll(Reader rd) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        int cp;
-        while ((cp = rd.read()) != -1) {
-            sb.append((char) cp);
-        }
-        return sb.toString();
-    }
-
-    public JSONObject readJsonFromUrl(String url) throws IOException, JSONException {
-        try (InputStream is = new URL(url).openStream()) {
-            BufferedReader rd = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
-            String jsonText = readAll(rd);
-            return new JSONObject(jsonText);
         }
     }
 
