@@ -10,29 +10,32 @@ import ro.nicolaemariusghergu.queryit.service.CategoryService;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("http://localhost:60028")
+import static ro.nicolaemariusghergu.queryit.BackEndApplication.LOCALHOST;
+
+@CrossOrigin(LOCALHOST)
+@RequestMapping("/v1/categories")
 @Controller
 public record CategoryController(CategoryService categoryService) {
 
-    @GetMapping("/v1/categories")
+    @GetMapping
     @ResponseBody
     public ResponseEntity<List<Category>> getCategories() {
         return new ResponseEntity<>(categoryService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/v1/categories/{categoryId}")
+    @GetMapping("/{categoryId}")
     @ResponseBody
     public ResponseEntity<Optional<Category>> getCategoryById(@PathVariable Long categoryId) {
         return new ResponseEntity<>(categoryService.findById(categoryId), HttpStatus.OK);
     }
 
-    @PostMapping("/v1/categories")
+    @PostMapping
     @ResponseBody
     public ResponseEntity<Category> addCategory(@RequestBody Category category) {
         return new ResponseEntity<>(categoryService.save(category), HttpStatus.OK);
     }
 
-    @PutMapping("/v1/categories/{categoryId}")
+    @PutMapping("/{categoryId}")
     @ResponseBody
     public ResponseEntity<Category> updateCategory(@RequestBody Category category, @PathVariable Long categoryId) {
         Optional<Category> optionalCategory = categoryService.findById(categoryId);
@@ -49,7 +52,7 @@ public record CategoryController(CategoryService categoryService) {
         }
     }
 
-    @DeleteMapping("/v1/categories/{categoryId}")
+    @DeleteMapping("/{categoryId}")
     @ResponseBody
     public ResponseEntity<Object> deleteProduct(@PathVariable Long categoryId) {
         categoryService.deleteById(categoryId);

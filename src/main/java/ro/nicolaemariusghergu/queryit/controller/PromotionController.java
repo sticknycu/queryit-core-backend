@@ -10,29 +10,32 @@ import ro.nicolaemariusghergu.queryit.service.PromotionService;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("http://localhost:60028")
+import static ro.nicolaemariusghergu.queryit.BackEndApplication.LOCALHOST;
+
+@CrossOrigin(LOCALHOST)
+@RequestMapping("/v1/promotions")
 @Controller
 public record PromotionController(PromotionService promotionService) {
 
-    @GetMapping("/v1/promotions")
+    @GetMapping
     @ResponseBody
     public ResponseEntity<List<Promotion>> getPromotions() {
         return new ResponseEntity<>(promotionService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/v1/promotions/{promotionId}")
+    @GetMapping("/{promotionId}")
     @ResponseBody
     public ResponseEntity<Optional<Promotion>> getPromotionById(@PathVariable Long promotionId) {
         return new ResponseEntity<>(promotionService.findById(promotionId), HttpStatus.OK);
     }
 
-    @PostMapping("/v1/promotions")
+    @PostMapping
     @ResponseBody
     public ResponseEntity<Promotion> addPromotion(@RequestBody Promotion promotion) {
         return new ResponseEntity<>(promotionService.save(promotion), HttpStatus.OK);
     }
 
-    @PutMapping("/v1/promotions/{promotionId}")
+    @PutMapping("/{promotionId}")
     @ResponseBody
     public ResponseEntity<Promotion> updatePromotion(@RequestBody Promotion promotion, @PathVariable Long promotionId) {
         Optional<Promotion> optionalPromotion = promotionService.findById(promotionId);
@@ -50,7 +53,7 @@ public record PromotionController(PromotionService promotionService) {
         }
     }
 
-    @DeleteMapping("/v1/promotions/{promotionId}")
+    @DeleteMapping("/{promotionId}")
     @ResponseBody
     public ResponseEntity<Object> deleteProduct(@PathVariable Long promotionId) {
         promotionService.deleteById(promotionId);

@@ -1,55 +1,38 @@
-/*package ro.nicolaemariusghergu.queryit.service.impl;
+package ro.nicolaemariusghergu.queryit.service.impl;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
+import org.springframework.web.reactive.function.client.WebClient;
 import ro.nicolaemariusghergu.queryit.model.Product;
-import ro.nicolaemariusghergu.queryit.repository.ProductRepository;
-import ro.nicolaemariusghergu.queryit.service.ProductService;
 
-import java.io.IOException;
-import java.util.Optional;
+import static ro.nicolaemariusghergu.queryit.BackEndApplication.LOCALHOST;
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ProductServiceImplTest {
 
-    private static final Long ID = 1L;
+    private static final String PRODUCTS_URL = "/v1/products";
+
+    private static final Long PRODUCT_ID = 1L;
 
     @Autowired
-    private ProductService productService;
-
-    @MockBean
-    private ProductRepository productRepository;
+    WebClient.Builder webClientBuilder;
 
     @Test
-    void whenGetDataThenShowResult() throws JSONException, IOException {
+    void whenGetDataThenShowResult() {
         // give
-        Product product = new Product();
-        product.setId(ID);
-
-        Optional<Product> searchedProd = productRepository.findById(ID);
-
-        // when
-        Mockito.when(productRepository.findById(ID)).thenReturn(Optional.of(product));
+        Product product = webClientBuilder
+                .build()
+                .get()
+                .uri(LOCALHOST + PRODUCTS_URL + "/" + PRODUCT_ID)
+                .retrieve()
+                .bodyToMono(Product.class)
+                .block();
 
         // then
-        Assertions.assertEquals(product, searchedProd.get());
+        Assertions.assertNotNull(product);
     }
-
-    @TestConfiguration
-    class ProductServiceImplTestContextConfiguration {
-
-        @Bean
-        public ProductServiceImpl productService() {
-            return new ProductServiceImpl(productRepository);
-        }
-    }
-}*/
+}
