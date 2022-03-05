@@ -11,17 +11,20 @@ import ro.nicolaemariusghergu.queryit.service.ProductService;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("http://localhost:60028")
+import static ro.nicolaemariusghergu.queryit.BackEndApplication.LOCALHOST;
+
+@CrossOrigin(LOCALHOST)
+@RequestMapping("/v1/products")
 @Controller
 public record ProductController(ProductService productService, CategoryService categoryService) {
 
-    @GetMapping("/v1/products")
+    @GetMapping
     @ResponseBody
     public ResponseEntity<List<Product>> getProducts() {
         return new ResponseEntity<>(productService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/v1/productsByCategoryId/{categoryId}")
+    @GetMapping("/productsByCategoryId/{categoryId}")
     @ResponseBody
     public ResponseEntity<List<Product>> getProductsByCategoryId(@PathVariable Long categoryId) {
         if (categoryService.findById(categoryId).isEmpty()) {
@@ -30,19 +33,19 @@ public record ProductController(ProductService productService, CategoryService c
         return new ResponseEntity<>(productService.findAllByCategoryId(categoryId), HttpStatus.OK);
     }
 
-    @GetMapping("/v1/products/{productId}")
+    @GetMapping("/{productId}")
     @ResponseBody
     public ResponseEntity<Optional<Product>> getProductById(@PathVariable Long productId) {
         return new ResponseEntity<>(productService.findById(productId), HttpStatus.OK);
     }
 
-    @PostMapping("/v1/products")
+    @PostMapping
     @ResponseBody
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
         return new ResponseEntity<>(productService.save(product), HttpStatus.OK);
     }
 
-    @PutMapping("/v1/products/{productId}")
+    @PutMapping("/{productId}")
     @ResponseBody
     public ResponseEntity<Product> updateProduct(@RequestBody Product product, @PathVariable Long productId) {
         Optional<Product> optionalProduct = productService.findById(productId);
@@ -66,7 +69,7 @@ public record ProductController(ProductService productService, CategoryService c
         }
     }
 
-    @DeleteMapping("/v1/products/{productId}")
+    @DeleteMapping("/{productId}")
     @ResponseBody
     public ResponseEntity<Object> deleteProduct(@PathVariable Long productId) {
         productService.deleteById(productId);
