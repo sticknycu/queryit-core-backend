@@ -1,6 +1,5 @@
 package ro.nicolaemariusghergu.queryit.service;
 
-import com.sun.istack.NotNull;
 import org.springframework.lang.NonNull;
 import ro.nicolaemariusghergu.queryit.model.Product;
 
@@ -24,7 +23,7 @@ public interface ProductService {
     <S extends Product> List<S> saveAll(Iterable<S> entities);
 
     @NonNull
-    void deleteById(@NotNull Long id);
+    void deleteById(@NonNull Long id);
 
     List<Product> findAllByCategoryId(Long categoryId);
 }
