@@ -14,6 +14,10 @@ jobs:
         with:
           java-version: 1.17
 
+      - name: Docker things
+        run: |
+          docker container ls
+
       - name: Test with Maven
         run: |
           mvn install
