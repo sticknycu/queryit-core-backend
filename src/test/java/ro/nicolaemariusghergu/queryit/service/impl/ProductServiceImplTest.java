@@ -2,15 +2,16 @@ package ro.nicolaemariusghergu.queryit.service.impl;
 
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
 import ro.nicolaemariusghergu.queryit.model.Product;
 import ro.nicolaemariusghergu.queryit.repository.ProductRepository;
+import ro.nicolaemariusghergu.queryit.service.ProductService;
 
 import java.util.Optional;
 
@@ -20,8 +21,16 @@ class ProductServiceImplTest {
 
     private static final Long ID = 1L;
 
-    @MockBean
+    private ProductService productService;
+
+    @Mock
     private ProductRepository productRepository;
+
+    @BeforeEach
+    void setup() {
+        MockitoAnnotations.openMocks(this);
+        productService = new ProductServiceImpl(productRepository);
+    }
 
     @SneakyThrows
     @Test
@@ -39,14 +48,5 @@ class ProductServiceImplTest {
 
         // then
         Assertions.assertEquals(product, searchedProd.get());
-    }
-
-    @TestConfiguration
-    class ProductServiceImplTestContextConfiguration {
-
-        @Bean
-        public ProductServiceImpl productService() {
-            return new ProductServiceImpl(productRepository);
-        }
     }
 }

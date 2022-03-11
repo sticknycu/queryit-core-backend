@@ -1,4 +1,4 @@
-package ro.nicolaemariusghergu.queryit.executor;
+/*package ro.nicolaemariusghergu.queryit.executor;
 
 import org.jeasy.random.randomizers.range.IntegerRangeRandomizer;
 import org.slf4j.Logger;
@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
-import org.springframework.stereotype.Component;
 import ro.nicolaemariusghergu.queryit.model.Category;
 import ro.nicolaemariusghergu.queryit.model.Manufacturer;
 import ro.nicolaemariusghergu.queryit.model.Product;
@@ -29,7 +28,7 @@ import java.time.ZoneOffset;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-@Component
+//@Component
 public class ExecutorHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorHandler.class);
@@ -94,7 +93,7 @@ public class ExecutorHandler {
             String dataLink = baseLink.replace("--", word);
             System.out.println("Site-ul este " + dataLink);*/
 
-        for (Map.Entry<String, JSONObject> entry : readFiles().entrySet()) {
+        /*for (Map.Entry<String, JSONObject> entry : readFiles().entrySet()) {
 
             JSONObject jsonObject = entry.getValue();
 
@@ -111,10 +110,10 @@ public class ExecutorHandler {
                     .get("name")
                     .toString();
 
-            /* If already data exists, I don't want to download it again
-            if (!ExecutorHandler.downloadData(dataLink, categoryName)) {
-                continue;
-            }*/
+            // If already data exists, I don't want to download it again
+            //if (!ExecutorHandler.downloadData(dataLink, categoryName)) {
+            //    continue;
+            //}
 
             LOGGER.info("Get data about every Category...");
             // daca nu exista categoria in database
@@ -276,3 +275,4 @@ public class ExecutorHandler {
     }
 
 }
+*/
