@@ -17,11 +17,10 @@ jobs:
       - name: Docker things
         run: |
           docker-compose up -d
-          docker container ls
 
       - name: Test with Maven
         run: |
-          mvn install
+          mvn test
 
       - name: Upload Coverage Raport from Jacoco to Codacy
         env:
