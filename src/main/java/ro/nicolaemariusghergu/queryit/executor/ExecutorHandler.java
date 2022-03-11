@@ -186,8 +186,12 @@ public class ExecutorHandler {
                     product.setCategory(category);
                     product.setIconUrl(iconUrl);
 
-                    Manufacturer manufacturer = manufacturerService.findByName(manufacturerName).get();
-                    product.setManufacturer(manufacturer);
+                    try {
+                        Manufacturer manufacturer = manufacturerService.findByName(manufacturerName).get();
+                        product.setManufacturer(manufacturer);
+                    } catch (Exception e) {
+                        LOGGER.info("Manufacturer not found for product= "+ product);
+                    }
 
                     productService.save(product);
                     System.out.println(product);
