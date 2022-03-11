@@ -1,4 +1,4 @@
-/*package ro.nicolaemariusghergu.queryit.executor;
+package ro.nicolaemariusghergu.queryit.executor;
 
 import org.jeasy.random.randomizers.range.IntegerRangeRandomizer;
 import org.slf4j.Logger;
@@ -93,7 +93,7 @@ public class ExecutorHandler {
             String dataLink = baseLink.replace("--", word);
             System.out.println("Site-ul este " + dataLink);*/
 
-        /*for (Map.Entry<String, JSONObject> entry : readFiles().entrySet()) {
+        for (Map.Entry<String, JSONObject> entry : readFiles().entrySet()) {
 
             JSONObject jsonObject = entry.getValue();
 
@@ -275,4 +275,3 @@ public class ExecutorHandler {
     }
 
 }
-*/
