@@ -16,6 +16,7 @@ jobs:
 
       - name: Docker things
         run: |
+          docker-compose up -d
           docker container ls
 
       - name: Test with Maven
