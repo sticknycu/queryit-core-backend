@@ -3,12 +3,14 @@ package ro.nicolaemariusghergu.queryit.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import ro.nicolaemariusghergu.queryit.model.Deposit;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
+@Transactional
 public interface DepositRepository extends JpaRepository<Deposit, Long> {
 
     @NonNull
