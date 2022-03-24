@@ -11,7 +11,9 @@ import ro.nicolaemariusghergu.queryit.service.ProductService;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("http://localhost:60028")
+import static ro.nicolaemariusghergu.queryit.BackEndApplication.LOCAL_HOST_ADDRESS;
+
+@CrossOrigin(LOCAL_HOST_ADDRESS)
 @Controller
 public record ProductController(ProductService productService, CategoryService categoryService) {
 

@@ -10,7 +10,9 @@ import ro.nicolaemariusghergu.queryit.service.PromotionService;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("http://localhost:60028")
+import static ro.nicolaemariusghergu.queryit.BackEndApplication.LOCAL_HOST_ADDRESS;
+
+@CrossOrigin(LOCAL_HOST_ADDRESS)
 @Controller
 public record PromotionController(PromotionService promotionService) {
 
@@ -41,6 +43,8 @@ public record PromotionController(PromotionService promotionService) {
             Promotion oldPromotion = optionalPromotion.get();
             oldPromotion.setName(promotion.getName());
             oldPromotion.setDescription(promotion.getDescription());
+            oldPromotion.setQuantityNeeded(promotion.getQuantityNeeded());
+            oldPromotion.setExpireDate(promotion.getExpireDate());
 
             promotionService.save(oldPromotion);
 

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.springframework.stereotype.Component;
 import ro.nicolaemariusghergu.queryit.model.Category;
 import ro.nicolaemariusghergu.queryit.model.Manufacturer;
 import ro.nicolaemariusghergu.queryit.model.Product;
@@ -28,7 +29,7 @@ import java.time.ZoneOffset;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-//@Component
+@Component
 public class ExecutorHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorHandler.class);
