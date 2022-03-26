@@ -14,9 +14,13 @@ jobs:
         with:
           java-version: 1.17
 
-      - name: Test with Maven
+      - name: Start Docker - Database Container & Compile Application
         run: |
-          mvn install
+          docker-compose up -d
+
+      - name: Test Application with Maven
+        run: |
+          mvn test
 
       - name: Upload Coverage Raport from Jacoco to Codacy
         env:

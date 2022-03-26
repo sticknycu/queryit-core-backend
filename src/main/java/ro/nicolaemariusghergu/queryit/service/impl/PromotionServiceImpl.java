@@ -30,6 +30,19 @@ public record PromotionServiceImpl(PromotionRepository promotionRepository) impl
     }
 
     @Override
+    public Promotion update(Promotion promotion) {
+        Optional<Promotion> promotionAlreadyExist = findById(promotion.getId());
+        Promotion modifiedPromotion = promotionAlreadyExist
+                .map(updatedPromotion -> {
+                    updatedPromotion.setQuantityNeeded(promotion.getQuantityNeeded());
+                    return updatedPromotion;
+                })
+                .get();
+        save(modifiedPromotion);
+        return modifiedPromotion;
+    }
+
+    @Override
     public <S extends Promotion> S save(S entity) {
         return promotionRepository.save(entity);
     }

@@ -25,6 +25,19 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
     }
 
     @Override
+    public Product update(Product product) {
+        Optional<Product> productAlreadyExist = findById(product.getId());
+        Product modifiedProduct = productAlreadyExist
+                .map(updatedProduct -> {
+                    updatedProduct.setQuantity(product.getQuantity());
+                    return updatedProduct;
+                })
+                .get();
+        save(modifiedProduct);
+        return modifiedProduct;
+    }
+
+    @Override
     public Optional<Product> findByName(String name) {
         return productRepository.findByName(name);
     }

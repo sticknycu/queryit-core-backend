@@ -3,12 +3,14 @@ package ro.nicolaemariusghergu.queryit.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import ro.nicolaemariusghergu.queryit.model.Manufacturer;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
+@Transactional
 public interface ManufacturerRepository extends JpaRepository<Manufacturer, Long> {
 
     @NonNull
