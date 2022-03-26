@@ -14,6 +14,8 @@ public interface ProductService {
     @NonNull
     List<Product> findAll();
 
+    Product update(Product product);
+
     Optional<Product> findByName(String name);
 
     List<Product> findAllByPrice(Double price);

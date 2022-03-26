@@ -13,11 +13,12 @@ import java.util.Optional;
 
 import static ro.nicolaemariusghergu.queryit.BackEndApplication.LOCAL_HOST_ADDRESS;
 
+@RequestMapping("/api/products")
 @CrossOrigin(LOCAL_HOST_ADDRESS)
 @Controller
 public record ProductController(ProductService productService, CategoryService categoryService) {
 
-    @GetMapping("/v1/products")
+    @GetMapping("/v1")
     @ResponseBody
     public ResponseEntity<List<Product>> getProducts() {
         return new ResponseEntity<>(productService.findAll(), HttpStatus.OK);
@@ -32,43 +33,27 @@ public record ProductController(ProductService productService, CategoryService c
         return new ResponseEntity<>(productService.findAllByCategoryId(categoryId), HttpStatus.OK);
     }
 
-    @GetMapping("/v1/products/{productId}")
+    @GetMapping("/v1/{productId}")
     @ResponseBody
     public ResponseEntity<Optional<Product>> getProductById(@PathVariable Long productId) {
         return new ResponseEntity<>(productService.findById(productId), HttpStatus.OK);
     }
 
-    @PostMapping("/v1/products")
+    @PostMapping("/v1")
     @ResponseBody
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
         return new ResponseEntity<>(productService.save(product), HttpStatus.OK);
     }
 
-    @PutMapping("/v1/products/{productId}")
+    @PatchMapping("/v1")
     @ResponseBody
-    public ResponseEntity<Product> updateProduct(@RequestBody Product product, @PathVariable Long productId) {
-        Optional<Product> optionalProduct = productService.findById(productId);
+    public ResponseEntity<Product> updateProduct(@RequestBody Product product) {
+        Product updatedProduct = productService.update(product);
 
-        if (optionalProduct.isPresent()) {
-            Product oldProduct = optionalProduct.get();
-            oldProduct.setName(product.getName());
-            oldProduct.setQuantity(product.getQuantity());
-            oldProduct.setPrice(product.getPrice());
-            oldProduct.setIconUrl(product.getIconUrl());
-            oldProduct.setCategory(product.getCategory());
-            oldProduct.setManufacturer(product.getManufacturer());
-            oldProduct.setMiniMarket(product.getMiniMarket());
-            oldProduct.setPromotion(product.getPromotion());
-
-            productService.save(oldProduct);
-
-            return new ResponseEntity<>(oldProduct, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
     }
 
-    @DeleteMapping("/v1/products/{productId}")
+    @DeleteMapping("/v1/{productId}")
     @ResponseBody
     public ResponseEntity<Object> deleteProduct(@PathVariable Long productId) {
         productService.deleteById(productId);

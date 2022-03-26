@@ -25,6 +25,19 @@ public record CategoryServiceImpl(CategoryRepository categoryRepository) impleme
     }
 
     @Override
+    public Category update(Category category) {
+        Optional<Category> categoryAlreadyExist = findById(category.getId());
+        Category modifiedCategory = categoryAlreadyExist
+                .map(updatedCategory -> {
+                    updatedCategory.setName(category.getName());
+                    return updatedCategory;
+                })
+                .get();
+        save(modifiedCategory);
+        return modifiedCategory;
+    }
+
+    @Override
     public Optional<Category> findByName(String name) {
         return categoryRepository.findByName(name);
     }

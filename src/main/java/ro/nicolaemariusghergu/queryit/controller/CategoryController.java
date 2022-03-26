@@ -12,46 +12,38 @@ import java.util.Optional;
 
 import static ro.nicolaemariusghergu.queryit.BackEndApplication.LOCAL_HOST_ADDRESS;
 
+@RequestMapping("/api/categories")
 @CrossOrigin(LOCAL_HOST_ADDRESS)
 @Controller
 public record CategoryController(CategoryService categoryService) {
 
-    @GetMapping("/v1/categories")
+    @GetMapping("/v1")
     @ResponseBody
     public ResponseEntity<List<Category>> getCategories() {
         return new ResponseEntity<>(categoryService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/v1/categories/{categoryId}")
+    @GetMapping("/v1/{categoryId}")
     @ResponseBody
     public ResponseEntity<Optional<Category>> getCategoryById(@PathVariable Long categoryId) {
         return new ResponseEntity<>(categoryService.findById(categoryId), HttpStatus.OK);
     }
 
-    @PostMapping("/v1/categories")
+    @PostMapping("/v1")
     @ResponseBody
     public ResponseEntity<Category> addCategory(@RequestBody Category category) {
         return new ResponseEntity<>(categoryService.save(category), HttpStatus.OK);
     }
 
-    @PutMapping("/v1/categories/{categoryId}")
+    @PatchMapping("/v1")
     @ResponseBody
-    public ResponseEntity<Category> updateCategory(@RequestBody Category category, @PathVariable Long categoryId) {
-        Optional<Category> optionalCategory = categoryService.findById(categoryId);
+    public ResponseEntity<Category> updateCategory(@RequestBody Category category) {
+        Category updatedCategory = categoryService.update(category);
 
-        if (optionalCategory.isPresent()) {
-            Category oldCategory = optionalCategory.get();
-            oldCategory.setName(category.getName());
-
-            categoryService.save(oldCategory);
-
-            return new ResponseEntity<>(oldCategory, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        return new ResponseEntity<>(updatedCategory, HttpStatus.OK);
     }
 
-    @DeleteMapping("/v1/categories/{categoryId}")
+    @DeleteMapping("/v1/{categoryId}")
     @ResponseBody
     public ResponseEntity<Object> deleteProduct(@PathVariable Long categoryId) {
         categoryService.deleteById(categoryId);

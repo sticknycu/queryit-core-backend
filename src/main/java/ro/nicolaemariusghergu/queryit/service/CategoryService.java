@@ -14,6 +14,8 @@ public interface CategoryService {
     @NonNull
     List<Category> findAll();
 
+    Category update(Category category);
+
     Optional<Category> findByName(String name);
 
     <S extends Category> S save(S entity);
