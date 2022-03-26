@@ -3,7 +3,6 @@ package ro.nicolaemariusghergu.queryit.executor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.jeasy.random.randomizers.range.IntegerRangeRandomizer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
@@ -31,24 +30,16 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 @Slf4j
 @Component
-public class ExecutorHandler {
+public record ExecutorHandler(ProductService productService,
+                              CategoryService categoryService,
+                              PromotionService promotionService,
+                              ManufacturerService manufacturerService) {
+
     private static final String RESOURCES_PATH = "src/main/resources/";
     private static final String DATA_PATH = "data/";
 
-    @Autowired
-    ProductService productService;
-
-    @Autowired
-    CategoryService categoryService;
-
-    @Autowired
-    PromotionService promotionService;
-
-    @Autowired
-    ManufacturerService manufacturerService;
-
     @PostConstruct
-    private void init() throws JSONException, IOException {
+    private void init() {
         log.info("ExecutorHandler has started. Starting collecting the data...");
         handleDataFromWeb();
     }
@@ -175,7 +166,7 @@ public class ExecutorHandler {
                         Manufacturer manufacturer = manufacturerService.findByName(manufacturerName).get();
                         product.setManufacturer(manufacturer);
                     } catch (Exception e) {
-                        log.info("Manufacturer not found for product= "+ product);
+                        log.info("Manufacturer not found for product= " + product);
                     }
 
                     productService.save(product);
