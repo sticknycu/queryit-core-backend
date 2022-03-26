@@ -1,8 +1,8 @@
 package ro.nicolaemariusghergu.queryit.executor;
 
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.jeasy.random.randomizers.range.IntegerRangeRandomizer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
@@ -29,11 +29,9 @@ import java.time.ZoneOffset;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+@Slf4j
 @Component
 public class ExecutorHandler {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorHandler.class);
-
     private static final String RESOURCES_PATH = "src/main/resources/";
     private static final String DATA_PATH = "data/";
 
@@ -51,7 +49,7 @@ public class ExecutorHandler {
 
     @PostConstruct
     private void init() throws JSONException, IOException {
-        LOGGER.info("ExecutorHandler has started. Starting collecting the data...");
+        log.info("ExecutorHandler has started. Starting collecting the data...");
         handleDataFromWeb();
     }
 
@@ -71,9 +69,8 @@ public class ExecutorHandler {
         return jsonObject;
     }
 
-    private void handleDataFromWeb() throws JSONException, IOException {
-        // hardcoded website to get mega image products from promotions, I need some data , lol , i stole some from you guys, sorry
-        //String baseLink = "https://api.mega-image.ro/?operationName=GetCategoryProductSearch&variables=%7B%22lang%22%3A%22ro%22%2C%22searchQuery%22%3A%22%22%2C%22category%22%3A%220--%22%2C%22pageNumber%22%3A0%2C%22pageSize%22%3A20%2C%22filterFlag%22%3Atrue%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22bdb32b6dc09b8ee0bce785e0a6799c6ff2593a8d1fd2a4ad2ac66cf3e999fdf5%22%7D%7D";
+    @SneakyThrows
+    private void handleDataFromWeb() {
         String baseLinkImages = "https://d1lqpgkqcok0l.cloudfront.net";
 
         Set<String> manufacturersName = new HashSet<>();
@@ -81,18 +78,6 @@ public class ExecutorHandler {
         long productId = 0L;
         long manufacturerId = 0L;
         long categoryId = 0L;
-        /* deoarece avem 15 categorii
-        for (int i = 1; i <= 15; i++) {
-            String word;
-            if (i >= 10) {
-                word = "" + i;
-            } else {
-                word = "0" + i;
-            }*
-
-            System.out.println("Avem site-ul numarul " + i);
-            String dataLink = baseLink.replace("--", word);
-            System.out.println("Site-ul este " + dataLink);*/
 
         for (Map.Entry<String, JSONObject> entry : readFiles().entrySet()) {
 
@@ -116,7 +101,7 @@ public class ExecutorHandler {
             //    continue;
             //}
 
-            LOGGER.info("Get data about every Category...");
+            log.info("Get data about every Category...");
             // daca nu exista categoria in database
             if (categoryService.findByName(categoryName).isEmpty()) {
                 // atunci creez un nou obiect
@@ -151,8 +136,8 @@ public class ExecutorHandler {
                 }
             }
 
-            System.out.println();
-            System.out.println("Pentru categoria " + categoryName + " avem urmatoarele produse:");
+            log.info("");
+            log.info("Pentru categoria " + categoryName + " avem urmatoarele produse:");
             for (int j = 0; j < jsonArray.length(); j++) {
                 String productName = jsonArray
                         .getJSONObject(j)
@@ -190,23 +175,23 @@ public class ExecutorHandler {
                         Manufacturer manufacturer = manufacturerService.findByName(manufacturerName).get();
                         product.setManufacturer(manufacturer);
                     } catch (Exception e) {
-                        LOGGER.info("Manufacturer not found for product= "+ product);
+                        log.info("Manufacturer not found for product= "+ product);
                     }
 
                     productService.save(product);
-                    System.out.println(product);
+                    log.info(String.valueOf(product));
                 }
             }
         }
 
-        LOGGER.info("Saved collected data to database!");
+        log.info("Saved collected data to database!");
 
-        LOGGER.info("Randomizing table Promotion....");
+        log.info("Randomizing table Promotion....");
         int maxValue = new IntegerRangeRandomizer(1, 20).getRandomValue();
         for (int i = 0; i < maxValue; i++) {
             Optional<Promotion> localPromotion = promotionService.findById((long) i);
             if (localPromotion.isPresent()) {
-                LOGGER.info("Promotion with id " + i + " already exists in our database!");
+                log.info("Promotion with id " + i + " already exists in our database!");
                 continue;
             }
 
@@ -246,13 +231,13 @@ public class ExecutorHandler {
             ZoneOffset zoneOffset = zoneId.getRules().getOffset(instant);
             promotion.setExpireDate(localDateTime.toInstant(zoneOffset).toEpochMilli());
 
-            System.out.println(promotion);
+            log.info(String.valueOf(promotion));
 
             promotionService.save(promotion);
         }
     }
 
-    private final int MAX_PRODUCT_ID = 290;
+    private static final int MAX_PRODUCT_ID = 290;
 
     private Product findAvailableProductFromRandomizedIntegerId() {
         int productRandomizedId = new IntegerRangeRandomizer(0, MAX_PRODUCT_ID).getRandomValue();
