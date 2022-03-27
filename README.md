@@ -13,5 +13,7 @@ Stack used for the project is:
 * Docker with docker-compose and Dockerfile
 * Mocked Tests are maked with Mockito and JUnit 5
 * JaCoCo Plugin 0.8.7
+* MapStruct Plugin 1.4.2
+* DTOs
 * Codacy for analyze, quality code and coverage tests
 * Github Actions
