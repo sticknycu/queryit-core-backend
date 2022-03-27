@@ -1,7 +1,6 @@
 package ro.nicolaemariusghergu.queryit.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import ro.nicolaemariusghergu.queryit.model.Product;
@@ -13,29 +12,7 @@ import java.util.Optional;
 @Transactional
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    @NonNull
-    @Override
-    Optional<Product> findById(@NonNull Long id);
-
-    @NonNull
-    @Override
-    List<Product> findAll();
+    List<Product> findAllByCategoryId(Long id);
 
     Optional<Product> findByName(String name);
-
-    List<Product> findAllByPrice(Double price);
-
-    @NonNull
-    @Override
-    <S extends Product> S save(@NonNull S entity);
-
-    @NonNull
-    @Override
-    <S extends Product> List<S> saveAll(@NonNull Iterable<S> entities);
-
-    @NonNull
-    @Override
-    void deleteById(@NonNull Long id);
-
-    List<Product> findAllByCategoryId(Long categoryId);
 }

@@ -1,61 +1,68 @@
 package ro.nicolaemariusghergu.queryit.service.impl;
 
-import org.springframework.lang.NonNull;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import ro.nicolaemariusghergu.queryit.model.Promotion;
+import ro.nicolaemariusghergu.queryit.dto.PromotionDto;
+import ro.nicolaemariusghergu.queryit.mapper.PromotionMapper;
 import ro.nicolaemariusghergu.queryit.repository.PromotionRepository;
 import ro.nicolaemariusghergu.queryit.service.PromotionService;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.NoSuchElementException;
 
 @Service
 public record PromotionServiceImpl(PromotionRepository promotionRepository) implements PromotionService {
 
-    @NonNull
     @Override
-    public Optional<Promotion> findById(@NonNull Long id) {
-        return promotionRepository.findById(id);
-    }
-
-    @NonNull
-    @Override
-    public List<Promotion> findAll() {
-        return promotionRepository.findAll();
+    public ResponseEntity<PromotionDto> getPromotionById(Long id) {
+        return ResponseEntity.ok(promotionRepository.findById(id)
+                .map(PromotionMapper.INSTANCE::promotionToPromotionDto)
+                .orElseThrow(() ->
+                        new NoSuchElementException("Promotion has not been found"))
+        );
     }
 
     @Override
-    public List<Promotion> findByName(String name) {
-        return promotionRepository.findByName(name);
+    public ResponseEntity<List<PromotionDto>> getPromotions() {
+        return ResponseEntity.ok(promotionRepository.findAll().stream()
+                .map(PromotionMapper.INSTANCE::promotionToPromotionDto)
+                .toList());
     }
 
     @Override
-    public Promotion update(Promotion promotion) {
-        Optional<Promotion> promotionAlreadyExist = findById(promotion.getId());
-        Promotion modifiedPromotion = promotionAlreadyExist
+    public ResponseEntity<List<PromotionDto>> getPromotionsByName(String name) {
+        return ResponseEntity.ok(promotionRepository.findAllByName(name).stream()
+                .map(PromotionMapper.INSTANCE::promotionToPromotionDto)
+                .toList());
+    }
+
+    @Override
+    public ResponseEntity<PromotionDto> updatePromotion(PromotionDto promotionDto) {
+        PromotionDto promotionAlreadyExist = promotionRepository.findById(promotionDto.getId())
+                .map(PromotionMapper.INSTANCE::promotionToPromotionDto)
                 .map(updatedPromotion -> {
-                    updatedPromotion.setQuantityNeeded(promotion.getQuantityNeeded());
+                    updatedPromotion.setQuantityNeeded(promotionDto.getQuantityNeeded());
                     return updatedPromotion;
                 })
-                .get();
-        save(modifiedPromotion);
-        return modifiedPromotion;
+                .orElseThrow(() ->
+                        new NoSuchElementException("Promotion has not been found"));
+        promotionRepository.save(PromotionMapper.INSTANCE
+                .promotionDtoToPromotion(promotionAlreadyExist));
+        return ResponseEntity.ok(promotionAlreadyExist);
     }
 
     @Override
-    public <S extends Promotion> S save(S entity) {
-        return promotionRepository.save(entity);
+    public ResponseEntity<Long> addPromotion(PromotionDto promotionDto) {
+        promotionRepository.save(
+                PromotionMapper.INSTANCE.promotionDtoToPromotion(promotionDto));
+        return ResponseEntity.ok(promotionDto.getId());
     }
 
     @Override
-    public <S extends Promotion> List<S> saveAll(Iterable<S> entities) {
-        return promotionRepository.saveAll(entities);
-    }
-
-    @NonNull
-    @Override
-    public void deleteById(@NonNull Long id) {
+    public ResponseEntity<Long> deletePromotionById(Long id) {
         promotionRepository.deleteById(id);
+        return ResponseEntity.ok(id);
     }
+
 
 }

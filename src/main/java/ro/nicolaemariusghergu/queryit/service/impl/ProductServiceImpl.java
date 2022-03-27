@@ -1,71 +1,81 @@
 package ro.nicolaemariusghergu.queryit.service.impl;
 
-import org.springframework.lang.NonNull;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import ro.nicolaemariusghergu.queryit.model.Product;
+import ro.nicolaemariusghergu.queryit.dto.ProductDto;
+import ro.nicolaemariusghergu.queryit.mapper.ProductMapper;
 import ro.nicolaemariusghergu.queryit.repository.ProductRepository;
 import ro.nicolaemariusghergu.queryit.service.ProductService;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
 public record ProductServiceImpl(ProductRepository productRepository) implements ProductService {
 
-    @NonNull
     @Override
-    public Optional<Product> findById(@NonNull Long id) {
-        return productRepository.findById(id);
+    public ResponseEntity<ProductDto> findProductById(Long id) {
+        return ResponseEntity.ok(productRepository.findById(id).stream()
+                        .map(ProductMapper.INSTANCE::productToProductDto)
+                        .findFirst()
+                        .orElseThrow(
+                                () -> new NoSuchElementException("Product does not exist!"))
+                );
     }
 
-    @NonNull
     @Override
-    public List<Product> findAll() {
-        return productRepository.findAll();
+    public ResponseEntity<List<ProductDto>> getProducts() {
+        return ResponseEntity.ok(productRepository.findAll()
+                .stream()
+                .map(ProductMapper.INSTANCE::productToProductDto)
+                .toList());
     }
 
     @Override
-    public Product update(Product product) {
-        Optional<Product> productAlreadyExist = findById(product.getId());
-        Product modifiedProduct = productAlreadyExist
+    public ResponseEntity<Long> addProduct(ProductDto productDto) {
+        productRepository.save(ProductMapper.INSTANCE.productDtoToProduct(productDto));
+        return ResponseEntity.ok(productDto.getId());
+    }
+
+    @Override
+    public ProductDto getProductByName(String name) {
+        return ProductMapper.INSTANCE.productToProductDto(
+                productRepository.findByName(name)
+                        .orElseThrow(() ->
+                                new NoSuchElementException("Product cannot be found"))
+        );
+    }
+
+    @Override
+    public ResponseEntity<Long> deleteProductById(Long id) {
+        productRepository.deleteById(id);
+        return ResponseEntity.ok(id);
+    }
+
+    @Override
+    public ResponseEntity<ProductDto> updateProduct(ProductDto productDto) {
+        ProductDto modifiedProduct = productRepository.findById(productDto.getId()).stream()
+                .map(ProductMapper.INSTANCE::productToProductDto)
                 .map(updatedProduct -> {
-                    updatedProduct.setQuantity(product.getQuantity());
+                    updatedProduct.setQuantity(productDto.getQuantity());
                     return updatedProduct;
                 })
-                .get();
-        save(modifiedProduct);
-        return modifiedProduct;
+                .findAny()
+                .orElseThrow(() ->
+                        new NoSuchElementException("Product has not been found")
+                );
+        productRepository.save(
+                ProductMapper.INSTANCE.productDtoToProduct(modifiedProduct));
+        return ResponseEntity.ok(modifiedProduct);
     }
 
     @Override
-    public Optional<Product> findByName(String name) {
-        return productRepository.findByName(name);
-    }
-
-    @Override
-    public List<Product> findAllByPrice(Double price) {
-        return productRepository.findAllByPrice(price);
-    }
-
-    @Override
-    public <S extends Product> S save(S entity) {
-        return productRepository.save(entity);
-    }
-
-    @Override
-    public <S extends Product> List<S> saveAll(Iterable<S> entities) {
-        return productRepository.saveAll(entities);
-    }
-
-    @NonNull
-    @Override
-    public void deleteById(@NonNull Long id) {
-        productRepository.deleteById(id);
-    }
-
-    @Override
-    public List<Product> findAllByCategoryId(Long categoryId) {
-        return productRepository.findAllByCategoryId(categoryId);
+    public ResponseEntity<List<ProductDto>> getProductsByCategoryId(Long categoryId) {
+        return ResponseEntity.ok(productRepository.findAllByCategoryId(categoryId)
+                .stream()
+                .map(ProductMapper.INSTANCE::productToProductDto)
+                .toList());
     }
 
 }

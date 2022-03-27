@@ -1,31 +1,23 @@
 package ro.nicolaemariusghergu.queryit.service;
 
-import org.springframework.lang.NonNull;
-import ro.nicolaemariusghergu.queryit.model.Product;
+import org.springframework.http.ResponseEntity;
+import ro.nicolaemariusghergu.queryit.dto.ProductDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ProductService {
 
-    @NonNull
-    Optional<Product> findById(@NonNull Long id);
+    ResponseEntity<ProductDto> findProductById(Long id);
 
-    @NonNull
-    List<Product> findAll();
+    ResponseEntity<List<ProductDto>> getProducts();
 
-    Product update(Product product);
+    ResponseEntity<Long> addProduct(ProductDto productDto);
 
-    Optional<Product> findByName(String name);
+    ProductDto getProductByName(String name);
 
-    List<Product> findAllByPrice(Double price);
+    ResponseEntity<Long> deleteProductById(Long id);
 
-    <S extends Product> S save(S entity);
+    ResponseEntity<ProductDto> updateProduct(ProductDto productDto);
 
-    <S extends Product> List<S> saveAll(Iterable<S> entities);
-
-    @NonNull
-    void deleteById(@NonNull Long id);
-
-    List<Product> findAllByCategoryId(Long categoryId);
+    ResponseEntity<List<ProductDto>> getProductsByCategoryId(Long categoryId);
 }
