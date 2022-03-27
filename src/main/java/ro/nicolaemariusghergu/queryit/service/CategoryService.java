@@ -1,27 +1,22 @@
 package ro.nicolaemariusghergu.queryit.service;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
-import ro.nicolaemariusghergu.queryit.model.Category;
+import ro.nicolaemariusghergu.queryit.dto.CategoryDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface CategoryService {
 
-    @NonNull
-    Optional<Category> findById(@NonNull Long id);
+    ResponseEntity<CategoryDto> getCategoryById(@NonNull Long id);
 
-    @NonNull
-    List<Category> findAll();
+    ResponseEntity<List<CategoryDto>> getCategories();
 
-    Category update(Category category);
+    ResponseEntity<CategoryDto> updateCategory(CategoryDto category);
 
-    Optional<Category> findByName(String name);
+    ResponseEntity<CategoryDto> getCategoryByName(String name);
 
-    <S extends Category> S save(S entity);
+    ResponseEntity<Long> addCategory(CategoryDto categoryDto);
 
-    <S extends Category> List<S> saveAll(Iterable<S> entities);
-
-    @NonNull
-    void deleteById(@NonNull Long id);
+    ResponseEntity<Long> deleteCategoryById(@NonNull Long id);
 }

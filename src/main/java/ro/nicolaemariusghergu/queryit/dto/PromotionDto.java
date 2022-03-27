@@ -1,14 +1,13 @@
 package ro.nicolaemariusghergu.queryit.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class PromotionDto {
 
     private Long id;
@@ -20,4 +19,6 @@ public class PromotionDto {
     private Long expireDate;
 
     private Integer quantityNeeded;
+
+    private ProductDto productId;
 }

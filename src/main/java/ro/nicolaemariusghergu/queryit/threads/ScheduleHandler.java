@@ -18,7 +18,7 @@ public class ScheduleHandler {
 
     @Scheduled(fixedRate = 1000)
     public void run() {
-        promotionService.findAll()
+        promotionService.getPromotions().getBody()
                 .forEach(promotion -> {
                     long expirePromotionTime = promotion.getExpireDate();
                     long currentTime = System.currentTimeMillis();
@@ -26,7 +26,7 @@ public class ScheduleHandler {
                     //LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
                     //log.info("Expire Local Date time of offer " + promotion.getName() + " is " + localDateTime) ;
                     if (currentTime >= expirePromotionTime) {
-                        promotionService.deleteById(promotion.getId());
+                        promotionService.deletePromotionById(promotion.getId());
                     }
                 });
     }

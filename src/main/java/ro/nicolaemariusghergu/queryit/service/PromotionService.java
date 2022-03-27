@@ -1,28 +1,22 @@
 package ro.nicolaemariusghergu.queryit.service;
 
-import org.springframework.lang.NonNull;
-import ro.nicolaemariusghergu.queryit.model.Promotion;
+import org.springframework.http.ResponseEntity;
+import ro.nicolaemariusghergu.queryit.dto.PromotionDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface PromotionService {
 
-    @NonNull
-    Optional<Promotion> findById(@NonNull Long id);
+    ResponseEntity<PromotionDto> getPromotionById(Long id);
 
-    @NonNull
-    List<Promotion> findAll();
+    ResponseEntity<List<PromotionDto>> getPromotions();
 
-    List<Promotion> findByName(String name);
+    ResponseEntity<List<PromotionDto>> getPromotionsByName(String name);
 
-    Promotion update(Promotion promotion);
+    ResponseEntity<PromotionDto> updatePromotion(PromotionDto promotionDto);
 
-    <S extends Promotion> S save(S entity);
+    ResponseEntity<Long> addPromotion(PromotionDto promotionDto);
 
-    <S extends Promotion> List<S> saveAll(Iterable<S> entities);
-
-    @NonNull
-    void deleteById(@NonNull Long id);
+    ResponseEntity<Long> deletePromotionById(Long id);
 
 }
