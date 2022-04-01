@@ -19,5 +19,7 @@ public interface ProductService {
 
     ResponseEntity<ProductDto> updateProduct(ProductDto productDto);
 
+    ResponseEntity<List<ProductDto>> getProxyProducts(Long categoryId);
+
     ResponseEntity<List<ProductDto>> getProductsByCategoryId(Long categoryId);
 }
