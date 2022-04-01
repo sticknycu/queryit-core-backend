@@ -4,15 +4,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import ro.nicolaemariusghergu.queryit.dto.ProductDto;
 import ro.nicolaemariusghergu.queryit.mapper.ProductMapper;
+import ro.nicolaemariusghergu.queryit.proxy.ProductProxy;
 import ro.nicolaemariusghergu.queryit.repository.ProductRepository;
 import ro.nicolaemariusghergu.queryit.service.ProductService;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @Service
-public record ProductServiceImpl(ProductRepository productRepository) implements ProductService {
+public record ProductServiceImpl(ProductRepository productRepository,
+                                 ProductProxy productProxy)
+        implements ProductService {
 
     @Override
     public ResponseEntity<ProductDto> findProductById(Long id) {
@@ -68,6 +70,13 @@ public record ProductServiceImpl(ProductRepository productRepository) implements
         productRepository.save(
                 ProductMapper.INSTANCE.productDtoToProduct(modifiedProduct));
         return ResponseEntity.ok(modifiedProduct);
+    }
+
+    @Override
+    public ResponseEntity<List<ProductDto>> getProxyProducts(Long categoryId) {
+        return ResponseEntity.ok(productProxy.getProducts(categoryId).stream()
+                .map(ProductMapper.INSTANCE::productToProductDto)
+                .toList());
     }
 
     @Override

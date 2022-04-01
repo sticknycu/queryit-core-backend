@@ -14,12 +14,18 @@ import static ro.nicolaemariusghergu.queryit.BackEndApplication.FRONTEND_CORE_AD
 @RequestMapping("/api/products")
 @CrossOrigin(FRONTEND_CORE_ADDRESS)
 @Controller
-public record ProductController(ProductService productService, CategoryService categoryService) {
+public record ProductController(ProductService productService,
+                                CategoryService categoryService) {
 
     @GetMapping("/v1")
     @ResponseBody
     public ResponseEntity<List<ProductDto>> getProducts() {
         return productService.getProducts();
+    }
+
+    @GetMapping("/v1/proxy-products/{categoryId}")
+    public ResponseEntity<List<ProductDto>> getProxyProducts(@PathVariable Long categoryId) {
+        return productService.getProxyProducts(categoryId);
     }
 
     @GetMapping("/v1/productsByCategoryId/{categoryId}")
