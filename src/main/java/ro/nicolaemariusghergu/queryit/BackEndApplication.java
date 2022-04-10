@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = "ro.nicolaemariusghergu.queryit")
 public class BackEndApplication {
 
-    public static final String FRONTEND_CORE_ADDRESS = "http://localhost:60028";
+    public static final String FRONTEND_CORE_ADDRESS = "http://localhost:4000";
 
     public static void main(String[] args) {
         SpringApplication.run(BackEndApplication.class, args);
