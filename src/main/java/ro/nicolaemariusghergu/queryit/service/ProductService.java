@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import ro.nicolaemariusghergu.queryit.dto.ProductDto;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ProductService {
 
@@ -19,7 +20,7 @@ public interface ProductService {
 
     ResponseEntity<ProductDto> updateProduct(ProductDto productDto);
 
-    ResponseEntity<List<ProductDto>> getProxyProducts(Long categoryId);
+    ResponseEntity<Set<ProductDto>> getProxyProducts(Long categoryId);
 
     ResponseEntity<List<ProductDto>> getProductsByCategoryId(Long categoryId);
 }

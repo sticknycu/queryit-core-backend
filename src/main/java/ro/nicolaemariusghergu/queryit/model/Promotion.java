@@ -1,6 +1,8 @@
 package ro.nicolaemariusghergu.queryit.model;
 
 import lombok.*;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,6 +17,8 @@ import java.io.Serializable;
 public class Promotion implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotFound(action = NotFoundAction.IGNORE)
     @Column(name = "promotion_id", nullable = false)
     private Long id;
 
@@ -23,11 +27,6 @@ public class Promotion implements Serializable {
 
     @Column(name = "description")
     private String description;
-
-    @ToString.Exclude
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product productId;
 
     @Column(name = "expire_date")
     private Long expireDate;

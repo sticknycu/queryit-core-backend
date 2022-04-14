@@ -1,21 +1,22 @@
 package ro.nicolaemariusghergu.queryit.threads;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.EnableScheduling;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import ro.nicolaemariusghergu.queryit.service.PromotionService;
 
-//@Slf4j
-@Configuration
-@EnableScheduling
-public class ScheduleHandler {
+@Slf4j
+//@Configuration
+//@EnableScheduling
+public class UpdateOffersScheduler {
 
     private final PromotionService promotionService;
 
-    public ScheduleHandler(PromotionService promotionService) {
+    public UpdateOffersScheduler(PromotionService promotionService) {
         this.promotionService = promotionService;
     }
 
+    @SneakyThrows
     @Scheduled(fixedRate = 1000)
     public void run() {
         promotionService.getPromotions().getBody()

@@ -4,18 +4,31 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import ro.nicolaemariusghergu.queryit.model.Product;
+import ro.nicolaemariusghergu.queryit.dto.CategoryDto;
+import ro.nicolaemariusghergu.queryit.dto.ProductDto;
+import ro.nicolaemariusghergu.queryit.dto.PromotionDto;
+import ro.nicolaemariusghergu.queryit.model.Manufacturer;
 
-import java.util.List;
+import java.util.Set;
 
 @FeignClient(name="products", url = "http://localhost:9092")
-@RequestMapping("/api/products")
 public interface ProductProxy {
 
-    @GetMapping("/api/download/v1/mega-image/{categoryId}")
-    ResponseEntity<List<Product>> getProductsFromMegaImageByCategory(@PathVariable Long categoryId);
+    @GetMapping("/api/download/v1/mega-image/products/{categoryId}")
+    ResponseEntity<Set<ProductDto>> getProductsFromMegaImageByCategory(@PathVariable Long categoryId);
 
-    @GetMapping("/api/download/v1/mega-image")
-    ResponseEntity<List<Product>> getProductsFromMegaImage();
+    @GetMapping("/api/download/v1/mega-image/products")
+    ResponseEntity<Set<ProductDto>> getProductsFromMegaImage();
+
+    @GetMapping("/api/download/v1/mega-image/promotions")
+    ResponseEntity<Set<PromotionDto>> getPromotionsFromMegaImage();
+
+    @GetMapping("/api/download/v1/mega-image/product-promotions")
+    ResponseEntity<Set<ProductDto>> getProductsWithPromotionFromMegaImage();
+
+    @GetMapping("/api/download/v1/mega-image/categories")
+    ResponseEntity<Set<CategoryDto>> getCategoriesFromMegaImage();
+
+    @GetMapping("/api/download/v1/mega-image/manufacturers")
+    ResponseEntity<Set<Manufacturer>> getManufacturersFromMegaImage();
 }

@@ -11,9 +11,8 @@ CREATE TABLE IF NOT EXISTS
                    promotion_id SERIAL,
                    name VARCHAR,
                    description VARCHAR,
-                   product_id SERIAL,
                    expire_date BIGINT,
-                   quantity_needed SERIAL,
+                   quantity_needed INTEGER,
 
                    PRIMARY KEY (promotion_id)
     );
@@ -44,10 +43,10 @@ CREATE TABLE IF NOT EXISTS
 
 CREATE TABLE IF NOT EXISTS
     manufacturers (
-                      manufacturer_id SERIAL,
-                      name VARCHAR,
+                manufacturer_id SERIAL,
+                name VARCHAR,
 
-                      PRIMARY KEY (manufacturer_id)
+                PRIMARY KEY (manufacturer_id)
     );
 
 CREATE TABLE IF NOT EXISTS
@@ -58,9 +57,9 @@ CREATE TABLE IF NOT EXISTS
                  minimarket_id INTEGER,
                  manufacturer_id INTEGER,
                  name VARCHAR,
-                 price FLOAT,
+                 price DECIMAL,
                  quantity INTEGER,
-                 icon_url VARCHAR,
+                 icon_path VARCHAR,
 
                  PRIMARY KEY (product_id),
 

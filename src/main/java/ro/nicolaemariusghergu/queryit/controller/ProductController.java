@@ -8,6 +8,7 @@ import ro.nicolaemariusghergu.queryit.service.CategoryService;
 import ro.nicolaemariusghergu.queryit.service.ProductService;
 
 import java.util.List;
+import java.util.Set;
 
 import static ro.nicolaemariusghergu.queryit.BackEndApplication.FRONTEND_CORE_ADDRESS;
 
@@ -24,7 +25,7 @@ public record ProductController(ProductService productService,
     }
 
     @GetMapping("/v1/proxy-products/{categoryId}")
-    public ResponseEntity<List<ProductDto>> getProxyProducts(@PathVariable Long categoryId) {
+    public ResponseEntity<Set<ProductDto>> getProxyProducts(@PathVariable Long categoryId) {
         return productService.getProxyProducts(categoryId);
     }
 

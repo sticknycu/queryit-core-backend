@@ -10,6 +10,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import ro.nicolaemariusghergu.queryit.model.Product;
+import ro.nicolaemariusghergu.queryit.proxy.ProductProxy;
 import ro.nicolaemariusghergu.queryit.repository.ProductRepository;
 import ro.nicolaemariusghergu.queryit.service.ProductService;
 
@@ -26,10 +27,13 @@ class ProductServiceImplTest {
     @Mock
     private ProductRepository productRepository;
 
+    @Mock
+    private ProductProxy productProxy;
+
     @BeforeEach
     void setup() {
         MockitoAnnotations.openMocks(this);
-        productService = new ProductServiceImpl(productRepository);
+        productService = new ProductServiceImpl(productRepository, productProxy);
     }
 
     @SneakyThrows

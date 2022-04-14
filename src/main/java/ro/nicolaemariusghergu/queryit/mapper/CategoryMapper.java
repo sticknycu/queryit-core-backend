@@ -14,4 +14,7 @@ public interface CategoryMapper {
 
     Category categoryDtoToCategory(CategoryDto categoryDto);
 
+    default String mapEmptyString(String string) {
+        return string != null && !string.isEmpty() ? string : null;
+    }
 }

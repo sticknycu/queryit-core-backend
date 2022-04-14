@@ -10,6 +10,7 @@ import ro.nicolaemariusghergu.queryit.service.ProductService;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Set;
 
 @Service
 public record ProductServiceImpl(ProductRepository productRepository,
@@ -73,10 +74,8 @@ public record ProductServiceImpl(ProductRepository productRepository,
     }
 
     @Override
-    public ResponseEntity<List<ProductDto>> getProxyProducts(Long categoryId) {
-        return ResponseEntity.ok(productProxy.getProducts(categoryId).stream()
-                .map(ProductMapper.INSTANCE::productToProductDto)
-                .toList());
+    public ResponseEntity<Set<ProductDto>> getProxyProducts(Long categoryId) {
+        return productProxy.getProductsFromMegaImageByCategory(categoryId);
     }
 
     @Override

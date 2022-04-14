@@ -13,4 +13,8 @@ public interface ProductMapper {
     ProductDto productToProductDto(Product product);
 
     Product productDtoToProduct(ProductDto productDto);
+
+    default String mapEmptyString(String string) {
+        return string != null && !string.isEmpty() ? string : null;
+    }
 }

@@ -13,4 +13,8 @@ public interface PromotionMapper {
     PromotionDto promotionToPromotionDto(Promotion promotion);
 
     Promotion promotionDtoToPromotion(PromotionDto promotionDto);
+
+    default String mapEmptyString(String string) {
+        return string != null && !string.isEmpty() ? string : null;
+    }
 }
