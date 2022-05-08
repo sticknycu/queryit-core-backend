@@ -27,7 +27,7 @@ public record TruckController(TruckService truckService) {
         return truckService.findTruckById(truckId);
     }
 
-    @GetMapping("/v1")
+    @GetMapping("/v1/truck-serialnumber")
     @ResponseBody
     public ResponseEntity<TruckDto> getTruckBySerialNumber(@RequestBody TruckDto truckDto) {
         return truckService.getTruckBySerialNumber(truckDto.getSerialNumber());

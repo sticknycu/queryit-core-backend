@@ -27,7 +27,7 @@ public record MiniMarketController(MiniMarketService miniMarketService) {
         return miniMarketService.findMiniMarketById(miniMarketId);
     }
 
-    @GetMapping("/v1")
+    @GetMapping("/v1/minimarket-name")
     @ResponseBody
     public ResponseEntity<MiniMarketDto> getMiniMarketByName(@RequestBody MiniMarketDto miniMarketDto) {
         return miniMarketService.getMiniMarketByName(miniMarketDto.getName());

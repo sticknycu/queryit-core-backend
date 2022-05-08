@@ -27,7 +27,7 @@ public record PromotionController(PromotionService promotionService) {
         return promotionService.getPromotionById(promotionId);
     }
 
-    @GetMapping("/v1")
+    @GetMapping("/v1/promotion-name")
     @ResponseBody
     public ResponseEntity<List<PromotionDto>> getPromotionByName(@RequestBody PromotionDto promotionDto) {
         return promotionService.getPromotionsByName(promotionDto.getName());

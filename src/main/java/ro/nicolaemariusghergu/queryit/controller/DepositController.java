@@ -33,7 +33,7 @@ public record DepositController(DepositService depositService) {
         return depositService.addDeposit(productDto);
     }
 
-    @GetMapping("/v1")
+    @GetMapping("/v1/deposit-name")
     @ResponseBody
     public ResponseEntity<DepositDto> getDepositByName(@RequestBody DepositDto depositDto) {
         return depositService.getDepositByName(depositDto.getName());

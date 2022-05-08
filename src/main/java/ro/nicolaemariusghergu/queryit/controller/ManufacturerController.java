@@ -27,7 +27,7 @@ public record ManufacturerController(ManufacturerService manufacturerService) {
         return manufacturerService.findManufacturerById(manufacturerId);
     }
 
-    @GetMapping("/v1")
+    @GetMapping("/v1/manufacturer-name")
     @ResponseBody
     public ResponseEntity<ManufacturerDto> getManufacturerByName(@RequestBody ManufacturerDto manufacturerDto) {
         return manufacturerService.getManufacturerByName(manufacturerDto.getName());
