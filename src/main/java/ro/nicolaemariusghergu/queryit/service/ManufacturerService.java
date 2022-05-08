@@ -1,22 +1,21 @@
 package ro.nicolaemariusghergu.queryit.service;
 
-import org.springframework.lang.NonNull;
-import ro.nicolaemariusghergu.queryit.model.Manufacturer;
+import org.springframework.http.ResponseEntity;
+import ro.nicolaemariusghergu.queryit.dto.ManufacturerDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ManufacturerService {
 
-    @NonNull
-    Optional<Manufacturer> findById(@NonNull Long id);
+    ResponseEntity<ManufacturerDto> findManufacturerById(Long id);
 
-    @NonNull
-    List<Manufacturer> findAll();
+    ResponseEntity<List<ManufacturerDto>> getManufacturers();
 
-    Optional<Manufacturer> findByName(String name);
+    ResponseEntity<Long> addManufacturer(ManufacturerDto manufacturerDto);
 
-    <S extends Manufacturer> S save(S entity);
+    ResponseEntity<ManufacturerDto> getManufacturerByName(String name);
 
-    <S extends Manufacturer> List<S> saveAll(Iterable<S> entities);
+    ResponseEntity<Long> deleteManufacturerById(Long id);
+
+    ResponseEntity<ManufacturerDto> updateManufacturer(ManufacturerDto manufacturerDto);
 }

@@ -27,6 +27,12 @@ public record CategoryController(CategoryService categoryService) {
         return categoryService.getCategoryById(categoryId);
     }
 
+    @GetMapping("/v1")
+    @ResponseBody
+    public ResponseEntity<CategoryDto> getCategoryByName(@RequestBody CategoryDto categoryDto) {
+        return categoryService.getCategoryByName(categoryDto.getName());
+    }
+
     @PostMapping("/v1")
     @ResponseBody
     public ResponseEntity<Long> addCategory(@RequestBody CategoryDto categoryDto) {

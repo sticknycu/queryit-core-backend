@@ -1,22 +1,20 @@
 package ro.nicolaemariusghergu.queryit.service;
 
-import org.springframework.lang.NonNull;
-import ro.nicolaemariusghergu.queryit.model.Truck;
+import org.springframework.http.ResponseEntity;
+import ro.nicolaemariusghergu.queryit.dto.TruckDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface TruckService {
+    ResponseEntity<TruckDto> findTruckById(Long id);
 
-    @NonNull
-    Optional<Truck> findById(@NonNull Long id);
+    ResponseEntity<List<TruckDto>> getTrucks();
 
-    @NonNull
-    List<Truck> findAll();
+    ResponseEntity<Long> addTruck(TruckDto truckDto);
 
-    Optional<Truck> findBySerialNumber(String serialNumber);
+    ResponseEntity<TruckDto> getTruckBySerialNumber(String serialNumber);
 
-    <S extends Truck> S save(S entity);
+    ResponseEntity<Long> deleteTruckById(Long id);
 
-    <S extends Truck> List<S> saveAll(Iterable<S> entities);
+    ResponseEntity<TruckDto> updateTruck(TruckDto truckDto);
 }

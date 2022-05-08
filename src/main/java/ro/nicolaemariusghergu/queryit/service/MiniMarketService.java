@@ -1,22 +1,21 @@
 package ro.nicolaemariusghergu.queryit.service;
 
-import org.springframework.lang.NonNull;
-import ro.nicolaemariusghergu.queryit.model.MiniMarket;
+import org.springframework.http.ResponseEntity;
+import ro.nicolaemariusghergu.queryit.dto.MiniMarketDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface MiniMarketService {
 
-    @NonNull
-    Optional<MiniMarket> findById(@NonNull Long id);
+    ResponseEntity<MiniMarketDto> findMiniMarketById(Long id);
 
-    @NonNull
-    List<MiniMarket> findAll();
+    ResponseEntity<List<MiniMarketDto>> getMiniMarkets();
 
-    Optional<MiniMarket> findByName(String name);
+    ResponseEntity<Long> addMiniMarket(MiniMarketDto miniMarketDto);
 
-    <S extends MiniMarket> S save(S entity);
+    ResponseEntity<MiniMarketDto> getMiniMarketByName(String name);
 
-    <S extends MiniMarket> List<S> saveAll(Iterable<S> entities);
+    ResponseEntity<Long> deleteMiniMarketById(Long id);
+
+    ResponseEntity<MiniMarketDto> updateMiniMarket(MiniMarketDto miniMarketDto);
 }

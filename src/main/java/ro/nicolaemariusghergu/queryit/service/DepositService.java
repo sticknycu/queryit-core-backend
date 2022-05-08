@@ -1,22 +1,20 @@
 package ro.nicolaemariusghergu.queryit.service;
 
-import org.springframework.lang.NonNull;
-import ro.nicolaemariusghergu.queryit.model.Deposit;
+import org.springframework.http.ResponseEntity;
+import ro.nicolaemariusghergu.queryit.dto.DepositDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface DepositService {
+    ResponseEntity<DepositDto> findDepositById(Long id);
 
-    @NonNull
-    Optional<Deposit> findById(@NonNull Long id);
+    ResponseEntity<List<DepositDto>> getDeposits();
 
-    @NonNull
-    List<Deposit> findAll();
+    ResponseEntity<Long> addDeposit(DepositDto depositDto);
 
-    Optional<Deposit> findByName(String name);
+    ResponseEntity<DepositDto> getDepositByName(String name);
 
-    <S extends Deposit> S save(S entity);
+    ResponseEntity<Long> deleteDepositById(Long id);
 
-    <S extends Deposit> List<S> saveAll(Iterable<S> entities);
+    ResponseEntity<DepositDto> updateDeposit(DepositDto depositDto);
 }
