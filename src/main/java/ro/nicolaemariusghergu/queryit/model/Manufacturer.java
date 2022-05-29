@@ -23,6 +23,18 @@ public class Manufacturer implements Serializable {
     @Column(name = "manufacturer_id", nullable = false)
     private Long id;
 
+    @ToString.Exclude
+    @ManyToOne
+    @JoinColumn(name = "deposit_id")
+    @NotFound(action = NotFoundAction.IGNORE)
+    private Deposit deposit;
+
+    @ToString.Exclude
+    @ManyToOne
+    @JoinColumn(name = "truck_id")
+    @NotFound(action = NotFoundAction.IGNORE)
+    private Truck truck;
+
     @Column(name = "name")
     private String name;
 

@@ -44,10 +44,15 @@ CREATE TABLE IF NOT EXISTS
 CREATE TABLE IF NOT EXISTS
     manufacturers (
                 manufacturer_id SERIAL,
+                deposit_id INTEGER,
+                truck_id INTEGER,
                 name VARCHAR,
 
-                PRIMARY KEY (manufacturer_id)
-    );
+                PRIMARY KEY (manufacturer_id),
+
+        CONSTRAINT fk_deposit_id FOREIGN KEY (deposit_id) REFERENCES deposits (deposit_id),
+        CONSTRAINT fk_truck_id FOREIGN KEY (truck_id) REFERENCES trucks (truck_id)
+);
 
 CREATE TABLE IF NOT EXISTS
     products (
