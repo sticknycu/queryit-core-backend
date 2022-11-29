@@ -1,75 +1,70 @@
-package ro.nicolaemariusghergu.queryit.model;
+package ro.nicolaemariusghergu.queryit.model
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
-
-import javax.persistence.*;
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.Objects;
+import lombok.Getter
+import lombok.Setter
+import lombok.ToString
+import org.hibernate.annotations.NotFound
+import org.hibernate.annotations.NotFoundAction
+import java.io.Serializable
+import java.math.BigDecimal
+import java.util.*
+import javax.persistence.*
 
 @Getter
 @Setter
 @Entity
 @ToString
 @Table(name = "products")
-public class Product implements Serializable {
-
+class Product : Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id", nullable = false)
     @NotFound(action = NotFoundAction.IGNORE)
-    private Long id;
+    private val id: Long? = null
 
     @Column(name = "name")
-    private String name;
+    private val name: String? = null
 
     @Column(name = "price")
-    private BigDecimal price;
+    private val price: BigDecimal? = null
 
     @Column(name = "quantity")
-    private Integer quantity;
+    private val quantity: Int? = null
 
     @Column(name = "icon_path")
-    private String iconPath;
+    private val iconPath: String? = null
 
     @ToString.Exclude
     @ManyToOne
     @JoinColumn(name = "category_id")
     @NotFound(action = NotFoundAction.IGNORE)
-    private Category category;
+    private val category: Category? = null
 
     @ToString.Exclude
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = [CascadeType.MERGE])
     @NotFound(action = NotFoundAction.IGNORE)
     @JoinColumn(name = "promotion_id")
-    private Promotion promotion;
+    private val promotion: Promotion? = null
 
     @ToString.Exclude
     @ManyToOne
     @JoinColumn(name = "minimarket_id")
     @NotFound(action = NotFoundAction.IGNORE)
-    private MiniMarket miniMarket;
+    private val miniMarket: MiniMarket? = null
 
     @ToString.Exclude
     @ManyToOne
     @JoinColumn(name = "manufacturer_id")
     @NotFound(action = NotFoundAction.IGNORE)
-    private Manufacturer manufacturer;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return id.equals(product.id);
+    private val manufacturer: Manufacturer? = null
+    override fun equals(o: Any?): Boolean {
+        if (this === o) return true
+        if (o == null || javaClass != o.javaClass) return false
+        val product = o as Product?
+        return id == product.id
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+    override fun hashCode(): Int {
+        return Objects.hash(id)
     }
 }

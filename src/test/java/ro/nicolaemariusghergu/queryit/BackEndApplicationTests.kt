@@ -1,13 +1,11 @@
-package ro.nicolaemariusghergu.queryit;
+package ro.nicolaemariusghergu.queryit
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.Test
+import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class BackEndApplicationTests {
-
+internal class BackEndApplicationTests {
     @Test
-    void contextLoads() {
+    fun contextLoads() {
     }
-
 }

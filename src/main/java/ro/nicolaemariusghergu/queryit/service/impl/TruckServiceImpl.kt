@@ -1,71 +1,61 @@
-package ro.nicolaemariusghergu.queryit.service.impl;
+package ro.nicolaemariusghergu.queryit.service.impl
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import ro.nicolaemariusghergu.queryit.dto.TruckDto;
-import ro.nicolaemariusghergu.queryit.mapper.TruckMapper;
-import ro.nicolaemariusghergu.queryit.repository.TruckRepository;
-import ro.nicolaemariusghergu.queryit.service.TruckService;
-
-import java.util.List;
-import java.util.NoSuchElementException;
+import org.springframework.http.ResponseEntity
+import org.springframework.stereotype.Service
+import ro.nicolaemariusghergu.queryit.dto.TruckDto
+import ro.nicolaemariusghergu.queryit.mapper.TruckMapper
+import ro.nicolaemariusghergu.queryit.model.Truck
+import ro.nicolaemariusghergu.queryit.service.TruckService
+import java.util.function.Function
+import java.util.function.Supplier
 
 @Service
-public record TruckServiceImpl(TruckRepository truckRepository) implements TruckService {
-
-    @Override
-    public ResponseEntity<TruckDto> findTruckById(Long id) {
+class TruckServiceImpl : TruckService {
+    override fun findTruckById(id: Long?): ResponseEntity<TruckDto?>? {
         return ResponseEntity.ok(truckRepository.findById(id).stream()
-                .map(TruckMapper.INSTANCE::truckToTruckDto)
+                .map<TruckDto?>(Function<Truck?, TruckDto?> { truck: Truck? -> TruckMapper.Companion.INSTANCE.truckToTruckDto(truck) })
                 .findFirst()
-                .orElseThrow(
-                        () -> new NoSuchElementException("Truck does not exist!"))
-        );
+                .orElseThrow<NoSuchElementException?>(
+                        Supplier { NoSuchElementException("Truck does not exist!") })
+        )
     }
 
-    @Override
-    public ResponseEntity<List<TruckDto>> getTrucks() {
+    override fun getTrucks(): ResponseEntity<MutableList<TruckDto?>?>? {
         return ResponseEntity.ok(truckRepository.findAll()
                 .stream()
-                .map(TruckMapper.INSTANCE::truckToTruckDto)
-                .toList());
+                .map<TruckDto?>(Function<Truck?, TruckDto?> { truck: Truck? -> TruckMapper.Companion.INSTANCE.truckToTruckDto(truck) })
+                .toList())
     }
 
-    @Override
-    public ResponseEntity<Long> addTruck(TruckDto truckDto) {
-        truckRepository.save(TruckMapper.INSTANCE.truckDtoToTruck(truckDto));
-        return ResponseEntity.ok(truckDto.getId());
+    override fun addTruck(truckDto: TruckDto?): ResponseEntity<Long?>? {
+        truckRepository.save<Truck?>(TruckMapper.Companion.INSTANCE.truckDtoToTruck(truckDto))
+        return ResponseEntity.ok(truckDto.getId())
     }
 
-    @Override
-    public ResponseEntity<TruckDto> getTruckBySerialNumber(String serialNumber) {
-        return ResponseEntity.ok(TruckMapper.INSTANCE.truckToTruckDto(
+    override fun getTruckBySerialNumber(serialNumber: String?): ResponseEntity<TruckDto?>? {
+        return ResponseEntity.ok(TruckMapper.Companion.INSTANCE.truckToTruckDto(
                 truckRepository.findBySerialNumber(serialNumber)
-                        .orElseThrow(() ->
-                                new NoSuchElementException("Truck cannot be found"))
-        ));
+                        .orElseThrow<NoSuchElementException?>(Supplier { NoSuchElementException("Truck cannot be found") })
+        ))
     }
 
-    @Override
-    public ResponseEntity<Long> deleteTruckById(Long id) {
-        truckRepository.deleteById(id);
-        return ResponseEntity.ok(id);
+    override fun deleteTruckById(id: Long?): ResponseEntity<Long?>? {
+        truckRepository.deleteById(id)
+        return ResponseEntity.ok(id)
     }
 
-    @Override
-    public ResponseEntity<TruckDto> updateTruck(TruckDto truckDto) {
-        TruckDto modifiedTruck = truckRepository.findById(truckDto.getId()).stream()
-                .map(TruckMapper.INSTANCE::truckToTruckDto)
-                .map(updatedTruck -> {
-                    updatedTruck.setSerialNumber(truckDto.getSerialNumber());
-                    return updatedTruck;
+    override fun updateTruck(truckDto: TruckDto?): ResponseEntity<TruckDto?>? {
+        val modifiedTruck: TruckDto = truckRepository.findById(truckDto.getId()).stream()
+                .map<TruckDto?>(Function<Truck?, TruckDto?> { truck: Truck? -> TruckMapper.Companion.INSTANCE.truckToTruckDto(truck) })
+                .map<TruckDto?>(Function { updatedTruck: TruckDto? ->
+                    updatedTruck.setSerialNumber(truckDto.getSerialNumber())
+                    updatedTruck
                 })
                 .findAny()
-                .orElseThrow(() ->
-                        new NoSuchElementException("Truck has not been found")
-                );
-        truckRepository.save(
-                TruckMapper.INSTANCE.truckDtoToTruck(modifiedTruck));
-        return ResponseEntity.ok(modifiedTruck);
+                .orElseThrow<NoSuchElementException?>(Supplier { NoSuchElementException("Truck has not been found") }
+                )
+        truckRepository.save<Truck?>(
+                TruckMapper.Companion.INSTANCE.truckDtoToTruck(modifiedTruck))
+        return ResponseEntity.ok(modifiedTruck)
     }
 }

@@ -1,38 +1,26 @@
-package ro.nicolaemariusghergu.queryit.dto;
+package ro.nicolaemariusghergu.queryit.dto
 
-import lombok.*;
-
-import java.util.Objects;
+import lombok.*
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class PromotionDto {
-
-    private Long id;
-
-    private String name;
-
-    private String description;
-
-    private Long expireDate;
-
-    private Integer quantityNeeded;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        PromotionDto that = (PromotionDto) o;
-
-        return Objects.equals(id, that.id);
+class PromotionDto {
+    private val id: Long? = null
+    private val name: String? = null
+    private val description: String? = null
+    private val expireDate: Long? = null
+    private val quantityNeeded: Int? = null
+    override fun equals(o: Any?): Boolean {
+        if (this === o) return true
+        if (o == null || javaClass != o.javaClass) return false
+        val that = o as PromotionDto?
+        return id == that.id
     }
 
-    @Override
-    public int hashCode() {
-        return id != null ? id.hashCode() : 0;
+    override fun hashCode(): Int {
+        return id?.hashCode() ?: 0
     }
 }

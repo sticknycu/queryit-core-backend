@@ -1,34 +1,22 @@
-package ro.nicolaemariusghergu.queryit.repository;
+package ro.nicolaemariusghergu.queryit.repository
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.lang.NonNull;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-import ro.nicolaemariusghergu.queryit.model.Manufacturer;
-
-import java.util.List;
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.lang.NonNull
+import org.springframework.stereotype.Repository
+import org.springframework.transaction.annotation.Transactional
+import ro.nicolaemariusghergu.queryit.model.Manufacturer
+import java.util.*
 
 @Repository
 @Transactional
-public interface ManufacturerRepository extends JpaRepository<Manufacturer, Long> {
-
+interface ManufacturerRepository : JpaRepository<Manufacturer?, Long?> {
     @NonNull
-    @Override
-    Optional<Manufacturer> findById(@NonNull Long id);
-
+    override fun findById(@NonNull id: Long?): Optional<Manufacturer?>?
     @NonNull
-    @Override
-    List<Manufacturer> findAll();
-
-    Optional<Manufacturer> findByName(String name);
-
+    override fun findAll(): MutableList<Manufacturer?>?
+    open fun findByName(name: String?): Optional<Manufacturer?>?
     @NonNull
-    @Override
-    <S extends Manufacturer> S save(@NonNull S entity);
-
+    override fun <S : Manufacturer?> save(@NonNull entity: S?): S?
     @NonNull
-    @Override
-    <S extends Manufacturer> List<S> saveAll(@NonNull Iterable<S> entities);
-
+    override fun <S : Manufacturer?> saveAll(@NonNull entities: Iterable<S?>?): MutableList<S?>?
 }

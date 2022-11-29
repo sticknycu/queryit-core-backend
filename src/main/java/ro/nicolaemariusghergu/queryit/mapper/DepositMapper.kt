@@ -1,20 +1,19 @@
-package ro.nicolaemariusghergu.queryit.mapper;
+package ro.nicolaemariusghergu.queryit.mapper
 
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
-import ro.nicolaemariusghergu.queryit.dto.DepositDto;
-import ro.nicolaemariusghergu.queryit.model.Deposit;
+import org.mapstruct.Mapper
+import org.mapstruct.factory.Mappers
+import ro.nicolaemariusghergu.queryit.dto.DepositDto
+import ro.nicolaemariusghergu.queryit.model.Deposit
 
 @Mapper
-public interface DepositMapper {
+interface DepositMapper {
+    open fun depositToDepositDto(deposit: Deposit?): DepositDto?
+    open fun depositDtoToDeposit(depositDto: DepositDto?): Deposit?
+    fun mapEmptyString(string: String?): String? {
+        return if (string != null && !string.isEmpty()) string else null
+    }
 
-    DepositMapper INSTANCE = Mappers.getMapper(DepositMapper.class);
-
-    DepositDto depositToDepositDto(Deposit deposit);
-
-    Deposit depositDtoToDeposit(DepositDto depositDto);
-
-    default String mapEmptyString(String string) {
-        return string != null && !string.isEmpty() ? string : null;
+    companion object {
+        val INSTANCE = Mappers.getMapper(DepositMapper::class.java)
     }
 }

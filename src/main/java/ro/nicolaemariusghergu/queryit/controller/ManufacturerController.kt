@@ -1,53 +1,48 @@
-package ro.nicolaemariusghergu.queryit.controller;
+package ro.nicolaemariusghergu.queryit.controller
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import ro.nicolaemariusghergu.queryit.dto.ManufacturerDto;
-import ro.nicolaemariusghergu.queryit.service.ManufacturerService;
-
-import java.util.List;
-
-import static ro.nicolaemariusghergu.queryit.BackEndApplication.FRONTEND_CORE_ADDRESS;
+import org.springframework.http.ResponseEntity
+import org.springframework.stereotype.Controller
+import org.springframework.web.bind.annotation.*
+import ro.nicolaemariusghergu.queryit.BackEndApplication
+import ro.nicolaemariusghergu.queryit.dto.ManufacturerDto
 
 @Controller
 @RequestMapping("/api/manufacturers")
-@CrossOrigin(FRONTEND_CORE_ADDRESS)
-public record ManufacturerController(ManufacturerService manufacturerService) {
-
+@CrossOrigin(BackEndApplication.FRONTEND_CORE_ADDRESS)
+class ManufacturerController {
     @GetMapping("/v1")
     @ResponseBody
-    public ResponseEntity<List<ManufacturerDto>> getManufacturers() {
-        return manufacturerService.getManufacturers();
+    fun getManufacturers(): ResponseEntity<MutableList<ManufacturerDto?>?>? {
+        return manufacturerService.getManufacturers()
     }
 
     @GetMapping("/v1/{manufacturerId}")
     @ResponseBody
-    public ResponseEntity<ManufacturerDto> getManufacturerById(@PathVariable Long manufacturerId) {
-        return manufacturerService.findManufacturerById(manufacturerId);
+    fun getManufacturerById(@PathVariable manufacturerId: Long?): ResponseEntity<ManufacturerDto?>? {
+        return manufacturerService.findManufacturerById(manufacturerId)
     }
 
     @GetMapping("/v1/manufacturer-name")
     @ResponseBody
-    public ResponseEntity<ManufacturerDto> getManufacturerByName(@RequestBody ManufacturerDto manufacturerDto) {
-        return manufacturerService.getManufacturerByName(manufacturerDto.getName());
+    fun getManufacturerByName(@RequestBody manufacturerDto: ManufacturerDto?): ResponseEntity<ManufacturerDto?>? {
+        return manufacturerService.getManufacturerByName(manufacturerDto.getName())
     }
 
     @PostMapping("/v1")
     @ResponseBody
-    public ResponseEntity<Long> addManufacturer(@RequestBody ManufacturerDto manufacturerDto) {
-        return manufacturerService.addManufacturer(manufacturerDto);
+    fun addManufacturer(@RequestBody manufacturerDto: ManufacturerDto?): ResponseEntity<Long?>? {
+        return manufacturerService.addManufacturer(manufacturerDto)
     }
 
     @PatchMapping("/v1")
     @ResponseBody
-    public ResponseEntity<ManufacturerDto> updateManufacturer(@RequestBody ManufacturerDto manufacturerDto) {
-        return manufacturerService.updateManufacturer(manufacturerDto);
+    fun updateManufacturer(@RequestBody manufacturerDto: ManufacturerDto?): ResponseEntity<ManufacturerDto?>? {
+        return manufacturerService.updateManufacturer(manufacturerDto)
     }
 
     @DeleteMapping("/v1/{manufacturerId}")
     @ResponseBody
-    public ResponseEntity<Long> deleteManufacturer(@PathVariable Long manufacturerId) {
-        return manufacturerService.deleteManufacturerById(manufacturerId);
+    fun deleteManufacturer(@PathVariable manufacturerId: Long?): ResponseEntity<Long?>? {
+        return manufacturerService.deleteManufacturerById(manufacturerId)
     }
 }

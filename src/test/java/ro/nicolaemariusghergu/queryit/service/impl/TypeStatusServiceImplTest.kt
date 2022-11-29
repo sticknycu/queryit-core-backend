@@ -1,81 +1,83 @@
-/*package ro.nicolaemariusghergu.queryit.service.impl;
-
-import org.jeasy.random.EasyRandom;
-import org.jeasy.random.EasyRandomParameters;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
-import ro.nicolaemariusghergu.queryit.exceptions.ResourceNotFoundException;
-
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-@SpringBootTest
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class TypeStatusServiceImplTest {
-
-    private static final Long ID = 1L;
-    private static final String TYPE = "BLOCATA";
-
-    @Autowired
-    TypeStatusService typeStatusService;
-
-    @MockBean
-    TypeStatusRepository typeStatusRepository;
-
-    @BeforeEach
-    void configurateBeans() {
-        EasyRandom easyRandom = new EasyRandom(new EasyRandomParameters().collectionSizeRange(1, 2));
-
-        TypeStatus typeStatus = new TypeStatus();
-        typeStatus.setId(ID);
-
-        TypeStatus typeStatusRandomized = easyRandom.nextObject(TypeStatus.class);
-
-        Mockito
-                .when(typeStatusRepository.findById(ID))
-                .thenReturn(Optional.of(typeStatusRandomized));
-
-        Mockito
-                .when(typeStatusRepository.findByType(TYPE))
-                .thenReturn(Optional.of(typeStatusRandomized));
-    }
-
-    @Test
-    void whenFindByIdthenReturnTypePay() {
-        // when
-        Optional<TypeStatus> found = typeStatusService.findById(ID);
-
-        // then
-        found.ifPresentOrElse(typePayFounded -> assertNotNull(typePayFounded.getType()), () -> {
-            throw new ResourceNotFoundException("Resource requested has not been found");
-        });
-    }
-
-    @Test
-    void whenFindByTypethenReturnTypePay() {
-        // when
-        Optional<TypeStatus> found = typeStatusService.findByType(TYPE);
-
-        // then
-        found.ifPresentOrElse(typePayFounded -> assertNotNull(typePayFounded.getId()), () -> {
-            throw new ResourceNotFoundException("Resource requested has not been found");
-        });
-    }
-
-    @TestConfiguration
-    class TypeStatusServiceImplTestContextConfiguration {
-
-        @Bean
-        public TypeStatusServiceImpl typeStatusService() {
-            return new TypeStatusServiceImpl(typeStatusRepository);
-        }
-    }
-}*/
+import lombok.ToString
+import lombok.NoArgsConstructor
+import lombok.AllArgsConstructor
+import org.hibernate.Hibernate
+import ro.nicolaemariusghergu.queryit.dto.TruckDto
+import ro.nicolaemariusghergu.queryit.dto.DepositDto
+import java.math.BigDecimal
+import ro.nicolaemariusghergu.queryit.dto.CategoryDto
+import ro.nicolaemariusghergu.queryit.dto.PromotionDto
+import ro.nicolaemariusghergu.queryit.dto.ProductDto
+import ro.nicolaemariusghergu.queryit.dto.MiniMarketDto
+import ro.nicolaemariusghergu.queryit.dto.ManufacturerDto
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import org.hibernate.annotations.NotFoundAction
+import ro.nicolaemariusghergu.queryit.model.Truck
+import ro.nicolaemariusghergu.queryit.model.Deposit
+import javax.persistence.JoinColumn
+import ro.nicolaemariusghergu.queryit.model.Promotion
+import ro.nicolaemariusghergu.queryit.model.MiniMarket
+import ro.nicolaemariusghergu.queryit.model.Manufacturer
+import ro.nicolaemariusghergu.queryit.model.Product
+import org.springframework.cloud.openfeign.FeignClient
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.http.ResponseEntity
+import org.springframework.cloud.openfeign.EnableFeignClients
+import springfox.documentation.swagger2.annotations.EnableSwagger2
+import springfox.documentation.spring.data.rest.configuration.SpringDataRestConfiguration
+import springfox.documentation.spring.web.plugins.Docket
+import springfox.documentation.spi.DocumentationType
+import springfox.documentation.builders.RequestHandlerSelectors
+import springfox.documentation.builders.PathSelectors
+import ro.nicolaemariusghergu.queryit.mapper.TruckMapper
+import org.mapstruct.factory.Mappers
+import ro.nicolaemariusghergu.queryit.mapper.DepositMapper
+import ro.nicolaemariusghergu.queryit.mapper.ProductMapper
+import ro.nicolaemariusghergu.queryit.mapper.CategoryMapper
+import ro.nicolaemariusghergu.queryit.mapper.PromotionMapper
+import ro.nicolaemariusghergu.queryit.mapper.MiniMarketMapper
+import ro.nicolaemariusghergu.queryit.mapper.ManufacturerMapper
+import ro.nicolaemariusghergu.queryit.service.TruckService
+import java.util.NoSuchElementException
+import ro.nicolaemariusghergu.queryit.service.DepositService
+import ro.nicolaemariusghergu.queryit.service.ProductService
+import lombok.extern.slf4j.Slf4j
+import ro.nicolaemariusghergu.queryit.service.CategoryService
+import ro.nicolaemariusghergu.queryit.service.PromotionService
+import ro.nicolaemariusghergu.queryit.service.MiniMarketService
+import ro.nicolaemariusghergu.queryit.service.ManufacturerService
+import lombok.SneakyThrows
+import org.springframework.scheduling.annotation.Scheduled
+import org.springframework.scheduling.annotation.EnableScheduling
+import ro.nicolaemariusghergu.queryit.proxy.ProductProxy
+import ro.nicolaemariusghergu.queryit.repository.ProductRepository
+import ro.nicolaemariusghergu.queryit.repository.CategoryRepository
+import ro.nicolaemariusghergu.queryit.repository.PromotionRepository
+import ro.nicolaemariusghergu.queryit.repository.ManufacturerRepository
+import ro.nicolaemariusghergu.queryit.threads.UpdateDatabaseScheduler
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.CrossOrigin
+import ro.nicolaemariusghergu.queryit.BackEndApplication
+import org.springframework.web.bind.annotation.ResponseBody
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.PatchMapping
+import org.springframework.web.bind.annotation.DeleteMapping
+import org.springframework.http.HttpStatus
+import java.lang.RuntimeException
+import org.springframework.web.bind.annotation.ControllerAdvice
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories
+import kotlin.jvm.JvmStatic
+import org.springframework.boot.SpringApplication
+import org.springframework.boot.test.context.SpringBootTest
+import org.junit.jupiter.api.TestInstance
+import org.mockito.Mock
+import org.junit.jupiter.api.BeforeEach
+import org.mockito.MockitoAnnotations
+import ro.nicolaemariusghergu.queryit.service.impl.ProductServiceImpl
+import ro.nicolaemariusghergu.queryit.service.impl.ProductServiceImplTest
+import org.mockito.Mockito

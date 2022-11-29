@@ -1,12 +1,11 @@
-package ro.nicolaemariusghergu.queryit.model;
+package ro.nicolaemariusghergu.queryit.model
 
-import lombok.*;
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
-
-import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Objects;
+import lombok.*
+import org.hibernate.annotations.NotFound
+import org.hibernate.annotations.NotFoundAction
+import java.io.Serializable
+import java.util.*
+import javax.persistence.*
 
 @Getter
 @Setter
@@ -15,28 +14,23 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "minimarkets")
-public class MiniMarket implements Serializable {
-
+class MiniMarket : Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotFound(action = NotFoundAction.IGNORE)
     @Column(name = "minimarket_id", nullable = false)
-    private Long id;
+    private val id: Long? = null
 
     @Column(name = "name")
-    private String name;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        MiniMarket shelf = (MiniMarket) o;
-        return id.equals(shelf.id);
+    private val name: String? = null
+    override fun equals(o: Any?): Boolean {
+        if (this === o) return true
+        if (o == null || javaClass != o.javaClass) return false
+        val shelf = o as MiniMarket?
+        return id == shelf.id
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+    override fun hashCode(): Int {
+        return Objects.hash(id)
     }
 }
-

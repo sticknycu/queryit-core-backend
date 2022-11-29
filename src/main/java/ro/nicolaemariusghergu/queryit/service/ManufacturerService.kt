@@ -1,21 +1,13 @@
-package ro.nicolaemariusghergu.queryit.service;
+package ro.nicolaemariusghergu.queryit.service
 
-import org.springframework.http.ResponseEntity;
-import ro.nicolaemariusghergu.queryit.dto.ManufacturerDto;
+import org.springframework.http.ResponseEntity
+import ro.nicolaemariusghergu.queryit.dto.ManufacturerDto
 
-import java.util.List;
-
-public interface ManufacturerService {
-
-    ResponseEntity<ManufacturerDto> findManufacturerById(Long id);
-
-    ResponseEntity<List<ManufacturerDto>> getManufacturers();
-
-    ResponseEntity<Long> addManufacturer(ManufacturerDto manufacturerDto);
-
-    ResponseEntity<ManufacturerDto> getManufacturerByName(String name);
-
-    ResponseEntity<Long> deleteManufacturerById(Long id);
-
-    ResponseEntity<ManufacturerDto> updateManufacturer(ManufacturerDto manufacturerDto);
+interface ManufacturerService {
+    open fun findManufacturerById(id: Long?): ResponseEntity<ManufacturerDto?>?
+    open fun getManufacturers(): ResponseEntity<MutableList<ManufacturerDto?>?>?
+    open fun addManufacturer(manufacturerDto: ManufacturerDto?): ResponseEntity<Long?>?
+    open fun getManufacturerByName(name: String?): ResponseEntity<ManufacturerDto?>?
+    open fun deleteManufacturerById(id: Long?): ResponseEntity<Long?>?
+    open fun updateManufacturer(manufacturerDto: ManufacturerDto?): ResponseEntity<ManufacturerDto?>?
 }

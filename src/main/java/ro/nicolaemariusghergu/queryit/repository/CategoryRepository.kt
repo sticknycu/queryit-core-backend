@@ -1,15 +1,13 @@
-package ro.nicolaemariusghergu.queryit.repository;
+package ro.nicolaemariusghergu.queryit.repository
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-import ro.nicolaemariusghergu.queryit.model.Category;
-
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
+import org.springframework.transaction.annotation.Transactional
+import ro.nicolaemariusghergu.queryit.model.Category
+import java.util.*
 
 @Repository
 @Transactional
-public interface CategoryRepository extends JpaRepository<Category, Long> {
-
-    Optional<Category> findByName(String name);
+interface CategoryRepository : JpaRepository<Category?, Long?> {
+    open fun findByName(name: String?): Optional<Category?>?
 }

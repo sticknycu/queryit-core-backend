@@ -1,26 +1,15 @@
-package ro.nicolaemariusghergu.queryit.service;
+package ro.nicolaemariusghergu.queryit.service
 
-import org.springframework.http.ResponseEntity;
-import ro.nicolaemariusghergu.queryit.dto.ProductDto;
+import org.springframework.http.ResponseEntity
+import ro.nicolaemariusghergu.queryit.dto.ProductDto
 
-import java.util.List;
-import java.util.Set;
-
-public interface ProductService {
-
-    ResponseEntity<ProductDto> findProductById(Long id);
-
-    ResponseEntity<List<ProductDto>> getProducts();
-
-    ResponseEntity<Long> addProduct(ProductDto productDto);
-
-    ProductDto getProductByName(String name);
-
-    ResponseEntity<Long> deleteProductById(Long id);
-
-    ResponseEntity<ProductDto> updateProduct(ProductDto productDto);
-
-    ResponseEntity<Set<ProductDto>> getProxyProducts(Long categoryId);
-
-    ResponseEntity<List<ProductDto>> getProductsByCategoryId(Long categoryId);
+interface ProductService {
+    open fun findProductById(id: Long?): ResponseEntity<ProductDto?>?
+    open fun getProducts(): ResponseEntity<MutableList<ProductDto?>?>?
+    open fun addProduct(productDto: ProductDto?): ResponseEntity<Long?>?
+    open fun getProductByName(name: String?): ProductDto?
+    open fun deleteProductById(id: Long?): ResponseEntity<Long?>?
+    open fun updateProduct(productDto: ProductDto?): ResponseEntity<ProductDto?>?
+    open fun getProxyProducts(categoryId: Long?): ResponseEntity<MutableSet<ProductDto?>?>?
+    open fun getProductsByCategoryId(categoryId: Long?): ResponseEntity<MutableList<ProductDto?>?>?
 }

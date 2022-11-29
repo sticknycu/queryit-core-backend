@@ -1,31 +1,20 @@
-package ro.nicolaemariusghergu.queryit.repository;
+package ro.nicolaemariusghergu.queryit.repository
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.lang.NonNull;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-import ro.nicolaemariusghergu.queryit.model.MiniMarket;
-
-import java.util.List;
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.lang.NonNull
+import org.springframework.stereotype.Repository
+import org.springframework.transaction.annotation.Transactional
+import ro.nicolaemariusghergu.queryit.model.MiniMarket
+import java.util.*
 
 @Repository
 @Transactional
-public interface MiniMarketRepository extends JpaRepository<MiniMarket, Long> {
-
+interface MiniMarketRepository : JpaRepository<MiniMarket?, Long?> {
     @NonNull
-    @Override
-    Optional<MiniMarket> findById(@NonNull Long id);
-
+    override fun findById(@NonNull id: Long?): Optional<MiniMarket?>?
     @NonNull
-    @Override
-    List<MiniMarket> findAll();
-
-    Optional<MiniMarket> findByName(String name);
-
-    @Override
-    <S extends MiniMarket> S save(S entity);
-
-    @Override
-    <S extends MiniMarket> List<S> saveAll(Iterable<S> entities);
+    override fun findAll(): MutableList<MiniMarket?>?
+    open fun findByName(name: String?): Optional<MiniMarket?>?
+    override fun <S : MiniMarket?> save(entity: S?): S?
+    override fun <S : MiniMarket?> saveAll(entities: Iterable<S?>?): MutableList<S?>?
 }

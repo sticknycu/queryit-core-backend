@@ -1,72 +1,61 @@
-package ro.nicolaemariusghergu.queryit.service.impl;
+package ro.nicolaemariusghergu.queryit.service.impl
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import ro.nicolaemariusghergu.queryit.dto.DepositDto;
-import ro.nicolaemariusghergu.queryit.mapper.DepositMapper;
-import ro.nicolaemariusghergu.queryit.repository.DepositRepository;
-import ro.nicolaemariusghergu.queryit.service.DepositService;
-
-import java.util.List;
-import java.util.NoSuchElementException;
+import org.springframework.http.ResponseEntity
+import org.springframework.stereotype.Service
+import ro.nicolaemariusghergu.queryit.dto.DepositDto
+import ro.nicolaemariusghergu.queryit.mapper.DepositMapper
+import ro.nicolaemariusghergu.queryit.model.Deposit
+import ro.nicolaemariusghergu.queryit.service.DepositService
+import java.util.function.Function
+import java.util.function.Supplier
 
 @Service
-public record DepositServiceImpl(DepositRepository depositRepository) implements DepositService {
-
-    @Override
-    public ResponseEntity<DepositDto> findDepositById(Long id) {
+class DepositServiceImpl : DepositService {
+    override fun findDepositById(id: Long?): ResponseEntity<DepositDto?>? {
         return ResponseEntity.ok(depositRepository.findById(id).stream()
-                .map(DepositMapper.INSTANCE::depositToDepositDto)
+                .map<DepositDto?>(Function<Deposit?, DepositDto?> { deposit: Deposit? -> DepositMapper.Companion.INSTANCE.depositToDepositDto(deposit) })
                 .findFirst()
-                .orElseThrow(
-                        () -> new NoSuchElementException("Deposit does not exist!"))
-        );
+                .orElseThrow<NoSuchElementException?>(
+                        Supplier { NoSuchElementException("Deposit does not exist!") })
+        )
     }
 
-    @Override
-    public ResponseEntity<List<DepositDto>> getDeposits() {
+    override fun getDeposits(): ResponseEntity<MutableList<DepositDto?>?>? {
         return ResponseEntity.ok(depositRepository.findAll()
                 .stream()
-                .map(DepositMapper.INSTANCE::depositToDepositDto)
-                .toList());
+                .map<DepositDto?>(Function<Deposit?, DepositDto?> { deposit: Deposit? -> DepositMapper.Companion.INSTANCE.depositToDepositDto(deposit) })
+                .toList())
     }
 
-    @Override
-    public ResponseEntity<Long> addDeposit(DepositDto depositDto) {
-        depositRepository.save(DepositMapper.INSTANCE.depositDtoToDeposit(depositDto));
-        return ResponseEntity.ok(depositDto.getId());
+    override fun addDeposit(depositDto: DepositDto?): ResponseEntity<Long?>? {
+        depositRepository.save<Deposit?>(DepositMapper.Companion.INSTANCE.depositDtoToDeposit(depositDto))
+        return ResponseEntity.ok(depositDto.getId())
     }
 
-    @Override
-    public ResponseEntity<DepositDto> getDepositByName(String name) {
-        return ResponseEntity.ok(DepositMapper.INSTANCE.depositToDepositDto(
+    override fun getDepositByName(name: String?): ResponseEntity<DepositDto?>? {
+        return ResponseEntity.ok(DepositMapper.Companion.INSTANCE.depositToDepositDto(
                 depositRepository.findByName(name)
-                        .orElseThrow(() ->
-                                new NoSuchElementException("Deposit cannot be found"))
-        ));
+                        .orElseThrow<NoSuchElementException?>(Supplier { NoSuchElementException("Deposit cannot be found") })
+        ))
     }
 
-    @Override
-    public ResponseEntity<Long> deleteDepositById(Long id) {
-        depositRepository.deleteById(id);
-        return ResponseEntity.ok(id);
+    override fun deleteDepositById(id: Long?): ResponseEntity<Long?>? {
+        depositRepository.deleteById(id)
+        return ResponseEntity.ok(id)
     }
 
-    @Override
-    public ResponseEntity<DepositDto> updateDeposit(DepositDto depositDto) {
-        DepositDto modifiedDeposit = depositRepository.findById(depositDto.getId()).stream()
-                .map(DepositMapper.INSTANCE::depositToDepositDto)
-                .map(updatedDeposit -> {
-                    updatedDeposit.setName(depositDto.getName());
-                    return updatedDeposit;
+    override fun updateDeposit(depositDto: DepositDto?): ResponseEntity<DepositDto?>? {
+        val modifiedDeposit: DepositDto = depositRepository.findById(depositDto.getId()).stream()
+                .map<DepositDto?>(Function<Deposit?, DepositDto?> { deposit: Deposit? -> DepositMapper.Companion.INSTANCE.depositToDepositDto(deposit) })
+                .map<DepositDto?>(Function { updatedDeposit: DepositDto? ->
+                    updatedDeposit.setName(depositDto.getName())
+                    updatedDeposit
                 })
                 .findAny()
-                .orElseThrow(() ->
-                        new NoSuchElementException("Deposit has not been found")
-                );
-        depositRepository.save(
-                DepositMapper.INSTANCE.depositDtoToDeposit(modifiedDeposit));
-        return ResponseEntity.ok(modifiedDeposit);
+                .orElseThrow<NoSuchElementException?>(Supplier { NoSuchElementException("Deposit has not been found") }
+                )
+        depositRepository.save<Deposit?>(
+                DepositMapper.Companion.INSTANCE.depositDtoToDeposit(modifiedDeposit))
+        return ResponseEntity.ok(modifiedDeposit)
     }
-
 }

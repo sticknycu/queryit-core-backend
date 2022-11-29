@@ -1,31 +1,25 @@
-package ro.nicolaemariusghergu.queryit.dto;
+package ro.nicolaemariusghergu.queryit.dto
 
-import lombok.*;
-import org.hibernate.Hibernate;
-
-import java.util.Objects;
+import lombok.*
+import org.hibernate.Hibernate
+import java.util.*
 
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class TruckDto {
-
-    private Long id;
-
-    private String serialNumber;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        TruckDto truck = (TruckDto) o;
-        return id != null && Objects.equals(id, truck.id);
+class TruckDto {
+    private val id: Long? = null
+    private val serialNumber: String? = null
+    override fun equals(o: Any?): Boolean {
+        if (this === o) return true
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false
+        val truck = o as TruckDto?
+        return id != null && id == truck.id
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+    override fun hashCode(): Int {
+        return Objects.hash(id)
     }
 }

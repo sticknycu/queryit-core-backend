@@ -1,13 +1,12 @@
-package ro.nicolaemariusghergu.queryit.model;
+package ro.nicolaemariusghergu.queryit.model
 
-import lombok.*;
-import org.hibernate.Hibernate;
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
-
-import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Objects;
+import lombok.*
+import org.hibernate.Hibernate
+import org.hibernate.annotations.NotFound
+import org.hibernate.annotations.NotFoundAction
+import java.io.Serializable
+import java.util.*
+import javax.persistence.*
 
 @Getter
 @Setter
@@ -16,27 +15,23 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "trucks")
-public class Truck implements Serializable {
-
+class Truck : Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotFound(action = NotFoundAction.IGNORE)
     @Column(name = "truck_id", nullable = false)
-    private Long id;
+    private val id: Long? = null
 
     @Column(name = "serial_number", nullable = false)
-    private String serialNumber;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Truck truck = (Truck) o;
-        return id != null && Objects.equals(id, truck.id);
+    private val serialNumber: String? = null
+    override fun equals(o: Any?): Boolean {
+        if (this === o) return true
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false
+        val truck = o as Truck?
+        return id != null && id == truck.id
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+    override fun hashCode(): Int {
+        return Objects.hash(id)
     }
 }

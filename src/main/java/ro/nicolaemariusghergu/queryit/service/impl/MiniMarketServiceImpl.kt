@@ -1,71 +1,61 @@
-package ro.nicolaemariusghergu.queryit.service.impl;
+package ro.nicolaemariusghergu.queryit.service.impl
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import ro.nicolaemariusghergu.queryit.dto.MiniMarketDto;
-import ro.nicolaemariusghergu.queryit.mapper.MiniMarketMapper;
-import ro.nicolaemariusghergu.queryit.repository.MiniMarketRepository;
-import ro.nicolaemariusghergu.queryit.service.MiniMarketService;
-
-import java.util.List;
-import java.util.NoSuchElementException;
+import org.springframework.http.ResponseEntity
+import org.springframework.stereotype.Service
+import ro.nicolaemariusghergu.queryit.dto.MiniMarketDto
+import ro.nicolaemariusghergu.queryit.mapper.MiniMarketMapper
+import ro.nicolaemariusghergu.queryit.model.MiniMarket
+import ro.nicolaemariusghergu.queryit.service.MiniMarketService
+import java.util.function.Function
+import java.util.function.Supplier
 
 @Service
-public record MiniMarketServiceImpl(MiniMarketRepository miniMarketRepository) implements MiniMarketService {
-
-    @Override
-    public ResponseEntity<MiniMarketDto> findMiniMarketById(Long id) {
+class MiniMarketServiceImpl : MiniMarketService {
+    override fun findMiniMarketById(id: Long?): ResponseEntity<MiniMarketDto?>? {
         return ResponseEntity.ok(miniMarketRepository.findById(id).stream()
-                .map(MiniMarketMapper.INSTANCE::miniMarketToMiniMarketDto)
+                .map<MiniMarketDto?>(Function<MiniMarket?, MiniMarketDto?> { miniMarket: MiniMarket? -> MiniMarketMapper.Companion.INSTANCE.miniMarketToMiniMarketDto(miniMarket) })
                 .findFirst()
-                .orElseThrow(
-                        () -> new NoSuchElementException("MiniMarket does not exist!"))
-        );
+                .orElseThrow<NoSuchElementException?>(
+                        Supplier { NoSuchElementException("MiniMarket does not exist!") })
+        )
     }
 
-    @Override
-    public ResponseEntity<List<MiniMarketDto>> getMiniMarkets() {
+    override fun getMiniMarkets(): ResponseEntity<MutableList<MiniMarketDto?>?>? {
         return ResponseEntity.ok(miniMarketRepository.findAll()
                 .stream()
-                .map(MiniMarketMapper.INSTANCE::miniMarketToMiniMarketDto)
-                .toList());
+                .map<MiniMarketDto?>(Function<MiniMarket?, MiniMarketDto?> { miniMarket: MiniMarket? -> MiniMarketMapper.Companion.INSTANCE.miniMarketToMiniMarketDto(miniMarket) })
+                .toList())
     }
 
-    @Override
-    public ResponseEntity<Long> addMiniMarket(MiniMarketDto miniMarketDto) {
-        miniMarketRepository.save(MiniMarketMapper.INSTANCE.miniMarketDtoToMiniMarket(miniMarketDto));
-        return ResponseEntity.ok(miniMarketDto.getId());
+    override fun addMiniMarket(miniMarketDto: MiniMarketDto?): ResponseEntity<Long?>? {
+        miniMarketRepository.save<MiniMarket?>(MiniMarketMapper.Companion.INSTANCE.miniMarketDtoToMiniMarket(miniMarketDto))
+        return ResponseEntity.ok(miniMarketDto.getId())
     }
 
-    @Override
-    public ResponseEntity<MiniMarketDto> getMiniMarketByName(String name) {
-        return ResponseEntity.ok(MiniMarketMapper.INSTANCE.miniMarketToMiniMarketDto(
+    override fun getMiniMarketByName(name: String?): ResponseEntity<MiniMarketDto?>? {
+        return ResponseEntity.ok(MiniMarketMapper.Companion.INSTANCE.miniMarketToMiniMarketDto(
                 miniMarketRepository.findByName(name)
-                        .orElseThrow(() ->
-                                new NoSuchElementException("MiniMarket cannot be found"))
-        ));
+                        .orElseThrow<NoSuchElementException?>(Supplier { NoSuchElementException("MiniMarket cannot be found") })
+        ))
     }
 
-    @Override
-    public ResponseEntity<Long> deleteMiniMarketById(Long id) {
-        miniMarketRepository.deleteById(id);
-        return ResponseEntity.ok(id);
+    override fun deleteMiniMarketById(id: Long?): ResponseEntity<Long?>? {
+        miniMarketRepository.deleteById(id)
+        return ResponseEntity.ok(id)
     }
 
-    @Override
-    public ResponseEntity<MiniMarketDto> updateMiniMarket(MiniMarketDto miniMarketDto) {
-        MiniMarketDto modifiedMiniMarket = miniMarketRepository.findById(miniMarketDto.getId()).stream()
-                .map(MiniMarketMapper.INSTANCE::miniMarketToMiniMarketDto)
-                .map(updatedMiniMarket -> {
-                    updatedMiniMarket.setName(miniMarketDto.getName());
-                    return updatedMiniMarket;
+    override fun updateMiniMarket(miniMarketDto: MiniMarketDto?): ResponseEntity<MiniMarketDto?>? {
+        val modifiedMiniMarket: MiniMarketDto = miniMarketRepository.findById(miniMarketDto.getId()).stream()
+                .map<MiniMarketDto?>(Function<MiniMarket?, MiniMarketDto?> { miniMarket: MiniMarket? -> MiniMarketMapper.Companion.INSTANCE.miniMarketToMiniMarketDto(miniMarket) })
+                .map<MiniMarketDto?>(Function { updatedMiniMarket: MiniMarketDto? ->
+                    updatedMiniMarket.setName(miniMarketDto.getName())
+                    updatedMiniMarket
                 })
                 .findAny()
-                .orElseThrow(() ->
-                        new NoSuchElementException("MiniMarket has not been found")
-                );
-        miniMarketRepository.save(
-                MiniMarketMapper.INSTANCE.miniMarketDtoToMiniMarket(modifiedMiniMarket));
-        return ResponseEntity.ok(modifiedMiniMarket);
+                .orElseThrow<NoSuchElementException?>(Supplier { NoSuchElementException("MiniMarket has not been found") }
+                )
+        miniMarketRepository.save<MiniMarket?>(
+                MiniMarketMapper.Companion.INSTANCE.miniMarketDtoToMiniMarket(modifiedMiniMarket))
+        return ResponseEntity.ok(modifiedMiniMarket)
     }
 }

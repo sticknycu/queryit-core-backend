@@ -1,31 +1,20 @@
-package ro.nicolaemariusghergu.queryit.repository;
+package ro.nicolaemariusghergu.queryit.repository
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.lang.NonNull;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-import ro.nicolaemariusghergu.queryit.model.Deposit;
-
-import java.util.List;
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.lang.NonNull
+import org.springframework.stereotype.Repository
+import org.springframework.transaction.annotation.Transactional
+import ro.nicolaemariusghergu.queryit.model.Deposit
+import java.util.*
 
 @Repository
 @Transactional
-public interface DepositRepository extends JpaRepository<Deposit, Long> {
-
+interface DepositRepository : JpaRepository<Deposit?, Long?> {
     @NonNull
-    @Override
-    Optional<Deposit> findById(@NonNull Long id);
-
+    override fun findById(@NonNull id: Long?): Optional<Deposit?>?
     @NonNull
-    @Override
-    List<Deposit> findAll();
-
-    Optional<Deposit> findByName(String name);
-
-    @Override
-    <S extends Deposit> S save(S entity);
-
-    @Override
-    <S extends Deposit> List<S> saveAll(Iterable<S> entities);
+    override fun findAll(): MutableList<Deposit?>?
+    open fun findByName(name: String?): Optional<Deposit?>?
+    override fun <S : Deposit?> save(entity: S?): S?
+    override fun <S : Deposit?> saveAll(entities: Iterable<S?>?): MutableList<S?>?
 }

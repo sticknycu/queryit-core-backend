@@ -1,11 +1,10 @@
-package ro.nicolaemariusghergu.queryit.model;
+package ro.nicolaemariusghergu.queryit.model
 
-import lombok.*;
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
-
-import javax.persistence.*;
-import java.io.Serializable;
+import lombok.*
+import org.hibernate.annotations.NotFound
+import org.hibernate.annotations.NotFoundAction
+import java.io.Serializable
+import javax.persistence.*
 
 @Getter
 @Setter
@@ -14,38 +13,32 @@ import java.io.Serializable;
 @AllArgsConstructor
 @ToString
 @Table(name = "promotions")
-public class Promotion implements Serializable {
-
+class Promotion : Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotFound(action = NotFoundAction.IGNORE)
     @Column(name = "promotion_id", nullable = false)
-    private Long id;
+    private val id: Long? = null
 
     @Column(name = "name")
-    private String name;
+    private val name: String? = null
 
     @Column(name = "description")
-    private String description;
+    private val description: String? = null
 
     @Column(name = "expire_date")
-    private Long expireDate;
+    private val expireDate: Long? = null
 
     @Column(name = "quantity_needed")
-    private Integer quantityNeeded;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Promotion promotion = (Promotion) o;
-
-        return id.equals(promotion.id);
+    private val quantityNeeded: Int? = null
+    override fun equals(o: Any?): Boolean {
+        if (this === o) return true
+        if (o == null || javaClass != o.javaClass) return false
+        val promotion = o as Promotion?
+        return id == promotion.id
     }
 
-    @Override
-    public int hashCode() {
-        return id.hashCode();
+    override fun hashCode(): Int {
+        return id.hashCode()
     }
 }

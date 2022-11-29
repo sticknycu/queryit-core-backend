@@ -1,32 +1,21 @@
-package ro.nicolaemariusghergu.queryit.repository;
+package ro.nicolaemariusghergu.queryit.repository
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.lang.NonNull;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-import ro.nicolaemariusghergu.queryit.model.Truck;
-
-import java.util.List;
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.lang.NonNull
+import org.springframework.stereotype.Repository
+import org.springframework.transaction.annotation.Transactional
+import ro.nicolaemariusghergu.queryit.model.Truck
+import java.util.*
 
 @Repository
 @Transactional
-public interface TruckRepository extends JpaRepository<Truck, Long> {
-
+interface TruckRepository : JpaRepository<Truck?, Long?> {
     @NonNull
-    @Override
-    Optional<Truck> findById(@NonNull Long id);
-
+    override fun findById(@NonNull id: Long?): Optional<Truck?>?
     @NonNull
-    @Override
-    List<Truck> findAll();
-
-    Optional<Truck> findBySerialNumber(String serialNumber);
-
+    override fun findAll(): MutableList<Truck?>?
+    open fun findBySerialNumber(serialNumber: String?): Optional<Truck?>?
     @NonNull
-    @Override
-    <S extends Truck> S save(@NonNull S entity);
-
-    @Override
-    <S extends Truck> List<S> saveAll(Iterable<S> entities);
+    override fun <S : Truck?> save(@NonNull entity: S?): S?
+    override fun <S : Truck?> saveAll(entities: Iterable<S?>?): MutableList<S?>?
 }

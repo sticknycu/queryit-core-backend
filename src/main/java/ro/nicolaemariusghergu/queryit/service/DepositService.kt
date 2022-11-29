@@ -1,20 +1,13 @@
-package ro.nicolaemariusghergu.queryit.service;
+package ro.nicolaemariusghergu.queryit.service
 
-import org.springframework.http.ResponseEntity;
-import ro.nicolaemariusghergu.queryit.dto.DepositDto;
+import org.springframework.http.ResponseEntity
+import ro.nicolaemariusghergu.queryit.dto.DepositDto
 
-import java.util.List;
-
-public interface DepositService {
-    ResponseEntity<DepositDto> findDepositById(Long id);
-
-    ResponseEntity<List<DepositDto>> getDeposits();
-
-    ResponseEntity<Long> addDeposit(DepositDto depositDto);
-
-    ResponseEntity<DepositDto> getDepositByName(String name);
-
-    ResponseEntity<Long> deleteDepositById(Long id);
-
-    ResponseEntity<DepositDto> updateDeposit(DepositDto depositDto);
+interface DepositService {
+    open fun findDepositById(id: Long?): ResponseEntity<DepositDto?>?
+    open fun getDeposits(): ResponseEntity<MutableList<DepositDto?>?>?
+    open fun addDeposit(depositDto: DepositDto?): ResponseEntity<Long?>?
+    open fun getDepositByName(name: String?): ResponseEntity<DepositDto?>?
+    open fun deleteDepositById(id: Long?): ResponseEntity<Long?>?
+    open fun updateDeposit(depositDto: DepositDto?): ResponseEntity<DepositDto?>?
 }

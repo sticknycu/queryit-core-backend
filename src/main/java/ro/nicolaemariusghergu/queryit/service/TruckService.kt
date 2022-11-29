@@ -1,20 +1,13 @@
-package ro.nicolaemariusghergu.queryit.service;
+package ro.nicolaemariusghergu.queryit.service
 
-import org.springframework.http.ResponseEntity;
-import ro.nicolaemariusghergu.queryit.dto.TruckDto;
+import org.springframework.http.ResponseEntity
+import ro.nicolaemariusghergu.queryit.dto.TruckDto
 
-import java.util.List;
-
-public interface TruckService {
-    ResponseEntity<TruckDto> findTruckById(Long id);
-
-    ResponseEntity<List<TruckDto>> getTrucks();
-
-    ResponseEntity<Long> addTruck(TruckDto truckDto);
-
-    ResponseEntity<TruckDto> getTruckBySerialNumber(String serialNumber);
-
-    ResponseEntity<Long> deleteTruckById(Long id);
-
-    ResponseEntity<TruckDto> updateTruck(TruckDto truckDto);
+interface TruckService {
+    open fun findTruckById(id: Long?): ResponseEntity<TruckDto?>?
+    open fun getTrucks(): ResponseEntity<MutableList<TruckDto?>?>?
+    open fun addTruck(truckDto: TruckDto?): ResponseEntity<Long?>?
+    open fun getTruckBySerialNumber(serialNumber: String?): ResponseEntity<TruckDto?>?
+    open fun deleteTruckById(id: Long?): ResponseEntity<Long?>?
+    open fun updateTruck(truckDto: TruckDto?): ResponseEntity<TruckDto?>?
 }

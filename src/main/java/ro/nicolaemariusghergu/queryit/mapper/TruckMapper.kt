@@ -1,20 +1,19 @@
-package ro.nicolaemariusghergu.queryit.mapper;
+package ro.nicolaemariusghergu.queryit.mapper
 
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
-import ro.nicolaemariusghergu.queryit.dto.TruckDto;
-import ro.nicolaemariusghergu.queryit.model.Truck;
+import org.mapstruct.Mapper
+import org.mapstruct.factory.Mappers
+import ro.nicolaemariusghergu.queryit.dto.TruckDto
+import ro.nicolaemariusghergu.queryit.model.Truck
 
 @Mapper
-public interface TruckMapper {
+interface TruckMapper {
+    open fun truckToTruckDto(truck: Truck?): TruckDto?
+    open fun truckDtoToTruck(truckDto: TruckDto?): Truck?
+    fun mapEmptyString(string: String?): String? {
+        return if (string != null && !string.isEmpty()) string else null
+    }
 
-    TruckMapper INSTANCE = Mappers.getMapper(TruckMapper.class);
-
-    TruckDto truckToTruckDto(Truck truck);
-
-    Truck truckDtoToTruck(TruckDto truckDto);
-
-    default String mapEmptyString(String string) {
-        return string != null && !string.isEmpty() ? string : null;
+    companion object {
+        val INSTANCE = Mappers.getMapper(TruckMapper::class.java)
     }
 }

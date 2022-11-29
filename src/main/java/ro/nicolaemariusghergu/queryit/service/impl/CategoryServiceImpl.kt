@@ -1,72 +1,63 @@
-package ro.nicolaemariusghergu.queryit.service.impl;
+package ro.nicolaemariusghergu.queryit.service.impl
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.ResponseEntity;
-import org.springframework.lang.NonNull;
-import org.springframework.stereotype.Service;
-import ro.nicolaemariusghergu.queryit.dto.CategoryDto;
-import ro.nicolaemariusghergu.queryit.mapper.CategoryMapper;
-import ro.nicolaemariusghergu.queryit.repository.CategoryRepository;
-import ro.nicolaemariusghergu.queryit.service.CategoryService;
-
-import java.util.List;
-import java.util.NoSuchElementException;
+import lombok.extern.slf4j.Slf4j
+import org.springframework.http.ResponseEntity
+import org.springframework.lang.NonNull
+import org.springframework.stereotype.Service
+import ro.nicolaemariusghergu.queryit.dto.CategoryDto
+import ro.nicolaemariusghergu.queryit.mapper.CategoryMapper
+import ro.nicolaemariusghergu.queryit.model.*
+import ro.nicolaemariusghergu.queryit.service.CategoryService
+import java.util.function.Function
+import java.util.function.Supplier
 
 @Slf4j
 @Service
-public record CategoryServiceImpl(CategoryRepository categoryRepository) implements CategoryService {
-
+class CategoryServiceImpl : CategoryService {
     @NonNull
-    @Override
-    public ResponseEntity<CategoryDto> getCategoryById(@NonNull Long id) {
-        return ResponseEntity.ok(CategoryMapper.INSTANCE
+    override fun getCategoryById(@NonNull id: Long?): ResponseEntity<CategoryDto?>? {
+        return ResponseEntity.ok(CategoryMapper.Companion.INSTANCE
                 .categoryToCategoryDto(categoryRepository.findById(id)
                         .stream()
                         .findAny()
-                        .orElseThrow(
-                                () -> new NoSuchElementException("Categoria nu a putut fi gasita")
+                        .orElseThrow<NoSuchElementException?>(
+                                Supplier { NoSuchElementException("Categoria nu a putut fi gasita") }
                         )
-                ));
+                ))
     }
 
-    @Override
-    public ResponseEntity<List<CategoryDto>> getCategories() {
+    override fun getCategories(): ResponseEntity<MutableList<CategoryDto?>?>? {
         return ResponseEntity.ok(categoryRepository.findAll().stream()
-                .map(CategoryMapper.INSTANCE::categoryToCategoryDto)
-                .toList());
+                .map<CategoryDto?>(Function<Category?, CategoryDto?> { category: Category? -> CategoryMapper.Companion.INSTANCE.categoryToCategoryDto(category) })
+                .toList())
     }
 
-    @Override
-    public ResponseEntity<CategoryDto> updateCategory(CategoryDto category) {
-        CategoryDto categoryDto = categoryRepository.findById(category.getId())
-                .map(CategoryMapper.INSTANCE::categoryToCategoryDto)
-                .orElseThrow(() ->
-                        new NoSuchElementException("Category has not been found"));
-        addCategory(categoryDto);
-        return ResponseEntity.ok(categoryDto);
+    override fun updateCategory(category: CategoryDto?): ResponseEntity<CategoryDto?>? {
+        val categoryDto: CategoryDto = categoryRepository.findById(category.getId())
+                .map<CategoryDto?>(Function<Category?, CategoryDto?> { category: Category? -> CategoryMapper.Companion.INSTANCE.categoryToCategoryDto(category) })
+                .orElseThrow<NoSuchElementException?>(Supplier { NoSuchElementException("Category has not been found") })
+        addCategory(categoryDto)
+        return ResponseEntity.ok(categoryDto)
     }
 
-    @Override
-    public ResponseEntity<CategoryDto> getCategoryByName(String name) {
-        return ResponseEntity.ok(CategoryMapper.INSTANCE
+    override fun getCategoryByName(name: String?): ResponseEntity<CategoryDto?>? {
+        return ResponseEntity.ok(CategoryMapper.Companion.INSTANCE
                 .categoryToCategoryDto(categoryRepository.findByName(name).stream()
                         .findAny()
-                        .orElseThrow(
-                                () -> new NoSuchElementException("Category has not been found"))
-                ));
+                        .orElseThrow<NoSuchElementException?>(
+                                Supplier { NoSuchElementException("Category has not been found") })
+                ))
     }
 
-    @Override
-    public ResponseEntity<Long> addCategory(CategoryDto categoryDto) {
-        categoryRepository.save(CategoryMapper.INSTANCE
-                .categoryDtoToCategory(categoryDto));
-        return ResponseEntity.ok(categoryDto.getId());
+    override fun addCategory(categoryDto: CategoryDto?): ResponseEntity<Long?>? {
+        categoryRepository.save<Category?>(CategoryMapper.Companion.INSTANCE
+                .categoryDtoToCategory(categoryDto))
+        return ResponseEntity.ok(categoryDto.getId())
     }
 
     @NonNull
-    @Override
-    public ResponseEntity<Long> deleteCategoryById(@NonNull Long id) {
-        categoryRepository.deleteById(id);
-        return ResponseEntity.ok(id);
+    override fun deleteCategoryById(@NonNull id: Long?): ResponseEntity<Long?>? {
+        categoryRepository.deleteById(id)
+        return ResponseEntity.ok(id)
     }
 }

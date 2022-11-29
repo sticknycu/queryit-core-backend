@@ -1,68 +1,56 @@
-package ro.nicolaemariusghergu.queryit.service.impl;
+package ro.nicolaemariusghergu.queryit.service.impl
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import ro.nicolaemariusghergu.queryit.dto.PromotionDto;
-import ro.nicolaemariusghergu.queryit.mapper.PromotionMapper;
-import ro.nicolaemariusghergu.queryit.repository.PromotionRepository;
-import ro.nicolaemariusghergu.queryit.service.PromotionService;
-
-import java.util.List;
-import java.util.NoSuchElementException;
+import org.springframework.http.ResponseEntity
+import org.springframework.stereotype.Service
+import ro.nicolaemariusghergu.queryit.dto.PromotionDto
+import ro.nicolaemariusghergu.queryit.mapper.PromotionMapper
+import ro.nicolaemariusghergu.queryit.model.Promotion
+import ro.nicolaemariusghergu.queryit.service.PromotionService
+import java.util.function.Function
+import java.util.function.Supplier
 
 @Service
-public record PromotionServiceImpl(PromotionRepository promotionRepository) implements PromotionService {
-
-    @Override
-    public ResponseEntity<PromotionDto> getPromotionById(Long id) {
+class PromotionServiceImpl : PromotionService {
+    override fun getPromotionById(id: Long?): ResponseEntity<PromotionDto?>? {
         return ResponseEntity.ok(promotionRepository.findById(id)
-                .map(PromotionMapper.INSTANCE::promotionToPromotionDto)
-                .orElseThrow(() ->
-                        new NoSuchElementException("Promotion has not been found"))
-        );
+                .map<PromotionDto?>(Function<Promotion?, PromotionDto?> { promotion: Promotion? -> PromotionMapper.Companion.INSTANCE.promotionToPromotionDto(promotion) })
+                .orElseThrow<NoSuchElementException?>(Supplier { NoSuchElementException("Promotion has not been found") })
+        )
     }
 
-    @Override
-    public ResponseEntity<List<PromotionDto>> getPromotions() {
+    override fun getPromotions(): ResponseEntity<MutableList<PromotionDto?>?>? {
         return ResponseEntity.ok(promotionRepository.findAll().stream()
-                .map(PromotionMapper.INSTANCE::promotionToPromotionDto)
-                .toList());
+                .map<PromotionDto?>(Function<Promotion?, PromotionDto?> { promotion: Promotion? -> PromotionMapper.Companion.INSTANCE.promotionToPromotionDto(promotion) })
+                .toList())
     }
 
-    @Override
-    public ResponseEntity<List<PromotionDto>> getPromotionsByName(String name) {
+    override fun getPromotionsByName(name: String?): ResponseEntity<MutableList<PromotionDto?>?>? {
         return ResponseEntity.ok(promotionRepository.findAllByName(name).stream()
-                .map(PromotionMapper.INSTANCE::promotionToPromotionDto)
-                .toList());
+                .map<PromotionDto?>(Function<Promotion?, PromotionDto?> { promotion: Promotion? -> PromotionMapper.Companion.INSTANCE.promotionToPromotionDto(promotion) })
+                .toList())
     }
 
-    @Override
-    public ResponseEntity<PromotionDto> updatePromotion(PromotionDto promotionDto) {
-        PromotionDto promotionAlreadyExist = promotionRepository.findById(promotionDto.getId())
-                .map(PromotionMapper.INSTANCE::promotionToPromotionDto)
-                .map(updatedPromotion -> {
-                    updatedPromotion.setQuantityNeeded(promotionDto.getQuantityNeeded());
-                    return updatedPromotion;
+    override fun updatePromotion(promotionDto: PromotionDto?): ResponseEntity<PromotionDto?>? {
+        val promotionAlreadyExist: PromotionDto = promotionRepository.findById(promotionDto.getId())
+                .map<PromotionDto?>(Function<Promotion?, PromotionDto?> { promotion: Promotion? -> PromotionMapper.Companion.INSTANCE.promotionToPromotionDto(promotion) })
+                .map<PromotionDto?>(Function { updatedPromotion: PromotionDto? ->
+                    updatedPromotion.setQuantityNeeded(promotionDto.getQuantityNeeded())
+                    updatedPromotion
                 })
-                .orElseThrow(() ->
-                        new NoSuchElementException("Promotion has not been found"));
-        promotionRepository.save(PromotionMapper.INSTANCE
-                .promotionDtoToPromotion(promotionAlreadyExist));
-        return ResponseEntity.ok(promotionAlreadyExist);
+                .orElseThrow<NoSuchElementException?>(Supplier { NoSuchElementException("Promotion has not been found") })
+        promotionRepository.save<Promotion?>(PromotionMapper.Companion.INSTANCE
+                .promotionDtoToPromotion(promotionAlreadyExist))
+        return ResponseEntity.ok(promotionAlreadyExist)
     }
 
-    @Override
-    public ResponseEntity<Long> addPromotion(PromotionDto promotionDto) {
-        promotionRepository.save(
-                PromotionMapper.INSTANCE.promotionDtoToPromotion(promotionDto));
-        return ResponseEntity.ok(promotionDto.getId());
+    override fun addPromotion(promotionDto: PromotionDto?): ResponseEntity<Long?>? {
+        promotionRepository.save<Promotion?>(
+                PromotionMapper.Companion.INSTANCE.promotionDtoToPromotion(promotionDto))
+        return ResponseEntity.ok(promotionDto.getId())
     }
 
-    @Override
-    public ResponseEntity<Long> deletePromotionById(Long id) {
-        promotionRepository.deleteById(id);
-        return ResponseEntity.ok(id);
+    override fun deletePromotionById(id: Long?): ResponseEntity<Long?>? {
+        promotionRepository.deleteById(id)
+        return ResponseEntity.ok(id)
     }
-
-
 }

@@ -1,32 +1,23 @@
-package ro.nicolaemariusghergu.queryit.dto;
+package ro.nicolaemariusghergu.queryit.dto
 
-import lombok.*;
-
-import java.util.Objects;
+import lombok.*
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class CategoryDto {
-
-    private Long id;
-
-    private String name;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        CategoryDto that = (CategoryDto) o;
-
-        return Objects.equals(id, that.id);
+class CategoryDto {
+    private val id: Long? = null
+    private val name: String? = null
+    override fun equals(o: Any?): Boolean {
+        if (this === o) return true
+        if (o == null || javaClass != o.javaClass) return false
+        val that = o as CategoryDto?
+        return id == that.id
     }
 
-    @Override
-    public int hashCode() {
-        return id != null ? id.hashCode() : 0;
+    override fun hashCode(): Int {
+        return id?.hashCode() ?: 0
     }
 }
