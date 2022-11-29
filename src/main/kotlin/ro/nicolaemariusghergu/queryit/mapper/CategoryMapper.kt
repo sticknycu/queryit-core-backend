@@ -9,9 +9,6 @@ import ro.nicolaemariusghergu.queryit.model.Category
 interface CategoryMapper {
     fun categoryToCategoryDto(category: Category): CategoryDto
     fun categoryDtoToCategory(categoryDto: CategoryDto): Category
-    fun mapEmptyString(string: String): String? {
-        return string.ifEmpty { null }
-    }
 
     companion object {
         val INSTANCE: CategoryMapper = Mappers.getMapper(CategoryMapper::class.java)

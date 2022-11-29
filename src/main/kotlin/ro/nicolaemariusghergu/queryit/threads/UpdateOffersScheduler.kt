@@ -7,7 +7,7 @@ import java.util.function.Consumer
 
 //@Configuration
 //@EnableScheduling
-class UpdateOffersScheduler(private val promotionService: PromotionService) {
+open class UpdateOffersScheduler(private val promotionService: PromotionService) {
 
     @Scheduled(fixedRate = 1000)
     fun run() {

@@ -9,9 +9,6 @@ import ro.nicolaemariusghergu.queryit.model.Promotion
 interface PromotionMapper {
     fun promotionToPromotionDto(promotion: Promotion): PromotionDto
     fun promotionDtoToPromotion(promotionDto: PromotionDto): Promotion
-    fun mapEmptyString(string: String): String? {
-        return string.ifEmpty { null }
-    }
 
     companion object {
         val INSTANCE: PromotionMapper = Mappers.getMapper(PromotionMapper::class.java)

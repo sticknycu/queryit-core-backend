@@ -4,8 +4,10 @@ import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-internal class BackEndApplicationTests {
+class BackEndApplicationTests{
+
     @Test
     fun contextLoads() {
     }
+
 }

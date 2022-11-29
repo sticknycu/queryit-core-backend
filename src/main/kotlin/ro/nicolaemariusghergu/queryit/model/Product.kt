@@ -1,9 +1,9 @@
 package ro.nicolaemariusghergu.queryit.model
 
+import javax.persistence.*
 import org.hibernate.annotations.NotFound
 import org.hibernate.annotations.NotFoundAction
 import java.math.BigDecimal
-import javax.persistence.*
 
 @Entity
 @Table(name = "products")
@@ -15,7 +15,7 @@ class Product(
         val price: BigDecimal,
 
         @Column(name = "quantity")
-        val quantity: Int,
+        var quantity: Int,
 
         @Column(name = "icon_path")
         val iconPath: String,
@@ -23,7 +23,7 @@ class Product(
         @ManyToOne
         @JoinColumn(name = "category_id")
         @NotFound(action = NotFoundAction.IGNORE)
-        val category: Category? = null,
+        val category: Category,
 
         @ManyToOne(cascade = [CascadeType.MERGE])
         @NotFound(action = NotFoundAction.IGNORE)
@@ -33,12 +33,12 @@ class Product(
         @ManyToOne
         @JoinColumn(name = "minimarket_id")
         @NotFound(action = NotFoundAction.IGNORE)
-        val miniMarket: MiniMarket? = null,
+        val miniMarket: MiniMarket,
 
         @ManyToOne
         @JoinColumn(name = "manufacturer_id")
         @NotFound(action = NotFoundAction.IGNORE)
-        val manufacturer: Manufacturer? = null,
+        val manufacturer: Manufacturer,
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

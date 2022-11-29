@@ -21,7 +21,7 @@ import ro.nicolaemariusghergu.queryit.repository.ProductRepository
 import ro.nicolaemariusghergu.queryit.repository.PromotionRepository
 
 @Configuration
-@EnableScheduling
+//@EnableScheduling
 open class UpdateDatabaseScheduler(private val productProxy: ProductProxy,
                                    private val productRepository: ProductRepository,
                                    private val categoryRepository: CategoryRepository,
@@ -34,40 +34,40 @@ open class UpdateDatabaseScheduler(private val productProxy: ProductProxy,
     fun run() {
         logger.info { "Starting saving Products informations to database, including Categories and Promotions..." }
         logger.info { "Saving Categories to database..." }
-        val categoriesProxy = productProxy.getCategoriesFromMegaImage()!!.body
+        val categoriesProxy = productProxy.getCategoriesFromMegaImage().body
         val categoriesExists = categoryRepository.findAll()
         categoryRepository.saveAll(categoriesProxy!!.stream()
-                .map { categoryDto: CategoryDto? -> CategoryMapper.INSTANCE.categoryDtoToCategory(categoryDto) }
-                .filter { categoryProxy: Category? -> !categoriesExists.contains(categoryProxy) }
+                .map { categoryDto: CategoryDto -> CategoryMapper.INSTANCE.categoryDtoToCategory(categoryDto) }
+                .filter { categoryProxy: Category -> !categoriesExists.contains(categoryProxy) }
                 .toList())
         logger.info { "Saving Manufacturers to database..." }
-        val manufacturersProxy = productProxy.getManufacturersFromMegaImage()!!.body
+        val manufacturersProxy = productProxy.getManufacturersFromMegaImage().body
         val manufacturersExists = manufacturerRepository.findAll()
         manufacturerRepository.saveAll(manufacturersProxy!!.stream()
-                .filter { manufacturer: Manufacturer? -> !manufacturersExists!!.contains(manufacturer) }
+                .filter { manufacturer: Manufacturer -> !manufacturersExists.contains(manufacturer) }
                 .toList())
         logger.info { "Saving Products to database..." }
-        val proxyProducts = productProxy.getProductsFromMegaImage()!!.body
+        val proxyProducts = productProxy.getProductsFromMegaImage().body
         val productsExists = productRepository.findAll()
         productRepository.saveAll(proxyProducts!!.stream()
-                .map { productDto: ProductDto? -> ProductMapper.INSTANCE.productDtoToProduct(productDto) }
-                .filter { proxyProduct: Product? -> !productsExists.contains(proxyProduct) }
+                .map { productDto: ProductDto -> ProductMapper.INSTANCE.productDtoToProduct(productDto) }
+                .filter { proxyProduct: Product -> !productsExists.contains(proxyProduct) }
                 .toList())
         logger.info { "Saving Promotions to database.." }
-        val proxyPromotions = productProxy.getPromotionsFromMegaImage()!!.body
+        val proxyPromotions = productProxy.getPromotionsFromMegaImage().body
         val promotionsExists = promotionRepository.findAll()
         promotionRepository.saveAll(proxyPromotions!!.stream()
-                .map { promotionDto: PromotionDto? -> PromotionMapper.INSTANCE.promotionDtoToPromotion(promotionDto) }
-                .filter { proxyPromotion: Promotion? -> !promotionsExists.contains(proxyPromotion) }
+                .map { promotionDto: PromotionDto -> PromotionMapper.INSTANCE.promotionDtoToPromotion(promotionDto) }
+                .filter { proxyPromotion: Promotion -> !promotionsExists.contains(proxyPromotion) }
                 .toList())
         logger.info { "Updating Products with promotions.." }
-        val productsWithPromotionsProxy = productProxy.getProductsWithPromotionFromMegaImage()!!.body
+        val productsWithPromotionsProxy = productProxy.getProductsWithPromotionFromMegaImage().body
         val productsWithPromotionsExists = productRepository.findAll()
-                .stream().filter { product: Product? -> product!!.promotion != null }
+                .stream().filter { product: Product -> product.promotion != null }
                 .toList()
         productRepository.saveAll(productsWithPromotionsProxy!!.stream()
-                .map { productDto: ProductDto? -> ProductMapper.INSTANCE.productDtoToProduct(productDto) }
-                .filter { productWithPromotionProxy: Product? -> !productsWithPromotionsExists.contains(productWithPromotionProxy) }
+                .map { productDto: ProductDto -> ProductMapper.INSTANCE.productDtoToProduct(productDto) }
+                .filter { productWithPromotionProxy: Product -> !productsWithPromotionsExists.contains(productWithPromotionProxy) }
                 .toList())
         logger.info { "Update DONE!" }
     }

@@ -8,9 +8,7 @@ import ro.nicolaemariusghergu.queryit.model.Manufacturer
 @Mapper
 interface ManufacturerMapper {
     fun manufacturerToManufacturerDto(manufacturer: Manufacturer): ManufacturerDto
-    fun mapEmptyString(string: String): String? {
-        return string.ifEmpty { null }
-    }
+    fun manufacturerDtoToManufacturer(manufacturerDto: ManufacturerDto): Manufacturer
 
     companion object {
         val INSTANCE: ManufacturerMapper = Mappers.getMapper(ManufacturerMapper::class.java)

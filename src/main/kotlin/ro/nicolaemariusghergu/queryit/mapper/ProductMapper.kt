@@ -9,9 +9,6 @@ import ro.nicolaemariusghergu.queryit.model.Product
 interface ProductMapper {
     fun productToProductDto(product: Product): ProductDto
     fun productDtoToProduct(productDto: ProductDto): Product
-    fun mapEmptyString(string: String): String? {
-        return string.ifEmpty { null }
-    }
 
     companion object {
         val INSTANCE: ProductMapper = Mappers.getMapper(ProductMapper::class.java)

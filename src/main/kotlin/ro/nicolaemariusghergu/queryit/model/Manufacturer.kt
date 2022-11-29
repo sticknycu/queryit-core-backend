@@ -1,8 +1,8 @@
 package ro.nicolaemariusghergu.queryit.model
 
+import javax.persistence.*
 import org.hibernate.annotations.NotFound
 import org.hibernate.annotations.NotFoundAction
-import javax.persistence.*
 
 @Entity
 @Table(name = "manufacturers")
@@ -10,15 +10,15 @@ class Manufacturer(
         @ManyToOne
         @JoinColumn(name = "deposit_id")
         @NotFound(action = NotFoundAction.IGNORE)
-        val deposit: Deposit? = null,
+        val deposit: Deposit,
 
         @ManyToOne
         @JoinColumn(name = "truck_id")
         @NotFound(action = NotFoundAction.IGNORE)
-        val truck: Truck ? = null,
+        val truck: Truck,
 
         @Column(name = "name")
-        val name: String,
+        var name: String,
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

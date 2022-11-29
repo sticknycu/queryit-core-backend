@@ -5,4 +5,4 @@ import org.springframework.context.annotation.Configuration
 
 @Configuration
 @EnableFeignClients(basePackages = ["ro.nicolaemariusghergu.queryit.gateway"])
-class OpenFeignConfig 
+open class OpenFeignConfig

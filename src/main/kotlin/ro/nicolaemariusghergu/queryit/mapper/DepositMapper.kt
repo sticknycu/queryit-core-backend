@@ -8,10 +8,7 @@ import ro.nicolaemariusghergu.queryit.model.Deposit
 @Mapper
 interface DepositMapper {
     fun depositToDepositDto(deposit: Deposit): DepositDto
-
-    fun mapEmptyString(string: String): String? {
-        return string.ifEmpty { null }
-    }
+    fun depositDtoToDeposit(depositDto: DepositDto): Deposit
 
     companion object {
         val INSTANCE: DepositMapper = Mappers.getMapper(DepositMapper::class.java)

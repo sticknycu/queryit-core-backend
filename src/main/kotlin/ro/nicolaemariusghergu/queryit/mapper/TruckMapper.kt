@@ -8,9 +8,7 @@ import ro.nicolaemariusghergu.queryit.model.Truck
 @Mapper
 interface TruckMapper {
     fun truckToTruckDto(truck: Truck): TruckDto
-    fun mapEmptyString(string: String): String? {
-        return string.ifEmpty { null }
-    }
+    fun toDto(truckDto: TruckDto): Truck
 
     companion object {
         val INSTANCE: TruckMapper = Mappers.getMapper(TruckMapper::class.java)

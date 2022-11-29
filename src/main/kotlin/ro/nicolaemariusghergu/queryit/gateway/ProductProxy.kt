@@ -12,15 +12,15 @@ import ro.nicolaemariusghergu.queryit.model.Manufacturer
 @FeignClient(name = "products", url = "http://localhost:9092")
 interface ProductProxy {
     @GetMapping("/api/download/v1/mega-image/products/{categoryId}")
-    fun getProductsFromMegaImageByCategory(@PathVariable categoryId: Long): ResponseEntity<MutableSet<ProductDto>>
+    fun getProductsFromMegaImageByCategory(@PathVariable categoryId: Long): ResponseEntity<Set<ProductDto>>
     @GetMapping("/api/download/v1/mega-image/products")
-    fun getProductsFromMegaImage(): ResponseEntity<MutableSet<ProductDto>>
+    fun getProductsFromMegaImage(): ResponseEntity<Set<ProductDto>>
     @GetMapping("/api/download/v1/mega-image/promotions")
-    fun getPromotionsFromMegaImage(): ResponseEntity<MutableSet<PromotionDto>>
+    fun getPromotionsFromMegaImage(): ResponseEntity<Set<PromotionDto>>
     @GetMapping("/api/download/v1/mega-image/product-promotions")
-    fun getProductsWithPromotionFromMegaImage(): ResponseEntity<MutableSet<ProductDto>>
+    fun getProductsWithPromotionFromMegaImage(): ResponseEntity<Set<ProductDto>>
     @GetMapping("/api/download/v1/mega-image/categories")
-    fun getCategoriesFromMegaImage(): ResponseEntity<MutableSet<CategoryDto>>
+    fun getCategoriesFromMegaImage(): ResponseEntity<Set<CategoryDto>>
     @GetMapping("/api/download/v1/mega-image/manufacturers")
-    fun getManufacturersFromMegaImage(): ResponseEntity<MutableSet<Manufacturer>>
+    fun getManufacturersFromMegaImage(): ResponseEntity<Set<Manufacturer>>
 }
