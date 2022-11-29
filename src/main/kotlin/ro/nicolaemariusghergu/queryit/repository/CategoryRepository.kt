@@ -6,8 +6,7 @@ import org.springframework.transaction.annotation.Transactional
 import ro.nicolaemariusghergu.queryit.model.Category
 import java.util.*
 
-@Repository
 @Transactional
-interface CategoryRepository : JpaRepository<Category?, Long?> {
-    open fun findByName(name: String?): Optional<Category?>?
+interface CategoryRepository : JpaRepository<Category, Long> {
+    fun findByName(name: String): Optional<Category>
 }
