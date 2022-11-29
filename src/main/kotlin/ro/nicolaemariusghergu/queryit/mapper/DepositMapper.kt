@@ -7,10 +7,10 @@ import ro.nicolaemariusghergu.queryit.model.Deposit
 
 @Mapper
 interface DepositMapper {
-    open fun depositToDepositDto(deposit: Deposit?): DepositDto?
-    open fun depositDtoToDeposit(depositDto: DepositDto?): Deposit?
-    fun mapEmptyString(string: String?): String? {
-        return if (string != null && !string.isEmpty()) string else null
+    fun depositToDepositDto(deposit: Deposit): DepositDto
+
+    fun mapEmptyString(string: String): String? {
+        return string.ifEmpty { null }
     }
 
     companion object {

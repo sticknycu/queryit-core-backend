@@ -7,10 +7,9 @@ import ro.nicolaemariusghergu.queryit.model.Manufacturer
 
 @Mapper
 interface ManufacturerMapper {
-    open fun manufacturerToManufacturerDto(manufacturer: Manufacturer?): ManufacturerDto?
-    open fun manufacturerDtoToManufacturer(manufacturerDto: ManufacturerDto?): Manufacturer?
-    fun mapEmptyString(string: String?): String? {
-        return if (string != null && !string.isEmpty()) string else null
+    open fun manufacturerToManufacturerDto(manufacturer: Manufacturer): ManufacturerDto
+    fun mapEmptyString(string: String): String? {
+        return string.ifEmpty { null }
     }
 
     companion object {

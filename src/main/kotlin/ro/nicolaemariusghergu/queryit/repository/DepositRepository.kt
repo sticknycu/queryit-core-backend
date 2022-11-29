@@ -5,4 +5,4 @@ import org.springframework.transaction.annotation.Transactional
 import ro.nicolaemariusghergu.queryit.model.Deposit
 
 @Transactional
-interface DepositRepository : JpaRepository<Deposit?, Long?>
+interface DepositRepository : JpaRepository<Deposit, Long>

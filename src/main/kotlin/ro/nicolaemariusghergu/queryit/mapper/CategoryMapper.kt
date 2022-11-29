@@ -7,10 +7,10 @@ import ro.nicolaemariusghergu.queryit.model.Category
 
 @Mapper
 interface CategoryMapper {
-    open fun categoryToCategoryDto(category: Category?): CategoryDto?
-    open fun categoryDtoToCategory(categoryDto: CategoryDto?): Category?
-    fun mapEmptyString(string: String?): String? {
-        return if (string != null && !string.isEmpty()) string else null
+    fun categoryToCategoryDto(category: Category): CategoryDto
+    fun categoryDtoToCategory(categoryDto: CategoryDto): Category
+    fun mapEmptyString(string: String): String? {
+        return string.ifEmpty { null }
     }
 
     companion object {
