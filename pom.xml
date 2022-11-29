@@ -18,6 +18,7 @@
         <kotlin.version>1.7.21</kotlin.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>
         <mapstruct.version>1.5.3.Final</mapstruct.version>
+        <jacoco.version>0.8.8</jacoco.version>
     </properties>
     <dependencies>
         <dependency>
@@ -168,6 +169,26 @@
                         <version>${kotlin.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <plugin>
