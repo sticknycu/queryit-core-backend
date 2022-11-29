@@ -14,7 +14,7 @@ class MiniMarketServiceImpl(private val miniMarketRepository: MiniMarketReposito
     override fun getMiniMarkets(): ResponseEntity<MutableList<MiniMarketDto>> {
         return ResponseEntity.ok(miniMarketRepository.findAll()
                 .stream()
-                .map<MiniMarketDto> { miniMarket: MiniMarket -> MiniMarketMapper.INSTANCE.miniMarketToMiniMarketDto(miniMarket) }
+                .map { miniMarket: MiniMarket -> MiniMarketMapper.INSTANCE.miniMarketToMiniMarketDto(miniMarket) }
                 .toList())
     }
 }

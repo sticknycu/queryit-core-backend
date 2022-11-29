@@ -13,7 +13,7 @@ class PromotionServiceImpl(private val promotionRepository: PromotionRepository)
 
     override fun getPromotions(): ResponseEntity<MutableList<PromotionDto>> {
         return ResponseEntity.ok(promotionRepository.findAll().stream()
-                .map<PromotionDto> { promotion: Promotion -> PromotionMapper.INSTANCE.promotionToPromotionDto(promotion) }
+                .map { promotion: Promotion -> PromotionMapper.INSTANCE.promotionToPromotionDto(promotion) }
                 .toList())
     }
 

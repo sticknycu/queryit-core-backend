@@ -14,6 +14,6 @@ interface DepositMapper {
     }
 
     companion object {
-        val INSTANCE = Mappers.getMapper(DepositMapper::class.java)
+        val INSTANCE: DepositMapper = Mappers.getMapper(DepositMapper::class.java)
     }
 }

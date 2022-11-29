@@ -14,6 +14,6 @@ interface CategoryMapper {
     }
 
     companion object {
-        val INSTANCE = Mappers.getMapper(CategoryMapper::class.java)
+        val INSTANCE: CategoryMapper = Mappers.getMapper(CategoryMapper::class.java)
     }
 }

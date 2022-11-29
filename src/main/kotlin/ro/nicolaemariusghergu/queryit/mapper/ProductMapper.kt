@@ -7,13 +7,13 @@ import ro.nicolaemariusghergu.queryit.model.Product
 
 @Mapper
 interface ProductMapper {
-    open fun productToProductDto(product: Product?): ProductDto?
-    open fun productDtoToProduct(productDto: ProductDto?): Product?
-    fun mapEmptyString(string: String?): String? {
-        return if (string != null && !string.isEmpty()) string else null
+    fun productToProductDto(product: Product): ProductDto
+    fun productDtoToProduct(productDto: ProductDto): Product
+    fun mapEmptyString(string: String): String? {
+        return string.ifEmpty { null }
     }
 
     companion object {
-        val INSTANCE = Mappers.getMapper(ProductMapper::class.java)
+        val INSTANCE: ProductMapper = Mappers.getMapper(ProductMapper::class.java)
     }
 }

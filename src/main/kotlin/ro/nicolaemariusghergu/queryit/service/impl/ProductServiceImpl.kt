@@ -14,7 +14,7 @@ class ProductServiceImpl(private val productRepository: ProductRepository) : Pro
     override fun getProducts(): ResponseEntity<MutableList<ProductDto>> {
         return ResponseEntity.ok(productRepository.findAll()
                 .stream()
-                .map<ProductDto> { product: Product -> ProductMapper.INSTANCE.productToProductDto(product) }
+                .map { product: Product -> ProductMapper.INSTANCE.productToProductDto(product) }
                 .toList())
     }
 }

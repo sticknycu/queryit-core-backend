@@ -7,13 +7,12 @@ import ro.nicolaemariusghergu.queryit.model.MiniMarket
 
 @Mapper
 interface MiniMarketMapper {
-    open fun miniMarketToMiniMarketDto(miniMarket: MiniMarket?): MiniMarketDto?
-    open fun miniMarketDtoToMiniMarket(miniMarketDto: MiniMarketDto?): MiniMarket?
-    fun mapEmptyString(string: String?): String? {
-        return if (string != null && !string.isEmpty()) string else null
+    fun miniMarketToMiniMarketDto(miniMarket: MiniMarket): MiniMarketDto
+    fun mapEmptyString(string: String): String? {
+        return string.ifEmpty { null }
     }
 
     companion object {
-        val INSTANCE = Mappers.getMapper(MiniMarketMapper::class.java)
+        val INSTANCE: MiniMarketMapper = Mappers.getMapper(MiniMarketMapper::class.java)
     }
 }

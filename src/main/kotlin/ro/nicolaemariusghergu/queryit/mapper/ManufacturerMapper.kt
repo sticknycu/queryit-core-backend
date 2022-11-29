@@ -7,12 +7,12 @@ import ro.nicolaemariusghergu.queryit.model.Manufacturer
 
 @Mapper
 interface ManufacturerMapper {
-    open fun manufacturerToManufacturerDto(manufacturer: Manufacturer): ManufacturerDto
+    fun manufacturerToManufacturerDto(manufacturer: Manufacturer): ManufacturerDto
     fun mapEmptyString(string: String): String? {
         return string.ifEmpty { null }
     }
 
     companion object {
-        val INSTANCE = Mappers.getMapper(ManufacturerMapper::class.java)
+        val INSTANCE: ManufacturerMapper = Mappers.getMapper(ManufacturerMapper::class.java)
     }
 }

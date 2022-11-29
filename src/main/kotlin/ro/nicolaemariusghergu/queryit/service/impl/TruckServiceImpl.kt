@@ -14,7 +14,7 @@ class TruckServiceImpl(private val truckRepository: TruckRepository) : TruckServ
     override fun getTrucks(): ResponseEntity<MutableList<TruckDto>> {
         return ResponseEntity.ok(truckRepository.findAll()
                 .stream()
-                .map<TruckDto> { truck: Truck -> TruckMapper.INSTANCE.truckToTruckDto(truck) }
+                .map { truck: Truck -> TruckMapper.INSTANCE.truckToTruckDto(truck) }
                 .toList())
     }
 }
