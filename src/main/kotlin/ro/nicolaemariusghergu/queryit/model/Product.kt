@@ -7,24 +7,18 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "products")
-data class Product(
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        @Column(name = "product_id", nullable = false)
-        @NotFound(action = NotFoundAction.IGNORE)
-        val id: Long? = null,
-
+class Product(
         @Column(name = "name")
-        val name: String? = null,
+        val name: String,
 
         @Column(name = "price")
-        val price: BigDecimal? = null,
+        val price: BigDecimal,
 
         @Column(name = "quantity")
-        val quantity: Int? = null,
+        val quantity: Int,
 
         @Column(name = "icon_path")
-        val iconPath: String? = null,
+        val iconPath: String,
 
         @ManyToOne
         @JoinColumn(name = "category_id")
@@ -44,4 +38,11 @@ data class Product(
         @ManyToOne
         @JoinColumn(name = "manufacturer_id")
         @NotFound(action = NotFoundAction.IGNORE)
-        val manufacturer: Manufacturer? = null)
+        val manufacturer: Manufacturer? = null,
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Column(name = "product_id", nullable = false)
+        @NotFound(action = NotFoundAction.IGNORE)
+        val id: Long? = null
+)
