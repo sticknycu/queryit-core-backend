@@ -10,7 +10,7 @@ import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
 import org.springframework.boot.test.context.SpringBootTest
 import ro.nicolaemariusghergu.queryit.model.Product
-import ro.nicolaemariusghergu.queryit.proxy.ProductProxy
+import ro.nicolaemariusghergu.queryit.gateway.ProductProxy
 import ro.nicolaemariusghergu.queryit.repository.ProductRepository
 import ro.nicolaemariusghergu.queryit.service.ProductService
 import java.util.*

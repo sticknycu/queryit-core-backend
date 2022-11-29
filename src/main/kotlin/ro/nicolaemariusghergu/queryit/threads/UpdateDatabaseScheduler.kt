@@ -14,7 +14,7 @@ import ro.nicolaemariusghergu.queryit.model.Category
 import ro.nicolaemariusghergu.queryit.model.Manufacturer
 import ro.nicolaemariusghergu.queryit.model.Product
 import ro.nicolaemariusghergu.queryit.model.Promotion
-import ro.nicolaemariusghergu.queryit.proxy.ProductProxy
+import ro.nicolaemariusghergu.queryit.gateway.ProductProxy
 import ro.nicolaemariusghergu.queryit.repository.CategoryRepository
 import ro.nicolaemariusghergu.queryit.repository.ManufacturerRepository
 import ro.nicolaemariusghergu.queryit.repository.ProductRepository

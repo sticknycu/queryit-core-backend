@@ -1,4 +1,4 @@
-package ro.nicolaemariusghergu.queryit.proxy
+package ro.nicolaemariusghergu.queryit.gateway
 
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.http.ResponseEntity
@@ -12,15 +12,15 @@ import ro.nicolaemariusghergu.queryit.model.Manufacturer
 @FeignClient(name = "products", url = "http://localhost:9092")
 interface ProductProxy {
     @GetMapping("/api/download/v1/mega-image/products/{categoryId}")
-    open fun getProductsFromMegaImageByCategory(@PathVariable categoryId: Long?): ResponseEntity<MutableSet<ProductDto?>?>?
+    fun getProductsFromMegaImageByCategory(@PathVariable categoryId: Long): ResponseEntity<MutableSet<ProductDto>>
     @GetMapping("/api/download/v1/mega-image/products")
-    open fun getProductsFromMegaImage(): ResponseEntity<MutableSet<ProductDto?>?>?
+    fun getProductsFromMegaImage(): ResponseEntity<MutableSet<ProductDto>>
     @GetMapping("/api/download/v1/mega-image/promotions")
-    open fun getPromotionsFromMegaImage(): ResponseEntity<MutableSet<PromotionDto?>?>?
+    fun getPromotionsFromMegaImage(): ResponseEntity<MutableSet<PromotionDto>>
     @GetMapping("/api/download/v1/mega-image/product-promotions")
-    open fun getProductsWithPromotionFromMegaImage(): ResponseEntity<MutableSet<ProductDto?>?>?
+    fun getProductsWithPromotionFromMegaImage(): ResponseEntity<MutableSet<ProductDto>>
     @GetMapping("/api/download/v1/mega-image/categories")
-    open fun getCategoriesFromMegaImage(): ResponseEntity<MutableSet<CategoryDto?>?>?
+    fun getCategoriesFromMegaImage(): ResponseEntity<MutableSet<CategoryDto>>
     @GetMapping("/api/download/v1/mega-image/manufacturers")
-    open fun getManufacturersFromMegaImage(): ResponseEntity<MutableSet<Manufacturer?>?>?
+    fun getManufacturersFromMegaImage(): ResponseEntity<MutableSet<Manufacturer>>
 }
